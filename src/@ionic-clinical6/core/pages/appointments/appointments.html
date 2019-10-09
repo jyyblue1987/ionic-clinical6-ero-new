@@ -1,0 +1,69 @@
+<ion-header>
+    <app-toolbar [title]="'Appointments'" [backLabel]="'Back'"></app-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="date-selector" no-margin no-padding ion-fixed>
+        <ion-segment [(ngModel)]="mode">
+            <ion-segment-button value="date" (click)="switchToDate()">
+                {{'Day View'}}</ion-segment-button>
+            <ion-segment-button value="month" (click)="switchToMonth()">
+                {{'Month View'}}</ion-segment-button>
+        </ion-segment>
+        <ion-label class="current-date"*ngIf="mode=='date'">{{currentDate}}</ion-label>
+        <ion-label class="current-date"*ngIf="mode=='month'">{{todayDate}}</ion-label>        
+    </div>
+    <!-- If date view -->
+    <div class="appointment-list" no-margin no-padding *ngIf="mode=='date'">
+        <ion-list class="list" *ngIf="todayAppointments.length > 0">
+            <ng-template ngFor let-appointment [ngForOf]="todayAppointments">
+                <button ion-button clear no-padding no-margin full class="progress-item" 
+                    class="details-container" (click)="showReminder(appointment)">
+                    <ion-grid fixed no-padding>
+                        <ion-row>
+                            <ion-col col-2 no-padding>
+                                <img class="detail-icon" src=""/>
+                            </ion-col>
+                            <ion-col col-9 no-padding>
+                                <div class="detail-content">
+                                    <div class="detail-dates">
+                                        {{moment(appointment.time).format('hh:mm A').toUpperCase()}},
+                                        {{moment(appointment.start).format('DD MMM YYYY').toUpperCase()}}
+                                    </div>
+                                    <div class="detail-title">{{appointment.title}}</div>
+                                </div>
+                            </ion-col>
+                            <!--<ion-col no-padding align-self-end class="icon-container">-->
+                            <ion-col no-padding class="arrow-col">
+                                <ion-icon class="arrow" name="arrow-forward"></ion-icon>
+                            </ion-col>
+                        </ion-row>
+                    </ion-grid>
+                </button>
+            </ng-template>
+        </ion-list>
+        <div class="no-appointments" *ngIf="todayAppointments.length == 0">
+            <img class="no-icon" src=""/>
+            <ion-label class="no-title">
+                {{'NO APPOINTMENTS'}}</ion-label>
+            <ion-label class="no-subtitle">
+                {{''}}</ion-label>
+        </div>
+    </div>
+    <!-- If month view -->
+    <div class="calendar-comp" *ngIf="mode=='month'">
+        <ion-spinner name="ios" class="custom-spinner" *ngIf="!ready"></ion-spinner>                                
+        <calendar-component [legend]="true" [events]="monthAppointments" [records]="records"
+         (onEvent)="showAllEvents($event)" *ngIf="ready"></calendar-component>
+    </div>
+</ion-content>
+
+<!--<ion-footer>
+    <button ion-button class="blue-button" (click)="newReminder()">SET UP NEW REMINDER</button>
+</ion-footer>-->
+<ion-footer text-center no-border>
+      <ion-toolbar no-border >    
+        <button ion-button full color="std-button" class="blue-button" (click)="newReminder()">
+            {{'SET APPOINTMENT'}}</button>
+      </ion-toolbar>
+</ion-footer>

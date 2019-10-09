@@ -1,0 +1,26 @@
+<ion-toolbar class="alert-top">  
+    <a><div class="p6-icon-cross exit-icon" 
+            (click)="dismiss()"></div></a>
+</ion-toolbar> 
+
+<ion-content padding>
+    <div class="title-container">
+      <span class="p6-icon-info {{iconColorClass}}"></span>
+      <div class="title-big title">{{title}}</div>
+    </div>
+    <div class="subtitle" *ngIf="subTitle" [innerHTML]="subTitle"></div>
+    <div class="body-text" [innerHTML]="body"></div>
+</ion-content>
+
+<ion-footer>
+  <ion-row>
+    <ion-col>
+      <button ion-button full (click)="dismiss('contact')" style="border-bottom-left-radius: 0.9rem;"
+        [color]="color">Contact Support</button>
+    </ion-col>
+    <ion-col>
+      <button ion-button full (click)="dismiss('none')" style="border-bottom-right-radius: 0.9rem;"
+        [color]="color">{{buttonName}}</button>
+    </ion-col>
+  </ion-row>
+</ion-footer>

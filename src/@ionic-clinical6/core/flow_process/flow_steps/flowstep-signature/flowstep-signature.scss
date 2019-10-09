@@ -1,0 +1,37 @@
+@import "../flowstep-help/flowstep-help.scss";
+
+flowstep-signature {
+  @extend flowstep-help;
+
+  .full-size-card {
+    border-color: map-get($colors, borders);
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: none;
+    padding: 0.6rem 0 2rem 0;
+    margin: 0;
+    width: 100%
+  }
+  .description {
+    margin-top: 0;
+    padding: 2rem 1.5rem;
+    p {
+      padding:0;
+    }
+  }
+  // .title {
+  //   margin-bottom: 2rem;
+  //   height:unset;
+  // }
+
+  ion-spinner {
+    width: 12%;
+    height: 12%;
+    margin: auto;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}

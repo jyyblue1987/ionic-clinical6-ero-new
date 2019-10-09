@@ -1,0 +1,1 @@
+exports.IonicClinical6 = require('./lib/ionic-clinical6.module').IonicClinical6;

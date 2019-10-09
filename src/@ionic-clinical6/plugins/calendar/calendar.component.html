@@ -1,0 +1,25 @@
+<div class="month-bar">
+    <ion-row>
+        <button mwlCalendarPreviousView [(viewDate)]="today" [view]="'month'" (viewDateChange)="navigate($event)">
+           <ion-icon name="arrow-back" class="arrow"></ion-icon>
+        </button>
+        <ion-label class="month-name">{{current_month}}</ion-label>
+        <button mwlCalendarNextView [(viewDate)]="today" [view]="'month'" (viewDateChange)="navigate($event)">
+           <ion-icon name="arrow-forward" class="arrow"></ion-icon>
+        </button>
+    </ion-row>
+</div>
+<mwl-calendar-month-view [viewDate]="today" [events]="events" (dayClicked)="eventAction($event)"></mwl-calendar-month-view>
+<div class="legend" *ngIf="legend">
+    <ion-row>
+        <div class="legend-title-container">
+            <ion-label class="legend-title">LEGEND</ion-label>
+        </div>
+        <div class="legend-content">
+            <ion-row style="padding-top: 4rem;">
+                <div class="blue-point"></div>
+                <ion-label class="appointment-label">Appointment</ion-label>
+            </ion-row>
+        </div>
+    </ion-row>
+</div>

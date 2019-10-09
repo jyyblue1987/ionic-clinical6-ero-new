@@ -1,0 +1,1 @@
+{"version":3,"names":[],"mappings":"","sources":["src/@ionic-clinical6/core/modal/index.d.ts"],"sourcesContent":["import { HelpModalPage } from './help-modal';\nimport { AlertModalPage } from './alert-modal';\nexport { HelpModalPage, AlertModalPage };\n"],"file":"index.d.ts"}

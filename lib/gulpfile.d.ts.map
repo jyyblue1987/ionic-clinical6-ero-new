@@ -1,0 +1,1 @@
+{"version":3,"names":[],"mappings":"","sources":["gulpfile.d.ts"],"sourcesContent":["declare var gulp: any, sass: any, runSequence: any, cleanCSS: any, sourcemaps: any, tsc: any, embedTemplates: any, exec: any;\ndeclare var concat: any;\ndeclare var gutil: any;\ndeclare var header: any;\n"],"file":"gulpfile.d.ts"}

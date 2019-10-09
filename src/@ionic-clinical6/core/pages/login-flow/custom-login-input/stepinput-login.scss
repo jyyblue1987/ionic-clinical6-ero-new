@@ -1,0 +1,87 @@
+@import "../../../flow_process/flow_inputs/text/stepinput-text.component.scss";
+@import "../login-flow.scss";
+
+custom-stepinput-login {
+    .login-form {
+        margin: auto;
+        text-align: center;
+        width: 87%;
+        .form-header {
+                &.reset_pin {
+                    margin-top: 5rem;
+                    margin-bottom: 1rem;
+                }
+                &.new_pin, &.code {
+                    margin-bottom: 10rem;
+                }
+                .body {
+                    @extend %title;
+                }
+                .hint {
+                    @extend %title;
+                    font-size: 1.9rem!important;
+                    line-height: 2rem!important;
+                }
+        }
+
+        .form-container {
+            margin: auto;
+            color: white;
+
+            ion-item.input-field {
+                background-color: rgba(255, 255, 255, 0.3);
+                border: 1.5px white solid;
+                color: white;
+                border-radius: 4px;
+                height: 4.5rem;
+                text-align: center;
+                padding: 0;
+                .text-input {
+                    text-align: center;
+                }
+            }
+            &.create_pin ion-item{
+                border-radius: 4px 4px 0 0 ;
+            }
+
+            &.confirm_reset_pin, &.confirm_new_pin{
+                ion-item {
+                    border-radius: 0 0 4px 4px!important;
+                }
+            }
+
+            &.new_pin, &.reset_pin {
+                ion-item {
+                    border-radius: 4px 4px 0 0!important;
+                }
+            }
+
+            &.email, &.pin{
+                margin-top: 10rem;
+            }
+
+            .error-box {
+                color: white;
+                margin: .2rem;
+            }
+            &.new_pin, &.reset_pin {
+                .error-box {
+                    display: none;
+                }
+            }
+
+        }
+
+        .link-button {
+            font-size: 1.3rem;
+            font-family: Gotham-Medium, Arial, Helvetica, sans-serif;
+            margin: 1.5rem auto;
+            a {
+                border-bottom: solid 1px white;
+                text-decoration: none;
+                color: white;
+            }
+        }
+     }
+    
+}

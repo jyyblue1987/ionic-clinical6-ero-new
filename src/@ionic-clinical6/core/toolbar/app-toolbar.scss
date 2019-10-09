@@ -1,0 +1,106 @@
+// @import "../../theme/variables.scss";
+
+app-toolbar {
+    .c6-toolbar{
+        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.20);
+        z-index: 100;
+        .toolbar-background {
+            background-color: unset !important; 
+        }
+        ion-buttons[left] .bar-button:first-child {
+            margin-left: 1rem;
+        }
+        ion-buttons[right] .bar-button {
+            margin-right: 1rem;
+        }
+
+        ion-icon {
+            font-size: 3.4rem ;
+            min-width: 1.8rem ;
+            margin: 0 0.0rem 0 0;
+            padding: 0;
+            display: flex;
+        }
+        button {
+            font-size: 1.7rem ;
+            letter-spacing: -0.1rem;
+            color: white;
+        }
+        .menu-icon {
+            font-size: 1.9rem;
+            margin-top: 0;
+            padding: 0 0.5rem;
+            text-align: left;
+        }
+        ion-title div.toolbar-title {
+            font-size: 1.8rem;
+            letter-spacing: -0.1rem;
+            font-family: Gotham-Medium;
+            color: white;
+        }
+        .ppd-logo {
+            font-size: 2.7rem;
+            line-height: 3.4rem;
+        }
+        #alerts-icon {
+            color: map-get($colors, text-lightest);
+            position: relative;
+            font-size: 2.1rem;
+        }
+
+        #alerts-text {
+            color: map-get($colors, text-lightest);
+            font-size: 1.7rem;
+            letter-spacing: -0.01rem;
+            text-align: right;
+            margin-right: 0.5rem;
+        }
+        .info-icon {
+            font-size: 2.3rem;
+            letter-spacing:0;
+            width: 3rem;
+            height: 3rem;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .plus-icon {
+            font-size: 2rem;
+            letter-spacing:0;
+        }
+    }
+
+    .c6-toolbar.ios {
+        // it looks like this is not set by ionic defaults... so reinstating here
+        min-height: calc(#{$toolbar-ios-height} + #{$cordova-ios-statusbar-padding});
+        padding-top: $cordova-ios-statusbar-padding;
+
+        .toolbar-background-ios {
+            border: none !important;
+        }
+        .title {
+            padding: 20px 80px 1px;
+        }
+
+        #alerts-text {
+            font-family: -apple-system, Roboto, "Segoe UI", sans-serif;
+        }
+    }
+
+    .c6-toolbar.android {
+
+        ion-buttons[left] {
+            width: 9rem;
+            order:1;
+        }        
+        ion-buttons[right] {
+            width: 9rem;
+        }
+        ion-title div.toolbar-title {
+            line-height: 2rem;
+            text-align: center;
+        }
+        .menu-icon {
+            margin-left: -1.5rem;
+        }
+    }
+}

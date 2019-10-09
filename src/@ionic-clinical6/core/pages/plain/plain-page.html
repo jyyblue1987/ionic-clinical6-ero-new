@@ -1,0 +1,8 @@
+<ion-header>
+  <app-toolbar [title]="title" [backLabel]="translator.getInnerHTML('BACK') || 'Back'" layout="plain"></app-toolbar>
+</ion-header>
+
+<ion-content small-padding (click)="return;">
+    <div class="spinner-overlay" *ngIf="isLoading"><ion-spinner></ion-spinner></div>
+  <div [innerHTML]="body" small-text class="content-body" *ngIf="!isLoading"></div>
+</ion-content>

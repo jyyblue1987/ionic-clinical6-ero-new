@@ -1,0 +1,90 @@
+@import "../input-container.component.scss";
+
+stepinput-single_choice {
+  
+  @extend %question;
+
+  /* case radio buttons */
+  ion-row.radio-buttons {
+    padding: 0.7rem 0 0; /* 5rem; */
+    align-items: center;
+    justify-content: center;
+  }
+  .item-radio {
+    color: map-get($colors, text-regular);
+    font-size: 1.3rem;
+    background-color: transparent;
+    border: none;
+    min-height: 4.15rem;
+    display: flex;
+    align-items: baseline;
+    
+    .item-inner {
+      border: none !important;
+    }
+
+  }
+  .item-inner {
+    border-bottom: 1.5px solid map-get($colors, text-lighter) !important;
+  }
+  .radio-checked .radio-inner {
+    background-color: map-get($colors , primary );
+    position: absolute;
+    top: calc((100% - 1.3rem )/2) !important;
+    left: calc((100% - 1.3rem )/2) !important;
+    width: 1.3rem !important;
+    height: 1.3rem !important;
+    border-radius: 100%;
+    border-width: 0;
+    transform: none;
+  }
+  .item ion-radio {
+    position: absolute !important;
+    top:0;
+    left:0;
+    margin: 0 !important;
+  }
+  .labelwrap {
+    margin: 0 0 2.1rem 2.3rem !important;
+    font-size: 1.6rem;
+    letter-spacing: -0.04rem;
+    white-space: normal;
+  }
+  .item-radio-checked ion-label {
+    color: unset;
+  }
+  .radio-icon {
+    border-color: map-get($colors, borders);
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 100%;
+    width: 2.3rem !important;
+    height: 2.3rem !important;
+  }
+
+  /* case 2 options */
+  ion-row.choice-2options {
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    padding: 0 25% !important;
+    position: relative;  
+    margin-top: 0; // 3.6rem
+  }
+
+  /* case drop-down */
+  /* also used in switch-site page */
+  .item-select {
+    // border-bottom: 1.5px solid map-get($colors, text-lighter);
+    padding-left: 0;
+    background-color: transparent;
+    color: map-get($colors, text-regular);
+
+    ion-label {
+        color: map-get($colors, text-lighter ) !important;
+    }
+    ion-select {
+      padding-bottom: 0!important;
+    }
+  }
+}

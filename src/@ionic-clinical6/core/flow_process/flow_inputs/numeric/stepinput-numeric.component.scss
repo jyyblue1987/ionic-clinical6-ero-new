@@ -1,0 +1,11 @@
+@import "../input-container.component.scss";
+
+stepinput-numeric {
+
+    @extend %question;
+    @extend %input-field;
+
+    .question-container{
+        display: inline-block;
+    }
+}

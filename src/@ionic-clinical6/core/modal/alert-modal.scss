@@ -1,0 +1,108 @@
+// @import "../../theme/global.scss";
+
+alert-modal {
+  max-height:  66.5vh;
+  max-width: 88vw;
+  margin: 13.5vh 6vw;
+
+  .alert-top {
+    // border-top-right-radius: 1rem;
+    // border-top-left-radius: 1rem;
+    min-height: 0;
+    overflow: visible;
+    padding: 0;
+  }
+  .exit-icon {
+    top: 1.4rem;
+    right: 1.2rem;
+    position: absolute;
+    font-size: 1.8rem;
+    color: #D2D2D2;
+  }
+
+  ion-content {
+      background-color: map-get($colors, soft-background) !important;
+      border-radius: 1rem;
+      overflow: hidden;
+  }
+  scroll-content {
+    padding: 0 2.5rem 0 2.5rem !important;
+    margin-bottom: 2rem
+  }
+
+  .title-container {
+    padding: 1.5rem 2rem 0 0rem;
+    margin-bottom: 1.2rem;
+    align-items: center;
+    display: flex;
+  }
+  .title {
+    margin: 0;
+    display: inline-flex;
+    text-align: left;
+    line-height: 3rem
+  }
+  .title-icon {
+    color: map-get($colors, primary);
+    font-size: 3.2rem;
+    display: inline-flex;
+    margin-right: 1.2rem;
+  }
+  .title-iconhelp {
+    @extend .title-icon;
+    color: map-get($colors, help);
+  }
+  .subtitle {
+    font-weight: bold;
+    margin-bottom: 0.9rem;
+    letter-spacing: -0.05rem;
+    top: 0px;
+    display: inline-block;
+    left: 0px;
+  }
+  .body-text {
+    font-size: 1.5rem;
+    letter-spacing: -0.02rem;
+    line-height: 2rem;
+
+    p {
+      font-size: 1.5rem;
+      letter-spacing: -0.02rem;
+      margin-top: 0.5rem;
+      line-height: 2rem;
+    }
+    h1, h2, h3, h4 {
+      font-weight: bold;
+      margin-top: 0.8rem;
+      letter-spacing: -0.05rem;
+      top: 0px;
+      display: inline-block;
+      left: 0px;
+      font-size: 1.7rem;
+      margin-bottom: 0;
+    }
+  }
+
+  ion-footer {
+    height: auto;
+    // min-height: unset;
+
+    ion-col {
+      padding: 0;
+    }
+    ion-col:first-child {
+      padding-right: 1px !important;
+    }
+    button {
+      font-size: 1.6rem !important;
+      height: 5rem !important;
+      margin: 0 !important;
+    }
+    ion-col:first-child button {
+      border-bottom-left-radius: 0.9rem;
+    }
+    ion-col:last-child button {
+      border-bottom-right-radius: 0.9rem;
+    }
+  }
+}

@@ -1,0 +1,122 @@
+@font-face {
+    font-family: "pico-dhs";
+    src:    url("../assets/fonts/pico-dhs.eot?2fhbmc");
+    src:    url("../assets/fonts/pico-dhs.eot?2fhbmc#iefix") format("embedded-opentype"),
+        url("../assets/fonts/pico-dhs.ttf?2fhbmc") format("truetype"),
+        url("../assets/fonts/pico-dhs.woff?2fhbmc") format("woff"),
+        url("../assets/fonts/pico-dhs.svg?2fhbmc#pico-dhs") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="pico-"], [class*=" pico-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'pico-dhs' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+// map the new class pico in the list, using as "key" the "pico class name", as a "value" the "content" of the class
+$pico_list: (clipboard: "e915", traffic-light: "e916", id: "e910", phone: "e911" , user: "e912" , wind-turbine: "e913", eye-o: "e90f",
+            cloud: "e91b", check: "e91e", check-small: "e91f", check-circle: "e91c", eye: "e90e", photo: "e914", video: "e918", pdf: "e90d",  
+            envelope: "e90c",  chat: "e900",  earth: "e901",  film: "e902", fire: "e903", flag: "e904", health: "e905", heart: "e906", 
+            lock: "e907", map-marker: "e908", play: "e909", star: "e90a", sun: "e90b");
+
+@each $key, $value in $pico_list {
+   .pico-#{$key}:before {
+       content: unquote("\"\\#{$value}\""); // workaround to pass the pico code and getting the unicode string as the classes content (compatible with Sass 3.3 but also 3.4)
+   }
+} 
+
+// .pico-clipboard:before {
+//     content: "\e915";
+// }
+// .pico-traffic-light:before {
+//     content: "\e916";
+// }
+// .pico-id:before {
+//     content: "\e910";
+// }
+// .pico-phone:before {
+//     content: "\e911";
+// }
+// .pico-user:before {
+//     content: "\e912";
+// }
+// .pico-wind-turbine:before {
+//     content: "\e913";
+// }
+// .pico-eye-o:before {
+//     content: "\e90f";
+// }
+// .pico-cloud:before {
+//     content: "\e91b";
+// }
+// .pico-check:before {
+//     content: "\e91e";
+// }
+// .pico-check-small:before {
+//     content: "\e91f";
+// }
+// .pico-check-circle:before {
+//     content: "\e91c";
+// }
+// .pico-eye:before {
+//     content: "\e90e";
+// }
+// .pico-photo:before {
+//     content: "\e914";
+// }
+// .pico-video:before {
+//     content: "\e918";
+// }
+// .pico-pdf:before {
+//     content: "\e90d";
+// }
+// .pico-envelope:before {
+//     content: "\e90c";
+// }
+// .pico-chat:before {
+//     content: "\e900";
+// }
+// .pico-earth:before {
+//     content: "\e901";
+// }
+// .pico-film:before {
+//     content: "\e902";
+// }
+// .pico-fire:before {
+//     content: "\e903";
+// }
+// .pico-flag:before {
+//     content: "\e904";
+// }
+// .pico-health:before {
+//     content: "\e905";
+// }
+// .pico-heart:before {
+//     content: "\e906";
+// }
+// .pico-lock:before {
+//     content: "\e907";
+// }
+// .pico-map-marker:before {
+//     content: "\e908";
+// }
+// .pico-play:before {
+//     content: "\e909";
+// }
+// .pico-star:before {
+//     content: "\e90a";
+// }
+// .pico-sun:before {
+//     content: "\e90b";
+// }

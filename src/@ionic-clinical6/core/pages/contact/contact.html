@@ -1,0 +1,19 @@
+<ion-header>
+    <app-toolbar [title]="'Contact'" [backLabel]="'Back'" ></app-toolbar>
+</ion-header>
+
+<ion-content>
+    <img class="icon" src="http://placehold.it/256"/>
+    <h1 class="address">{{contactInformations.siteName}}</h1>
+    <p class="address-line-1">{{contactInformations.siteAddress1}}</p>
+    <p class="address-line-2">{{contactInformations.siteAddress2}}</p>
+
+    <div class="buttons">
+        <a [href]="'tel:' + contactInformations.sitePhoneNumber">
+        <button ion-button full color="std-button" class="large-button bottom-space">Call: {{contactInformations.sitePhoneNumber}}</button>
+        </a>
+        <a [href]="'mailto:' + contactInformations.siteEmail">
+        <button ion-button full color="secondary-btn" class="large-button">{{contactInformations.siteEmail}}</button>
+        </a>
+    </div>
+</ion-content>

@@ -1,0 +1,29 @@
+<ion-header>
+  <app-toolbar [backLabel]="'Back'"
+              layout="app"
+             ></app-toolbar>
+</ion-header>
+<ion-content padding (click)="return;">
+
+  <!-- <script type='text/javascript' language='JavaScript' src='pdfUrl()' (message)="handleMessage($event)"></script> -->
+  <script>
+    if (!window.addEventListener) {
+      window.attachEvent('onmessage', eventHandler);
+    } else {
+      window.addEventListener('message', eventHandler, false);
+    }
+
+    function eventHandler(e) {
+      if (e.origin == "https://secure.echosign.com") {
+        console.log("Event from EchoSign!", JSON.parse(e.data));
+      } else {
+        console.log("Do not process this!");
+      }
+    }
+  </script>
+
+<ion-spinner> </ion-spinner>
+
+<!-- <iframe (message)="handleMessage($event)" [src]='pdfUrl()' width="100%" height="100%" frameborder="0" style="border: 0; overflow: hidden; min-height: 100%; min-width: 100%;"></iframe>
+ <iframe id="frame" [src]='pdfUrl()' width="100%" height="100%" frameborder="0" style="border: 0; overflow: hidden; min-height: 100%; min-width: 100%;"></iframe>-->
+</ion-content>

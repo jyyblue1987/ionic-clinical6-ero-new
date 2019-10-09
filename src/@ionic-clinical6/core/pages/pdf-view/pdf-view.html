@@ -1,0 +1,13 @@
+<ion-header>
+  <app-toolbar [title]="title" [backLabel]="translator.getInnerHTML('BACK') || 'Back'"  [bgColor]="themeColor"
+              layout="plain"
+             ></app-toolbar>
+</ion-header>
+<ion-content no-padding class="pdf-view">
+	<ion-spinner *ngIf="loadingSpinner"> </ion-spinner>
+	<div class="zoom-container" #eventsContainer *ngIf="enableAndroidViewer">
+		<!--<pdf-viewer  [src]="pdfPath" [after-load-complete]="loadComplete" [show-all]="true" #scalingElement [zoom]="1.2">-->
+		<pdf-viewer  [src]="pdfPath" (after-load-complete)="loadComplete($event)" [show-all]="true" #scalingElement [zoom]="1.2">
+		</pdf-viewer>
+	</div>
+</ion-content>

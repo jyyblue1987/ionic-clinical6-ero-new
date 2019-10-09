@@ -1,0 +1,23 @@
+
+<ion-row class="choice-container">
+    <ion-checkbox [(ngModel)]="choiceSelected" (ngModelChange)="selectOption(i)"></ion-checkbox>
+    <ion-label class="labelwrap">{{inputdata.title}}</ion-label>
+</ion-row>
+<ion-col no-padding class="instructions-container">
+  <div class="instructions">{{inputdata.instructions}}</div>
+</ion-col>
+
+<!-- todo: figure out disabled issue on template-->
+
+<!--<ion-item *ngIf="(inputdata.inputStyle == InputStyle.dropdown)" class="input-field" >
+  <ion-label floating>{{inputdata.inputTitle}}</ion-label>
+  <ion-input type="text" readonly value="{{choiceText}}" #dropdownInput
+    (focus)="inputFocus()" (blur)="inputBlur()" (mousedown)="inputMousedown()"></ion-input>
+</ion-item>
+<ion-col *ngIf="(inputdata.inputStyle == InputStyle.dropdown) && showDropdown" class="choice-box">
+  <ion-item class="item" *ngFor="let choiceItem of choiceItems; let i = index;">
+    <ion-label class="labelwrap">{{choiceItem.choiceBody}}</ion-label>
+    <ion-checkbox [(ngModel)]="choiceItem.choiceSelected" (ionChange)="selectOption(i)"
+      (touchstart)="itemTouchStart()" (touchend)="itemTouchEnd()"></ion-checkbox>
+  </ion-item>
+</ion-col>-->

@@ -1,0 +1,36 @@
+<ion-header>
+  <app-toolbar [backLabel]="'Back'"
+              layout="ppd"
+              (backClick)="goBack()"></app-toolbar>
+</ion-header>
+
+<ion-content padding class="pin-page" (click)="return;">
+    <div class="title">{{title}}</div>
+    <img class="icon-image" src="assets/images/Pin Icon.svg" />
+      <div class="helper">{{helpText}}</div>
+   <form [formGroup]="authForm" novalidate>
+      <div class="form-container">
+        <ion-item class="input-field">
+          <ion-label floating>{{pinLabel}}</ion-label>
+          <ion-input class="text-input" type="tel" value="" [(ngModel)]="pin" formControlName="pin" required maxlength="6" pattern="[0-9]+" 
+               autocorrect="off" autocapitalize="off" (focus)="focusOut=false" (blur)="focusOut=true"></ion-input>
+        </ion-item> 
+        <p *ngIf="focusOut && authForm.controls.pin.hasError('minlength') && !authForm.controls.pin.hasError('pattern')" class="error-box">{{pinError}}</p>
+        <p [hidden]="!authForm.controls.pin.hasError('pattern')" class="error-box">{{pinError}}</p>
+        <ion-item class="input-field">
+          <ion-label floating>{{pinConfirmationLabel}}</ion-label>
+          <ion-input class="text-input" type="tel" value="" [(ngModel)]="pinConfirm" formControlName="pinConfirm" required maxlength="6" pattern="[0-9]+" autocorrect="off" autocapitalize="off"></ion-input>
+        </ion-item>
+      </div>
+  </form>
+</ion-content>
+
+<ion-footer no-border class="pin-page">
+  <ion-toolbar class="footer">
+    <ion-row class="footer-buttons">
+      <ion-col>
+        <button ion-button no-padding full color="secondary" (click)="unlock()" [disabled]="!(authForm.valid || nextFlow)">{{unlockMessage}}</button>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-footer>

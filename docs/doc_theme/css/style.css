@@ -1,0 +1,143 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700);
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+html
+{
+  font-family: 'Lato', 'Helvetica Neue', 'Source Sans Pro', 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+a {
+  /*color: #0095dd;*/
+  /*color:rgb(37, 138, 175);*/
+  color: #00adf2;
+}
+
+code a:hover {
+  text-decoration: underline;
+}
+
+ul, ol {
+  padding-left: 20px;
+}
+
+ul li {
+  list-style: disc;
+  margin: 4px 0;
+}
+
+ol li {
+  margin: 4px 0;
+}
+
+h1 {
+  margin-bottom: 10px;
+  /*font-size: 34px;*/
+  font-size: 38px;
+  font-weight: 300;
+  /*border-bottom: solid 1px #ddd;*/
+  border-bottom: solid 1px #00adf2;
+}
+
+h2 {
+  margin-top: 24px;
+  margin-bottom: 10px;
+  /*font-size: 20px;*/
+  font-size: 24px;
+  /*border-bottom: solid 1px #ddd;*/
+  border-bottom: solid 1px #00adf2;
+  font-weight: 300;
+}
+
+h3 {
+  position: relative;
+  font-size: 16px;
+  margin-bottom: 12px;
+  background-color: #E2E2E2;
+  padding: 4px;
+  font-weight: 300;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+p {
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+
+.layout-container {
+  /*display: flex;*/
+  /*flex-direction: row;*/
+  /*justify-content: flex-start;*/
+  /*align-items: stretch;*/
+}
+
+.layout-container > header {
+  height: 40px;
+  line-height: 40px;
+  font-size: 16px;
+  padding: 0 10px;
+  margin: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  background-color: white;
+  /*background-color: #fafafa;*/
+  /*background-color: #00adf2;*/
+  top: 0;
+  /*border-bottom: solid 1px #ddd;*/
+  border-bottom: solid 1px #00adf2;
+}
+
+/*           "logo": "./doc_theme/images/parallel6TM-logo.png",*/
+/* .layout-container > header:before {
+  content: ' ';
+  background-image: url('../../../doc_theme/images/parallel6TM-logo.png');
+  padding-left: 115px;
+  padding-right: 5px;
+  background-size: auto 15px;
+  background-repeat: no-repeat;
+} */
+
+.layout-container > header > a:first-child > img{
+  width: 150px !important;
+}
+.layout-container > header > a{
+  margin: 0 5px;
+  color: #888888;
+  /*color: white;*/
+  font-weight: 100;
+}
+
+
+.github-markdown h1,
+.github-markdown h2,
+.github-markdown h3,
+.github-markdown h4,
+.github-markdown h5 {
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: 500;
+  padding: 0;
+}
+
+.github-markdown h1,
+.github-markdown h2 {
+  font-weight: 300;
+}
+
+.github-markdown h1 {
+  font-size: 3em;
+}
+
+.github-markdown h2 {
+  font-size: 2.5em;
+}

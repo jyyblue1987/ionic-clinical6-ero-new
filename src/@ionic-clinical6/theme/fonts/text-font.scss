@@ -1,0 +1,41 @@
+$font_list: (
+    "Gotham": (font_name: Gotham, src: Gotham-Book),
+    "Gotham-Bold": (font_name: Gotham, src: Gotham-Bold, font_weight: bold),
+    "Gotham-Book": (font_name: Gotham-Book, src: Gotham-Book),
+    "Gotham-Medium": (font_name: Gotham-Medium, src: Gotham-Medium),
+    "Gotham-Light": (font_name: Gotham-Light, src: Gotham-Light)
+);
+
+@each $key, $font in $font_list {
+    @font-face {
+        font-family: map-get($font, font_name );
+        src: url("../assets/fonts/#{map-get($font, src)}.otf") format("opentype");
+        font-weight: map-get($font, font_weight);
+    }
+}
+
+// @font-face {
+//     font-family: Gotham;
+//     src: url("../assets/fonts/Gotham-Book.otf") format("opentype");
+// }
+
+// @font-face {
+//     font-family: Gotham;
+//     font-weight: bold;
+//     src: url("../assets/fonts/Gotham-Bold.otf") format("opentype");
+// }
+
+// @font-face {
+//     font-family: Gotham-Book;
+//     src: url("../assets/fonts/Gotham-Book.otf") format("opentype");
+// }
+
+// @font-face {
+//     font-family: Gotham-Medium;
+//     src: url("../assets/fonts/Gotham-Medium.otf") format("opentype");
+// }
+
+// @font-face {
+//     font-family: Gotham-Light;
+//     src: url("../assets/fonts/Gotham-Light.otf") format("opentype");
+// }

@@ -1,0 +1,23 @@
+// @import "../../../../theme/global.scss";
+
+stepinput-file-upload {
+    .remove-icon {
+        font-size: 1.2rem;
+    }
+    .url {
+        text-decoration: underline;
+        font-size: 1.6rem;
+        color: map-get($colors, link-active );
+
+    }
+    .file-container {
+        margin: 5rem 0;
+    }
+    .upload_button {
+        @extend button.light-blue;
+        margin: 4rem auto;
+        width: 100%;
+        font-family: Gotham-Medium;
+        display: block;
+    }
+}

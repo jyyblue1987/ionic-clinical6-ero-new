@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../../../../">
+  <title data-ice="title">src/@ionic-clinical6/core/pages/login-flow/mock.ts | Clinical 6 - JavaScript SDK</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<link rel="stylesheet" href="./inject/css/0-style.css"><meta name="description" content="A JavaScript SDK to use the Clinical6 platform"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="Clinical 6 - JavaScript SDK"><meta property="twitter:description" content="A JavaScript SDK to use the Clinical6 platform"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./" style="display: flex; align-items: center;"><img src="./image/brand_logo.png" style="width:34px;"></a>
+  <a href="./manual/index.html" data-ice="manualHeaderLink">Manual</a>
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/parallel-6/ionic-clinical6"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core">@ionic-clinical6/core</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/clinical6.service.ts~Clinical6Service.html">Clinical6Service</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/ionic-clinical6.module.ts~IonicClinical6.html">IonicClinical6</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/login.service.ts~AppLoginService.html">AppLoginService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/soft-keyboard.service.ts~SoftKeyboardService.html">SoftKeyboardService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/utils.service.ts~UtilsService.html">UtilsService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-CustomComponent">CustomComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-AUTHSTATE">AUTHSTATE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-badges">@ionic-clinical6/core/badges</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/badges/badge-models.ts~AwardedBadge.html">AwardedBadge</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/badges/badge-models.ts~Badge.html">Badge</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/badges/badge-models.ts~likeInfo.html">likeInfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/badges/badges-plugin.module.ts~BadgesPluginModule.html">BadgesPluginModule</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/badges/badges-plugin.service.ts~BadgesPluginService.html">BadgesPluginService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-config">@ionic-clinical6/core/config</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/config/app.config.ts~AppConfig.html">AppConfig</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/config/environment.service.ts~EnvironmentService.html">EnvironmentService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-ediary">@ionic-clinical6/core/ediary</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/ediary/anti-pattern-examples.ts~EdiaryIonicServiceAP.html">EdiaryIonicServiceAP</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/ediary/ediary.service.ts~EdiaryIonicService.html">EdiaryIonicService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-flow-process">@ionic-clinical6/core/flow_process</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow-factory.ts~Flows.html">Flows</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow.service.ts~FlowService.html">FlowService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flows.module.ts~FlowsModule.html">FlowsModule</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-flow-process-flow-inputs">@ionic-clinical6/core/flow_process/flow_inputs</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_inputs/flow-input.model.ts~AppFlowInput.html">AppFlowInput</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_inputs/input-container.component.ts~InputContainerComponent.html">InputContainerComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_inputs/input.model.ts~InputStyle.html">InputStyle</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_inputs/input.model.ts~InputStyleUtil.html">InputStyleUtil</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_inputs/inputs.module.ts~InputsModule.html">InputsModule</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_inputs/stepinput.component.ts~StepInputComponent.html">StepInputComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_inputs/stepinput.directive.ts~StepInputDirective.html">StepInputDirective</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_inputs/stepinput.factory.ts~StepInputFactory.html">StepInputFactory</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_inputs/validation.factory.ts~InputValidationFactory.html">InputValidationFactory</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-ValidationService">ValidationService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-flow-process-flow-inputs-agreement">@ionic-clinical6/core/flow_process/flow_inputs/agreement</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_inputs/agreement/agreement.component.ts~AgreementCheckboxComponent.html">AgreementCheckboxComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-flow-process-flow-inputs-date">@ionic-clinical6/core/flow_process/flow_inputs/date</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_inputs/date/stepinput-date.component.ts~StepInputDateComponent.html">StepInputDateComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-flow-process-flow-inputs-dummy">@ionic-clinical6/core/flow_process/flow_inputs/dummy</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_inputs/dummy/stepinput-dummy.component.ts~StepInputDummyComponent.html">StepInputDummyComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-DUMMY_CONTROL_ACCESSOR">DUMMY_CONTROL_ACCESSOR</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-flow-process-flow-inputs-file-upload">@ionic-clinical6/core/flow_process/flow_inputs/file-upload</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_inputs/file-upload/stepinput-file-upload.component.ts~StepInputFileUploadComponent.html">StepInputFileUploadComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-flow-process-flow-inputs-multi-choice">@ionic-clinical6/core/flow_process/flow_inputs/multi_choice</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_inputs/multi_choice/stepinput-multi_choice.component.ts~StepInputMultiChoiceComponent.html">StepInputMultiChoiceComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-flow-process-flow-inputs-numeric">@ionic-clinical6/core/flow_process/flow_inputs/numeric</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_inputs/numeric/stepinput-numeric.component.ts~StepInputNumericComponent.html">StepInputNumericComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-flow-process-flow-inputs-pipes">@ionic-clinical6/core/flow_process/flow_inputs/pipes</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_inputs/pipes/address.pipe.ts~AddressPrintPipe.html">AddressPrintPipe</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_inputs/pipes/momentdate.pipe.ts~MomentDatePipe.html">MomentDatePipe</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_inputs/pipes/snake-to-title.pipe.ts~SnakeToTitleCasePipe.html">SnakeToTitleCasePipe</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-flow-process-flow-inputs-pre-populated">@ionic-clinical6/core/flow_process/flow_inputs/pre-populated</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_inputs/pre-populated/stepinput-pre-populated.component.ts~StepInputPrePopulatedComponent.html">StepInputPrePopulatedComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-flow-process-flow-inputs-single-choice">@ionic-clinical6/core/flow_process/flow_inputs/single_choice</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_inputs/single_choice/stepinput-single_choice.component.ts~StepInputSingleChoiceComponent.html">StepInputSingleChoiceComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-COUNTRIES">COUNTRIES</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-STATE">STATE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-flow-process-flow-inputs-text">@ionic-clinical6/core/flow_process/flow_inputs/text</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_inputs/text/stepinput-text.component.ts~StepInputTextComponent.html">StepInputTextComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-flow-process-flow-inputs-time">@ionic-clinical6/core/flow_process/flow_inputs/time</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_inputs/time/stepinput-time.component.ts~StepInputTimeComponent.html">StepInputTimeComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-flow-process-flow-steps">@ionic-clinical6/core/flow_process/flow_steps</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_steps/flowstep.ts~FlowStepPage.html">FlowStepPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-flow-process-flow-steps-flow-choice">@ionic-clinical6/core/flow_process/flow_steps/flow-choice</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_steps/flow-choice/flow-choice.ts~FlowChoicePage.html">FlowChoicePage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-flow-process-flow-steps-flow-intro">@ionic-clinical6/core/flow_process/flow_steps/flow-intro</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_steps/flow-intro/flow-intro.ts~FlowIntroPage.html">FlowIntroPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-flow-process-flow-steps-flowstep-help">@ionic-clinical6/core/flow_process/flow_steps/flowstep-help</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_steps/flowstep-help/flowstep-help.ts~FlowStepHelpPage.html">FlowStepHelpPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-DEMOUSERINFO">DEMOUSERINFO</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-flow-process-flow-steps-flowstep-helpcard">@ionic-clinical6/core/flow_process/flow_steps/flowstep-helpcard</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_steps/flowstep-helpcard/flowstep-helpcard.ts~FlowStepHelpCardPage.html">FlowStepHelpCardPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-flow-process-flow-steps-flowstep-signature">@ionic-clinical6/core/flow_process/flow_steps/flowstep-signature</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_steps/flowstep-signature/flowstep-signature.ts~FlowStepSignPage.html">FlowStepSignPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-STATUS_SIGNED">STATUS_SIGNED</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-flow-process-flow-steps-verify-card">@ionic-clinical6/core/flow_process/flow_steps/verify-card</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_steps/verify-card/flowstep-verifycard.ts~FlowStepVerifyCardPage.html">FlowStepVerifyCardPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_steps/verify-card/flowstep-verifycard.ts~VerifyIRBAddress.html">VerifyIRBAddress</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_steps/verify-card/flowstep-verifycard.ts~VerifyIRBContact.html">VerifyIRBContact</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_steps/verify-card/flowstep-verifycard.ts~VerifyLab.html">VerifyLab</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_steps/verify-card/flowstep-verifycard.ts~VerifyLabDirector.html">VerifyLabDirector</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-flow-process-items-verify-card">@ionic-clinical6/core/flow_process/items/verify-card</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/items/verify-card/verify-card.component.ts~VerifyCardComponent.html">VerifyCardComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-menu">@ionic-clinical6/core/menu</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/menu/menu.module.ts~MenuModule.html">MenuModule</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/menu/sliding-menu.ts~SlidingMenu.html">SlidingMenu</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/menu/submenu.ts~SlidingMenuSubCategoryPage.html">SlidingMenuSubCategoryPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-DEBUGMENUITEMS">DEBUGMENUITEMS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-DEMOMENUITEMS">DEMOMENUITEMS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-MenuService">MenuService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-modal">@ionic-clinical6/core/modal</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/modal/help-modal.ts~HelpModalPage.html">HelpModalPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/modal/modal.module.ts~ModalModule.html">ModalModule</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-AlertModalPage">AlertModalPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-pages-about">@ionic-clinical6/core/pages/about</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/about/about.ts~AboutPage.html">AboutPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-pages-admins">@ionic-clinical6/core/pages/admins</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/admins/admins.module.ts~AdminsModule.html">AdminsModule</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/admins/create-new-user.ts~CreateNewUserPage.html">CreateNewUserPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-pages-alerts">@ionic-clinical6/core/pages/alerts</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/alerts/alert.factory.ts~AlertsFactory.html">AlertsFactory</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/alerts/alerts.service.ts~AlertsService.html">AlertsService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/alerts/alerts.ts~AlertGroup.html">AlertGroup</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/alerts/alerts.ts~ViewInfo.html">ViewInfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/alerts/push.service.ts~PushNotification.html">PushNotification</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/alerts/push.service.ts~PushService.html">PushService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-AlertsPage">AlertsPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-DEMO_VIEW_INFO">DEMO_VIEW_INFO</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-pages-appointments">@ionic-clinical6/core/pages/appointments</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/appointments/appointments.module.ts~AppointmentsModule.html">AppointmentsModule</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/appointments/appointments.service.ts~AppointmentsService.html">AppointmentsService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/appointments/appointments.ts~AppointmentsPage.html">AppointmentsPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-DATA">DATA</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-EVENTS">EVENTS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-RECORDS">RECORDS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-pages-appointments-edit">@ionic-clinical6/core/pages/appointments/edit</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/appointments/edit/edit-appointment.ts~EditAppointmentPage.html">EditAppointmentPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-pages-base">@ionic-clinical6/core/pages/base</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/base/base-page.ts~BasePage.html">BasePage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-pages-contact">@ionic-clinical6/core/pages/contact</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/contact/contact.ts~ContactPage.html">ContactPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-pages-faq">@ionic-clinical6/core/pages/faq</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/faq/faq.ts~FAQsPage.html">FAQsPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-pages-glossary">@ionic-clinical6/core/pages/glossary</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/glossary/glossary.ts~GlossaryPage.html">GlossaryPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-pages-login">@ionic-clinical6/core/pages/login</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/login/login.ts~LoginPage.html">LoginPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-pages-login-flow">@ionic-clinical6/core/pages/login-flow</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/login-flow/login-flow.ts~LoginFlowPage.html">LoginFlowPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/login-flow/mock.ts~LoginFlow.html">LoginFlow</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-loginFlow">loginFlow</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-pages-login-flow-custom-login-input">@ionic-clinical6/core/pages/login-flow/custom-login-input</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/login-flow/custom-login-input/stepinput-login.ts~CustomStepInputLoginComponent.html">CustomStepInputLoginComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-pages-login-with-pin">@ionic-clinical6/core/pages/login-with-pin</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/login-with-pin/login-with-pin.ts~LoginWithPinPage.html">LoginWithPinPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-pages-pdf-view">@ionic-clinical6/core/pages/pdf-view</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/pdf-view/pdf-view.module.ts~PdfViewModule.html">PdfViewModule</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/pdf-view/pdf-view.ts~PdfViewPage.html">PdfViewPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-pages-pin">@ionic-clinical6/core/pages/pin</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/pin/pin.ts~PinPage.html">PinPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-pages-plain">@ionic-clinical6/core/pages/plain</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/plain/plain-page.ts~PlainPage.html">PlainPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-pages-profile">@ionic-clinical6/core/pages/profile</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/profile/profile.module.ts~ProfileModule.html">ProfileModule</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/profile/profile.service.ts~CompanionModel.html">CompanionModel</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/profile/profile.service.ts~ProfileService.html">ProfileService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-COMPANION_PROFILE_FORM">COMPANION_PROFILE_FORM</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-PATIENT_PROFILE_FORM">PATIENT_PROFILE_FORM</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-pages-profile-companions">@ionic-clinical6/core/pages/profile/companions</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/profile/companions/companions-dashboard.ts~CompanionsDashboardPage.html">CompanionsDashboardPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-pages-profile-user-profile">@ionic-clinical6/core/pages/profile/user-profile</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/profile/user-profile/user-profile.ts~UserProfilePage.html">UserProfilePage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-pages-resources">@ionic-clinical6/core/pages/resources</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/resources/resources.module.ts~ResourcesModule.html">ResourcesModule</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/resources/resources.ts~ResourcesPage.html">ResourcesPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-pages-sign-up">@ionic-clinical6/core/pages/sign-up</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/sign-up/login-email.ts~EnterEmailPage.html">EnterEmailPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/sign-up/login-verify-code.ts~VerifyCodePage.html">VerifyCodePage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-pages-simple-title-text">@ionic-clinical6/core/pages/simple-title-text</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/simple-title-text/simple-title-text-page.ts~SimpleTitleTextPage.html">SimpleTitleTextPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-toolbar">@ionic-clinical6/core/toolbar</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/toolbar/app-toolbar.module.ts~AppToolbarModule.html">AppToolbarModule</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-AppToolbar">AppToolbar</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__param">__param</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-translator">@ionic-clinical6/core/translator</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/translator/translator.module.ts~TranslatorModule.html">TranslatorModule</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/translator/translator.service.ts~TranslatorService.html">TranslatorService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-tutorial">@ionic-clinical6/core/tutorial</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/tutorial/tutorial-modal.ts~TutorialModalPage.html">TutorialModalPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/tutorial/tutorial.module.ts~TutorialModule.html">TutorialModule</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/tutorial/tutorial.service.ts~TutorialService.html">TutorialService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-plugins-bluetooth">@ionic-clinical6/plugins/bluetooth</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/plugins/bluetooth/ble.service.ts~BLEService.html">BLEService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/plugins/bluetooth/bluetooth-characteristic.model.ts~BluetoothCharacteristic.html">BluetoothCharacteristic</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/plugins/bluetooth/bluetooth.factory.ts~BluetoothFactory.html">BluetoothFactory</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/plugins/bluetooth/bluetooth.module.ts~BluetoothModule.html">BluetoothModule</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/plugins/bluetooth/bluetooth.service.ts~BluetoothService.html">BluetoothService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-createMask">createMask</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getCanonicalUUID">getCanonicalUUID</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getCharacteristicUUID">getCharacteristicUUID</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getDescriptorUUID">getDescriptorUUID</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getKeyFromValue">getKeyFromValue</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getServiceUUID">getServiceUUID</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-bluetoothCharacteristics">bluetoothCharacteristics</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-bluetoothDescriptors">bluetoothDescriptors</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-bluetoothServices">bluetoothServices</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-plugins-bluetooth-devices">@ionic-clinical6/plugins/bluetooth/devices</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/plugins/bluetooth/devices/bluetooth-device.model.ts~BluetoothDevice.html">BluetoothDevice</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/plugins/bluetooth/devices/fora-glucometer.model.ts~ForaGlucometer.html">ForaGlucometer</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-plugins-calendar">@ionic-clinical6/plugins/calendar</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/plugins/calendar/calendar.component.ts~CalendarComponent.html">CalendarComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/@ionic-clinical6/core/pages/login-flow/mock.ts</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/* tslint:disable */
+
+import { Flow, FlowStep } from &apos;clinical6&apos;;
+
+/**
+ * The Login Flow extends the Flow Model, adds new helper attributes and resets the default values by avoiding to send any transition 
+ * and allowing to use mock flows. For making the code more user-friedly and flexible we tried to keep as much as possible the same String values for
+ * following properties: id, callback, input.id
+ *
+ * @extends {FlowModel}
+ * Flow Step properties
+ * @property {FlowStep} first                           - The first step if the first_step id exists
+ * @property {String|Number} first_step                 - The id corresponding to the first step in the flow.
+ * @property {String|Number} id                         - The flow id (inherited)
+ * @property {String} name                              - The name of the flow  (inherited)
+ * @property {Number} total                             - The total number of steps in the flow (inherited)
+ * @property {String} separator                         - Adds a &apos;line&apos; or a &apos;space&apos; separator between divs. It is valid also for an input to divide
+ *                                                        the body(text) from the instructions(text)
+ * @property {Object} toolbar                           - Used to set different toolbar layouts
+ * @property {String} toolbar.title                     - Uses the toolbar &apos;title&apos; layout: Center Text Title + Back Arrow  + Back Label 
+ * @property {boolean} toolbar.logo                     - Uses the toolbar &apos;logo&apos; layout: Company Logo centered + back arrow + back Label 
+ * @property {Object} alerts                            - Object that maps different popup error or warning to show on the App, using the Alert key
+ *                                                        and the title, message and buttons properties to customize the Alert (also works with Translator Service).
+ *                                                        Depending of the Alert to show the following default keys must be used:
+ *                                                          1. account disabled -&gt; &quot;disabled&quot; key
+ *                                                          2. invalid code/email/pin -&gt; &quot;invalid&quot; key
+ *                                                          3. pins code mismatch -&gt; &quot;pins_mismatch&quot; key
+ *                                                          4. app/device registration error -&gt; &quot;registration&quot; key
+ *                                                          5. alert for pin reset -&gt; &quot;reset_pin&quot; key
+ * @property {String} input.id                          - The id corresponding to the input. Depending of the page to show the following default values must be used:
+ *                                                          1. &quot;check-email&quot; screen -&gt; &quot;email&quot; id for email form
+ *                                                          2. &quot;check-code&quot; screen -&gt; &quot;code&quot; id for verification-code form
+ *                                                          3. &quot;check-pin&quot; screen -&gt; &quot;email_sent&quot; id for pin/password form
+ *                                                          4. &quot;forgot-pin&quot; screen -&gt; &quot;email_sent&quot; id for email form (forgot pin case)
+ *                                                          5. &quot;reset-pin&quot; screen -&gt; &quot;activation_code&quot; id for activation-code form (forgot pin case)
+ *                                                          6. &quot;reset-pin&quot; screen -&gt; &quot;reset_pin&quot; id for pin form (forgot pin case)
+ *                                                          7. &quot;reset-pin&quot; screen -&gt; &quot;confirm_reset_pin&quot; id for confirm-pin form (forgot pin case)
+ *                                                          8. &quot;create-pin&quot; screen -&gt; &quot;new_pin&quot; id for pin form (create pin case)
+ *                                                          9. &quot;create-pin&quot; screen -&gt; &quot;confirm_new_pin&quot; id for confirm-pin form (create pin case)
+ * @property {String} input.question_type               - The question_type corresponding to the input. Depending of the form to show the following default values must be used:
+ *                                                          1. email form -&gt; &quot;email&quot; question_type-
+ *                                                          2. pin/password form -&gt; &quot;pin&quot; question_type
+ *                                                          3. code form -&gt; &quot;code&quot; question_type
+ * @property {String} input.style                       - The style corresponding to the input. Depending of the form to show the following default values must be used:
+ *                                                          1. email form -&gt; &quot;email&quot; style
+ *                                                          1. pin/code form -&gt; &quot;password&quot; style
+ * @property {Object} input.validation_details          - Any further validation information
+ * @property {Number} input.validation_details.min      - Number of minimum values to use. Default to 6 for a pin/password input and 
+ *                                                        8 for a verification/activation-code input
+ * @property {Number} input.validation_details.max      - Number of maximum values to use. Default to 6 for a pin/password input and 
+ *                                                        8 for a verification/activation-code input
+ * @property {Object} input.attribute                   - Custom attributes for UI improvements
+ * @property {String} input.attribute.separator         - Adds a &apos;line&apos; or a &apos;space&apos; separator between divs (for input form)
+ * @property {String} input.attribute.link_button       - Used to add a link button under the input form. It must be equal to the button_name property
+ * 
+ * Flow Step - Button properties
+ * @property {boolean} capture                          - It must be false to avoid transition errors
+ * @property {String} callback                          - Callback to use if the button is clicked. A custom callback can be implemented extending the LoginFlowPage and
+ *                                                        using any string other than the following:
+ *                                                          1. &quot;checkEmail&quot; -&gt; Callback to check registration status of the user
+ *                                                          2. &quot;checkCode&quot; -&gt; Callback to check the verification code and call the &apos;checkCodeSuccess&apos; callback in case of success
+ *                                                          3. &quot;checkPin&quot; -&gt; Callback to start the login procedure and call the &apos;loginSuccess&apos; callback in case of success
+ *                                                          4. &quot;forgotPin&quot; -&gt; Callback to start the pin/password reset procedure
+ *                                                          5. &quot;resetPin&quot; -&gt; Callback to reset the pin/password and call the &apos;loginSuccess&apos; callback in case of success
+ *                                                          6. &quot;createPin&quot; -&gt; Callback to create a new Pin and call the &apos;createPinSuccess&apos; callback in case of success
+ * @property {boolean} input.attribute.is_link_button   - Necessary to understand that the button is a link and not a footer button or a special button
+ * 
+ * @example &lt;caption&gt;Login Flow Step example&lt;/caption&gt;
+ * {
+ *   &apos;id&apos;: &apos;check-pin&apos;,
+ *   &apos;title&apos;: &apos;Enter your 6 digit PIN&apos;,
+ *   &apos;description&apos;: null,
+ *   &apos;rich_description&apos;: null,
+ *   &apos;separator&apos;: null, 
+ *   &apos;content_type&apos;: &apos;check_pin&apos;,
+ *   &apos;image&apos;: null,
+ *   &apos;toolbar&apos;: {
+ *     &apos;logo&apos;: null,
+ *     &apos;title&apos;: &apos;Log In&apos;
+ *   },
+ *   &apos;alerts&apos;: {
+ *     &apos;reset_pin&apos;: {
+ *         &apos;title&apos;: &apos;Reset Password&apos;,
+ *         &apos;message&apos;: &apos;Would you like to reset &lt;br&gt;your 6 digit Password?&apos;,
+ *         &apos;buttons&apos;: [
+ *           {
+ *             &apos;text&apos;: &apos;Cancel&apos;,
+ *             &apos;handler&apos;: false
+ *           },
+ *           {
+ *             &apos;text&apos;: &apos;OK&apos;,
+ *             &apos;handler&apos;: true
+ *           }
+ *         ]
+ *     },
+ *     &apos;invalid&apos;: {
+ *         &apos;title&apos;: &apos;Invalid PIN&apos;,
+ *         &apos;message&apos;: &apos;Please check your credentials and try again&apos;,
+ *         &apos;buttons&apos;: null
+ *     },
+ *     &apos;registration&apos;: {
+ *         &apos;title&apos;: &apos;Application error&apos;,
+ *         &apos;message&apos;: &apos;Something went wrong, please reinstall your app.&apos;,
+ *         &apos;buttons&apos;: null
+ *     }
+ *   },
+ *   &apos;inputs&apos;: [
+ *       {
+ *         &apos;id&apos;: &apos;pin&apos;,
+ *         &apos;storage_attribute&apos;: &apos;pin&apos;,
+ *         &apos;title&apos;: &apos;Enter your 6 digit PIN&apos;,
+ *         &apos;body&apos;: null,
+ *         &apos;question_type&apos;: &apos;pin&apos;,
+ *         &apos;style&apos;: &apos;password&apos;, 
+ *         &apos;required&apos;: true,
+ *         &apos;validation_details&apos;: { min: 6, max: 6},
+ *         &apos;instructions&apos;: null,
+ *         &apos;choice_list&apos;: [],
+ *         &apos;locked&apos;: null,
+ *         &apos;attribute&apos; : {
+ *           &apos;link_button&apos;: &apos;Forgot Pin&apos;,
+ *           &apos;separator&apos;: &apos;space&apos;
+ *         }                  
+ *       }
+ *     ],
+ *     &apos;paths&apos;: [
+ *         {
+ *           &apos;button_name&apos;: &apos;Forgot Pin&apos;,
+ *           &apos;callback&apos;: null,
+ *           &apos;capture&apos;: false,
+ *           &apos;last&apos;: true,
+ *           &apos;is_link_button&apos;: true,
+ *           &apos;steps&apos;: [
+ *               {
+ *                   &apos;step&apos;: &apos;forgot-pin&apos;,
+ *                   &apos;conditions&apos;: []
+ *               }
+ *           ]
+ *         },
+ *         {
+ *           &apos;button_name&apos;: &apos;LOG IN&apos;,
+ *           &apos;callback&apos;: &apos;checkPin&apos;,
+ *           &apos;capture&apos;: false,
+ *           &apos;last&apos;: false,
+ *           &apos;steps&apos;: [
+ *             {
+ *               &apos;step&apos;: &apos;forgot-pin&apos;,
+ *               &apos;conditions&apos;: [
+ *                   {criteria: &quot;failed_logins&quot;, operator: &quot;&gt;=&quot;, value: &quot;3&quot;, source: &quot;profile&quot;}
+ *               ]
+ *             },
+ *             {
+ *               &apos;step&apos;: null,
+ *               &apos;conditions&apos;: [
+ *                   {criteria: &quot;failed_logins&quot;, operator: &quot;&lt;&quot;, value: &quot;3&quot;, source: &quot;profile&quot;}
+ *               ]
+ *             }
+ *           ]
+ *         }
+ *     ]
+ * }
+ **/
+class LoginFlow extends Flow{
+    constructor(response = {}) {
+        super(response);
+        this.disableTransitions();
+    }
+    /**
+     * This allows to use the Login Flow as a mock flow, disabling any transition
+     */
+    disableTransitions() {
+      this[&apos;status&apos;] = null;
+      this[&apos;transition&apos;] = null;
+      this[&apos;complete&apos;] = () =&gt; {
+        return new Promise((resolve, reject) =&gt; {
+            this[&apos;reset&apos;]();
+            resolve(&apos;flow completed&apos;);
+        });
+      };
+    }
+
+    /**
+     * @param {String} id    - Flow Step id
+     * @return {FlowStep}    - Retrieves the Flow Step with a specific &quot;id&quot; by filtering the Flow Steps list of the Login Flow
+     * 
+     * @example 
+     * let flow = new LoginFlow({...});
+     * let step = flow.getStepbyId(&apos;create-pin&apos;);
+    **/
+    getStepbyId(id) {
+        return this &amp;&amp; (this[&apos;steps&apos;].find(step =&gt; {return (step.id == id)}) || this[&apos;first&apos;]);
+    }
+
+    /**
+     * Sets the Flow Step with a specific &quot;id&quot; as first Flow Step of the Login Flow
+     * @param {String} id    - Flow Step id
+     * 
+     * @example 
+     * let flow = new LoginFlow({...});
+     * let step = flow.setFirstStep(&apos;create-pin&apos;);
+    **/
+    setFirstStep(id) {
+        this &amp;&amp; (this[&apos;first_step&apos;] = id) &amp;&amp; (this[&apos;first&apos;] = this.getStepbyId(id));
+    }
+}
+
+/**
+ * @type {LoginFlow} loginFlow -The following loginFlow can be imported  in any Project to build the Login Section
+ * 
+ * NOTE: the default properties flow_process_id, input.validation_expression, input.max, input.max_label, input.min, input.min_label,
+ *       input.labels[], input.interval, etc. are unnecessary so will be omitted.
+**/
+const loginFlow = new LoginFlow({
+  &quot;id&quot;: &quot;login-flow&quot;,
+    &quot;steps&quot;: [
+        {
+          &apos;id&apos;: &apos;check-email&apos;,
+          &apos;title&apos;: null,
+          &apos;description&apos;: null,
+          &apos;rich_description&apos;: null,
+          &apos;separator&apos;: null,
+          &apos;content_type&apos;: &apos;check_email&apos;,
+          &apos;image&apos;: null,
+          &apos;toolbar&apos;: {
+            &apos;logo&apos;: false,
+            &apos;title&apos;: &apos;Log In&apos;
+          },
+          &apos;alerts&apos;: {
+              &apos;disabled&apos;: {
+                  &apos;title&apos;: &apos;Account Disabled&apos;,
+                  &apos;message&apos;: &apos;Your account has been disabled. Please contact your System Administrator.&apos;,
+                  &apos;buttons&apos;: [
+                    {
+                      &apos;text&apos;: null,
+                      &apos;handler&apos;: null
+                    }
+                  ]
+              },
+              &apos;invalid&apos;: {
+                  &apos;title&apos;: &apos;Invalid Email&apos;,
+                  &apos;message&apos;: &apos;The entered Email is not valid. Please verify and try again.&apos;,
+                  &apos;buttons&apos;: [
+                    {
+                      &apos;text&apos;: null,
+                      &apos;handler&apos;: null
+                    }
+                  ]
+              },
+              &apos;registration&apos;: {
+                  &apos;title&apos;: &apos;App Registration Error&apos;,
+                  &apos;message&apos;: &apos;Unable to register the application. Please get in touch with your support contact, and try again.&apos;,
+                  &apos;buttons&apos;: [
+                    {
+                      &apos;text&apos;: null,
+                      &apos;handler&apos;: null
+                    }
+                  ]
+              }
+          },
+          &apos;inputs&apos;: [
+            {
+              &apos;id&apos;: &apos;email&apos;,
+              &apos;storage_attribute&apos;: &apos;email&apos;,
+              &apos;title&apos;: &apos;Email Address&apos;,
+              &apos;body&apos;: &apos;Enter Your Previously Registered Email Address.&apos;,
+              &apos;question_type&apos;: &apos;email&apos;,
+              &apos;style&apos;: &apos;email&apos;, 
+              &apos;required&apos;: true,
+              &apos;validation_details&apos;: null,
+              &apos;instructions&apos;: null,
+              &apos;choice_list&apos;: [],
+              &apos;locked&apos;: null,
+              &apos;attribute&apos; : {
+                &apos;separator&apos;: &apos;space&apos;
+              }  
+            }
+          ],
+          &apos;paths&apos;: [
+            {
+              &apos;button_name&apos;: &apos;NEXT&apos;,
+              &apos;capture&apos;: false,
+              &apos;callback&apos;: &apos;checkEmail&apos;,
+              &apos;last&apos;: false,
+              &apos;steps&apos;: [
+                  {
+                    &apos;step&apos;: &apos;check-pin&apos;,
+                    &apos;conditions&apos;: [
+                        {criteria: &quot;check-email&quot;, operator: &quot;=&quot;, value: &quot;pin&quot;, source: &quot;profile&quot;}
+                    ]
+                  },
+                  {
+                    &apos;step&apos;: &apos;check-code&apos;,
+                    &apos;conditions&apos;: [
+                        {criteria: &quot;check-email&quot;, operator: &quot;=&quot;, value: &quot;code&quot;, source: &quot;profile&quot;}
+                    ]
+                  }
+              ]
+            }
+          ]
+        },
+        {
+          &apos;id&apos;: &apos;check-code&apos;,
+          &apos;title&apos;: null,
+          &apos;description&apos;: null,
+          &apos;rich_description&apos;: null,
+          &apos;separator&apos;: null, 
+          &apos;content_type&apos;: &apos;check_code&apos;,
+          &apos;image&apos;: null,
+          &apos;toolbar&apos;: {
+            &apos;logo&apos;: true,
+            &apos;title&apos;: &apos;&apos;,
+          },
+          &apos;alerts&apos;: {
+            &apos;invalid&apos;: {
+                &apos;title&apos;: &apos;Invalid Verification Code&apos;,
+                &apos;message&apos;: &apos;Please Verify Your Code and try again.&apos;,
+                &apos;buttons&apos;: null
+            }
+          },
+          &apos;inputs&apos;: [
+            {
+              &apos;id&apos;: &apos;code&apos;,
+              &apos;storage_attribute&apos;: &apos;code&apos;,
+              &apos;title&apos;: &apos;Enter your Verification&apos;,
+              &apos;body&apos;: &apos;Enter your Verification Code&apos;,
+              &apos;question_type&apos;: &apos;code&apos;,
+              &apos;style&apos;: &apos;password&apos;, 
+              &apos;required&apos;: true,
+              &apos;validation_details&apos;: { min: 8, max: 8},
+              &apos;instructions&apos;: &apos;Enter the 8 digit Verification Code we sent to your registered email&apos;,
+              &apos;choice_list&apos;: [],
+              &apos;locked&apos;: null,
+              &apos;attribute&apos; : {
+                &apos;separator&apos;: &apos;line&apos;
+              }   
+            }
+          ],
+          &apos;paths&apos;: [
+            {
+              &apos;button_name&apos;: &apos;UNLOCK APP&apos;,
+              &apos;capture&apos;: false,
+              &apos;callback&apos;: &apos;checkCode&apos;,
+              &apos;last&apos;: true,
+              &apos;steps&apos;: [
+                {
+                  &apos;step&apos;: null,
+                  &apos;conditions&apos;: []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          &apos;id&apos;: &apos;check-pin&apos;,
+          &apos;title&apos;: &apos;Enter your 6 digit PIN&apos;,
+          &apos;description&apos;: null,
+          &apos;rich_description&apos;: null,
+          &apos;separator&apos;: null, 
+          &apos;content_type&apos;: &apos;check_pin&apos;,
+          &apos;image&apos;: null,
+          &apos;toolbar&apos;: {
+            &apos;logo&apos;: null,
+            &apos;title&apos;: &apos;Log In&apos;
+          },
+          &apos;alerts&apos;: {
+            &apos;reset_pin&apos;: {
+              &apos;title&apos;: &apos;Reset Password&apos;,
+              &apos;message&apos;: &apos;Would you like to reset &lt;br&gt;your 6 digit Password?&apos;,
+              &apos;buttons&apos;: [
+                {
+                  &apos;text&apos;: &apos;Cancel&apos;,
+                  &apos;handler&apos;: false
+                },
+                {
+                  &apos;text&apos;: &apos;OK&apos;,
+                  &apos;handler&apos;: true
+                }
+              ]
+            },
+            &apos;invalid&apos;: {
+                &apos;title&apos;: &apos;Invalid PIN&apos;,
+                &apos;message&apos;: &apos;Please check your credentials and try again&apos;,
+                &apos;buttons&apos;: null
+            },
+            &apos;registration&apos;: {
+                &apos;title&apos;: &apos;Application error&apos;,
+                &apos;message&apos;: &apos;Something went wrong, please reinstall your app.&apos;,
+                &apos;buttons&apos;: null
+            }
+          },
+          &apos;inputs&apos;: [
+              {
+                &apos;id&apos;: &apos;pin&apos;,
+                &apos;storage_attribute&apos;: &apos;pin&apos;,
+                &apos;title&apos;: &apos;Enter your 6 digit PIN&apos;,
+                &apos;body&apos;: null,
+                &apos;question_type&apos;: &apos;pin&apos;,
+                &apos;style&apos;: &apos;password&apos;, 
+                &apos;required&apos;: true,
+                &apos;validation_details&apos;: { min: 6, max: 6},
+                &apos;instructions&apos;: null,
+                &apos;choice_list&apos;: [],
+                &apos;locked&apos;: null,
+                &apos;attribute&apos; : {
+                  &apos;link_button&apos;: &apos;Forgot Pin&apos;,
+                  &apos;separator&apos;: &apos;space&apos;
+                }                  
+              }
+            ],
+            &apos;paths&apos;: [
+                {
+                  &apos;button_name&apos;: &apos;Forgot Pin&apos;,
+                  &apos;callback&apos;: null,
+                  &apos;capture&apos;: false,
+                  &apos;last&apos;: true,
+                  &apos;is_link_button&apos;: true,
+                  &apos;steps&apos;: [
+                      {
+                          &apos;step&apos;: &apos;forgot-pin&apos;,
+                          &apos;conditions&apos;: []
+                      }
+                  ]
+                },
+                {
+                  &apos;button_name&apos;: &apos;LOG IN&apos;,
+                  &apos;callback&apos;: &apos;checkPin&apos;,
+                  &apos;capture&apos;: false,
+                  &apos;last&apos;: false,
+                  &apos;steps&apos;: [
+                    {
+                      &apos;step&apos;: &apos;forgot-pin&apos;,
+                      &apos;conditions&apos;: [
+                          {criteria: &quot;failed_logins&quot;, operator: &quot;&gt;=&quot;, value: &quot;3&quot;, source: &quot;profile&quot;}
+                      ]
+                    },
+                    {
+                      &apos;step&apos;: null,
+                      &apos;conditions&apos;: [
+                          {criteria: &quot;failed_logins&quot;, operator: &quot;&lt;&quot;, value: &quot;3&quot;, source: &quot;profile&quot;}
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              &apos;id&apos;: &apos;forgot-pin&apos;,
+              &apos;title&apos;: &apos;Enter Your Email Address&apos;,
+              &apos;description&apos;: &apos;We can send an activation code to your email to reset your PIN.&lt;br&gt;Please enter your email address and tap the send button below.&apos;,
+              &apos;rich_description&apos;: null,
+              &apos;separator&apos;: null,
+              &apos;content_type&apos;: &apos;check_email&apos;,
+              &apos;image&apos;: null,
+              &apos;toolbar&apos;: {
+                &apos;logo&apos;: null,
+                &apos;title&apos;: &apos;Log In&apos;
+              },
+              &apos;alerts&apos;: {
+                &apos;invalid&apos;: {
+                    &apos;title&apos;: &apos;Invalid Email&apos;,
+                    &apos;message&apos;: &apos;The entered Email is not valid. Please verify and try again.&apos;,
+                    &apos;buttons&apos;: null
+                },
+                &apos;registration&apos;: {
+                    &apos;title&apos;: &apos;App Registration Error&apos;,
+                    &apos;message&apos;: &apos;Unable to register the application. Please get in touch with your support contact, and try again.&apos;,
+                    &apos;buttons&apos;: null
+                }
+              },
+              &apos;inputs&apos;: [
+                {
+                  &apos;id&apos;: &apos;email_sent&apos;,
+                  &apos;storage_attribute&apos;: &apos;email_sent&apos;,
+                  &apos;title&apos;: &apos;Email Address&apos;,
+                  &apos;body&apos;: null,
+                  &apos;question_type&apos;: &apos;email&apos;,
+                  &apos;style&apos;: &apos;email&apos;, 
+                  &apos;required&apos;: true,
+                  &apos;validation_details&apos;: null,
+                  &apos;instructions&apos;: null,
+                  &apos;choice_list&apos;: [],
+                  &apos;locked&apos;: null,
+                  &apos;attribute&apos; : {
+                    &apos;separator&apos;: &apos;space&apos;
+                  }  
+                }
+              ],
+              &apos;paths&apos;: [
+                {
+                  &apos;button_name&apos;: &apos;SEND&apos;,
+                  &apos;capture&apos;: false,
+                  &apos;callback&apos;: &apos;forgotPin&apos;,
+                  &apos;last&apos;: false,
+                  &apos;steps&apos;: [
+                      {
+                        &apos;step&apos;: &apos;email-sent&apos;,
+                        &apos;conditions&apos;: []
+                      }
+                  ]
+                }
+              ]
+            },
+            {
+              &apos;id&apos;: &apos;email-sent&apos;,
+              &apos;title&apos;: &apos;Please Check Your Email&apos;,
+              &apos;description&apos;: &apos;If the email entered is a valid registerd email, a PIN/Password reset code will be sent to you shortly.&apos;,
+              &apos;rich_description&apos;: null,
+              &apos;separator&apos;: null,
+              &apos;content_type&apos;: &apos;check_email&apos;,
+              &apos;image&apos;: null,
+              &apos;toolbar&apos;: {
+                &apos;logo&apos;: null,
+                &apos;title&apos;: &apos;Log In&apos;
+              },
+              &apos;alerts&apos;: null,
+              &apos;inputs&apos;: [],
+              &apos;paths&apos;: [
+                {
+                  &apos;button_name&apos;: &apos;CONTINUE&apos;,
+                  &apos;capture&apos;: false,
+                  &apos;callback&apos;: null,
+                  &apos;last&apos;: false,
+                  &apos;steps&apos;: [
+                      {
+                        &apos;step&apos;: &apos;reset-pin&apos;,
+                        &apos;conditions&apos;: []
+                      }
+                  ]
+                }
+              ]
+            },
+            {
+              &apos;id&apos;: &apos;reset-pin&apos;,
+              &apos;title&apos;: null,
+              &apos;description&apos;: null,
+              &apos;rich_description&apos;: null,
+              &apos;separator&apos;: &apos;space&apos;, 
+              &apos;content_type&apos;: &apos;reset_pin&apos;,
+              &apos;image&apos;: null,
+              &apos;toolbar&apos;: {
+                &apos;logo&apos;: null,
+                &apos;title&apos;: &apos;Log In&apos;
+              },
+              &apos;alerts&apos;: {
+                &apos;invalid&apos;: {
+                  &apos;title&apos;: &apos;Invalid Activation Code&apos;,
+                  &apos;message&apos;: &apos;An invalid activation code has been entered. Please try again.&apos;,
+                  &apos;buttons&apos;: null
+                },
+                &apos;pins_mismatch&apos;: {
+                    &apos;title&apos;: &apos;PIN codes Mismatch&apos;,
+                    &apos;message&apos;: &apos;PIN codes do not match, please verify your input.&apos;,
+                    &apos;buttons&apos;: null
+                },
+                &apos;registration&apos;: {
+                    &apos;title&apos;: &apos;Device Registration Error&apos;,
+                    &apos;message&apos;: &apos;Unable to Reset Password. Please get in touch with your support contact, and try again.&apos;,
+                    &apos;buttons&apos;: null
+                }
+              },
+              &apos;inputs&apos;: [
+                {
+                  &apos;id&apos;: &apos;activation_code&apos;,
+                  &apos;storage_attribute&apos;: &apos;activation_code&apos;,
+                  &apos;title&apos;: &apos;Activation Code&apos;,
+                  &apos;body&apos;: &apos;Enter your Activation Code&apos;,
+                  &apos;question_type&apos;: &apos;code&apos;,
+                  &apos;style&apos;: &apos;password&apos;, 
+                  &apos;required&apos;: true,
+                  &apos;validation_details&apos;: { min: 8, max: 8},
+                  &apos;instructions&apos;: null,
+                  &apos;choice_list&apos;: [],
+                  &apos;locked&apos;: null,
+                  &apos;attribute&apos; : {
+                      &apos;link_button&apos;: &apos;If you have not received your activation code tap here to re-enter your email.&apos;,
+                      &apos;separator&apos;: &apos;space&apos;
+                  }
+                },
+                {
+                    &apos;id&apos;: &apos;reset_pin&apos;,
+                    &apos;storage_attribute&apos;: &apos;reset_pin&apos;,
+                    &apos;title&apos;: &apos;Create A New 6 Digit PIN&apos;,
+                    &apos;body&apos;: &apos;Create A New 6 Digit PIN&apos;,
+                    &apos;question_type&apos;: &apos;pin&apos;,
+                    &apos;style&apos;: &apos;password&apos;, 
+                    &apos;required&apos;: true,
+                    &apos;validation_details&apos;: { min: 6, max: 6},
+                    &apos;instructions&apos;: &apos;Please be sure to remember this information. You will be asked to enter your PIN next time you enter the app.&apos;,
+                    &apos;choice_list&apos;: [],
+                    &apos;locked&apos;: null,
+                    &apos;attribute&apos; : {
+                      &apos;separator&apos;: &apos;line&apos;
+                    }
+                  },
+                  {
+                    &apos;id&apos;: &apos;confirm_reset_pin&apos;,
+                    &apos;storage_attribute&apos;: &apos;confirm_reset_pin&apos;,
+                    &apos;title&apos;: &apos;Enter your 6 digit PIN&apos;,
+                    &apos;body&apos;: null,
+                    &apos;question_type&apos;: &apos;pin&apos;,
+                    &apos;style&apos;: &apos;password&apos;, 
+                    &apos;required&apos;: true,
+                    &apos;validation_details&apos;: { min: 6, max: 6},
+                    &apos;instructions&apos;: null,
+                    &apos;choice_list&apos;: [],
+                    &apos;locked&apos;: null,
+                  }
+              ],
+              &apos;paths&apos;: [
+                {
+                  &apos;button_name&apos;: &apos;If you have not received your activation code tap here to re-enter your email.&apos;,
+                  &apos;callback&apos;: null,
+                  &apos;capture&apos;: false,
+                  &apos;last&apos;: false,
+                  &apos;is_link_button&apos;: true,
+                  &apos;steps&apos;: [
+                      {
+                          &apos;step&apos;: &apos;check-email&apos;,
+                          &apos;conditions&apos;: []
+                      }
+                  ]
+                },
+                {
+                  &apos;button_name&apos;: &apos;LOG IN&apos;,
+                  &apos;callback&apos;: &apos;resetPin&apos;,
+                  &apos;capture&apos;: false,
+                  &apos;color&apos;: &apos;cyan&apos;,
+                  &apos;last&apos;: true,
+                  &apos;steps&apos;: [
+                      {
+                        &apos;step&apos;: null,
+                        &apos;conditions&apos;: []
+                      }
+                  ]
+                }
+              ]
+            },
+            {
+              &apos;id&apos;: &apos;create-pin&apos;,
+              &apos;title&apos;: null,
+              &apos;description&apos;: null,
+              &apos;rich_description&apos;: null,
+              &apos;separator&apos;: null, 
+              &apos;content_type&apos;: &apos;create_pin&apos;,
+              &apos;image&apos;: null,
+              &apos;toolbar&apos;: {
+                &apos;logo&apos;: null,
+                &apos;title&apos;: &apos;Log In&apos;
+              },
+              &apos;alerts&apos;: {
+                &apos;pins_mismatch&apos;: {
+                  &apos;title&apos;: &apos;PIN codes Mismatch&apos;,
+                  &apos;message&apos;: &apos;PIN codes do not match, please verify your input.&apos;,
+                  &apos;buttons&apos;: null
+                },
+                &apos;invalid&apos;: {
+                  &apos;title&apos;: &apos;Invalid PIN&apos;,
+                  &apos;message&apos;: &apos;Please check your credentials and try again&apos;,
+                  &apos;buttons&apos;: null
+                }
+              },
+              &apos;inputs&apos;: [
+                {
+                  &apos;id&apos;: &apos;new_pin&apos;,
+                  &apos;storage_attribute&apos;: &apos;new_pin&apos;,
+                  &apos;title&apos;: &apos;Enter a 6 digit PIN&apos;,
+                  &apos;body&apos;: &apos;Create a 6 digit PIN&apos;,
+                  &apos;question_type&apos;: &apos;pin&apos;,
+                  &apos;style&apos;: &apos;password&apos;, 
+                  &apos;required&apos;: true,
+                  &apos;validation_details&apos;: { min: 6, max: 6},
+                  &apos;instructions&apos;: &apos;Please be sure to remember this information. You will be asked to enter this information the next time you enter the app.&apos;,
+                  &apos;choice_list&apos;: [],
+                  &apos;locked&apos;: null,
+                  &apos;attribute&apos; : {
+                    &apos;separator&apos;: &apos;line&apos;
+                  }
+                },
+                {
+                  &apos;id&apos;: &apos;confirm_new_pin&apos;,
+                  &apos;storage_attribute&apos;: &apos;confirm_new_pin&apos;,
+                  &apos;title&apos;: &apos;Confirm your 6 digit PIN&apos;,
+                  &apos;body&apos;: null,
+                  &apos;question_type&apos;: &apos;pin&apos;,
+                  &apos;style&apos;: &apos;password&apos;, 
+                  &apos;required&apos;: true,
+                  &apos;validation_details&apos;: { min: 6, max: 6},
+                  &apos;instructions&apos;: null,
+                  &apos;choice_list&apos;: [],
+                  &apos;locked&apos;: null,
+                }
+              ],
+              &apos;paths&apos;: [
+                {
+                  &apos;button_name&apos;: &apos;UNLOCK APP&apos;,
+                  &apos;callback&apos;: &apos;createPin&apos;,
+                  &apos;capture&apos;: false,
+                  &apos;last&apos;: true,
+                  &apos;steps&apos;: []
+                }
+              ]
+          }
+    ],
+    &quot;name&quot;: &quot;Login Flow&quot;,
+    &quot;first_step&quot;: &apos;check-email&apos;,
+    &quot;total&quot;: 7
+});
+
+export {loginFlow, LoginFlow};</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

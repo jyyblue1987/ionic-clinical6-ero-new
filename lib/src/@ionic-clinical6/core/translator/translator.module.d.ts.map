@@ -1,0 +1,1 @@
+{"version":3,"names":[],"mappings":"","sources":["src/@ionic-clinical6/core/translator/translator.module.d.ts"],"sourcesContent":["export declare class TranslatorModule {\n}\n"],"file":"translator.module.d.ts"}

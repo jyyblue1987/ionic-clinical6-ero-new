@@ -1,0 +1,92 @@
+contact-page {
+
+    // centering spinner for pages that needs a loader
+    .custom-spinner {
+        margin: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        height: 85px;
+        text-align: center;
+    }
+
+    ion-content {
+        text-align: center;
+
+    }
+    .full-page {
+        margin-top: 3.5rem;
+    }
+
+    img {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+        height: 7rem;
+    }
+
+    .icon {
+        margin-top: 4rem;
+    }
+
+    .buttons {
+        padding-top: 10rem;
+    }
+
+    .page-title {
+        font-family: Arial;
+        font-weight: bold;
+        font-size: 2.1rem;
+        color: #545454;
+        margin: 1rem 0.5rem;
+    }
+
+    .subtitle {
+        font-family: Lato, sans-serif;
+        font-size: 1.7rem;
+        font-weight: bold;
+        margin: 0.5rem;
+        color: #7a7a7a;
+    }
+
+    .bottom-space {
+        // margin-bottom: 2.7rem;
+    }
+    a {
+        text-decoration: none;
+    }
+    .buttons {
+        padding: 1rem 2rem 0 2rem;
+    }
+    .buttons_title {
+        font-size: 2.1rem;
+        margin: 1rem 0 0 0;
+    }
+    button.large-button {
+        border-radius: 5px;
+        height: 5.5rem;
+        font-family: Lato, sans-serif;
+        font-weight: bold;
+        font-size: 1.8rem;
+        // margin: .7rem;
+    }
+  .spinner-overlay {
+    position: fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    animation: fadein 300ms;
+  }
+  @keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+}

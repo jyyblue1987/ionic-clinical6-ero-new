@@ -1,0 +1,76 @@
+alerts-page {
+    ion-content {
+        ion-list {
+            button {
+                height: unset !important;
+                padding: 2.5rem 0 0 1.8rem !important;
+
+                .image-col {
+                    max-width: 15%;
+                    padding-top: 0.1rem;
+                    padding-left: 0;
+                }
+
+                .alert-image {
+                    display: flex;
+                }
+
+                .details-col {
+                    padding: 0;
+                    padding-left: 1rem;
+                }
+
+                .item-icon-container {
+                    font-size: 2.8rem;
+                    display: block;
+                    width: 7rem;
+                    // color: $icon-blue;
+                    padding-top: 0.3rem;
+                }
+                .details {
+                    padding: 0;
+                    text-align: left;
+                    // color: $text-grey2;
+                    font-family: Arial;
+                    white-space: normal;
+                    line-height: 2.2rem;
+                    letter-spacing: -0.05rem;
+                    width: 100%;
+                    font-size: 1.5rem;
+                }
+                .description {
+                    font-size: 1.4rem;
+                }
+                .alert-title-col {
+                    padding: 0;
+                }
+                .title {
+                    font-weight: bold;
+                    text-align: left;
+                    font-size: 1.5rem;
+                }
+                .alert-time-col {
+                    padding: 0;
+                }
+                .button-inner {
+                    border-bottom: 1px solid;
+                    // border-bottom-color: $separator_grey;
+                    padding-bottom: 2rem;
+                }
+                a {
+                    width: 4rem;
+                    height: 4rem;
+                    display: flex ;
+                    align-items: center ;
+                    justify-content: center ;
+                    // color: $text-grey2;
+                }
+                .dismiss-button {
+                    padding-left: 2rem;
+                    padding-top: 2rem;
+                    padding-right: 1rem;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,33 @@
+import { EventEmitter } from '@angular/core';
+import { Platform, NavController } from 'ionic-angular';
+export declare class AppToolbar {
+    platform: Platform;
+    private navCtrl;
+    currentPlatform: string;
+    static defaultBackLabel: string;
+    layout: any;
+    bgColor: any;
+    title: any;
+    backLabel: any;
+    backClick: EventEmitter<{}>;
+    leftBtnLabel: any;
+    leftBtnClick: EventEmitter<{}>;
+    actionHidden: boolean;
+    actionDisabled: boolean;
+    rightLabel: any;
+    infoIconClass: any;
+    alertsIconClass: any;
+    alert: any;
+    actionClick: EventEmitter<{}>;
+    constructor(platform: Platform, navCtrl: NavController);
+    ngOnChanges(): void;
+    backButtonClick(ev: UIEvent): void;
+    leftButtonClick(ev: UIEvent): void;
+    onRightActionClick(): void;
+    displayTextTitle(): boolean;
+    displayLogoTitle(): boolean;
+    displayLeftButton(): boolean;
+    displayBackButton(): boolean;
+    displayAlerts(): boolean;
+    displayAction(): boolean;
+}

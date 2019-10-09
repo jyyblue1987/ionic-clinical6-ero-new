@@ -1,0 +1,1 @@
+{"version":3,"names":[],"mappings":"","sources":["src/@ionic-clinical6/core/config/app-state.enum.d.ts"],"sourcesContent":["export declare enum AppState {\n    start = 0,\n    loggedin = 1,\n    eagreement = 2,\n    registered = 3,\n}\n"],"file":"app-state.enum.d.ts"}

@@ -1,0 +1,41 @@
+// @import "../../../theme/global.scss";
+
+faqs-page {
+    .details {
+        @extend [small-text];
+        height: 0px;
+        border-width: 1px;
+        border-style: solid;
+        border-color: map-get($colors, borders);
+        background-color: map-get($colors, soft-dark-backgnd);
+        margin: 0 0 -2px 0;
+        overflow: hidden;
+        transition: all 200ms;
+        -webkit-transition: all 200ms; /* Safari */
+    }
+    .action-arrow {
+        transition: all 200ms;
+        -webkit-transition: all 200ms; /* Safari */ 
+    }
+    .turned {
+        -ms-transform: rotate(90deg); /* IE 9 */
+        -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+        transform: rotate(90deg);
+    }
+    .spinner-overlay {
+      position: absolute;
+      top:0;
+      bottom:0;
+      left:0;
+      right:0;
+      display: flex;
+      align-items: center;
+      justify-content: center;  
+      background-color: rgba(255, 255, 255, 0.8);
+      animation: fadein 300ms;
+    }
+    @keyframes fadein {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+}

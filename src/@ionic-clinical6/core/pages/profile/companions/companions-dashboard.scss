@@ -1,0 +1,11 @@
+@import '../user-profile/user-profile.scss';
+companions-dashboard-page {
+    @extend user-profile-page;
+
+    ion-content {
+
+        ion-note {
+            margin: 0;
+        }
+    }
+}

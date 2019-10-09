@@ -1,0 +1,12 @@
+<div class="form-container" [formGroup]="subForm" novalidate>   
+  <ion-item button no-padding [class.readonly]="readOnly">
+    <ion-label class="placeholder-label" floating *ngIf="!labelStyle || labelStyle === 'floating'">{{title}}</ion-label>
+    <ion-label class="placeholder-label" stacked *ngIf="labelStyle === 'stacked'">{{title}}</ion-label>
+    <ion-datetime [formControlName]="flowInput.inputId" class="input-{{type}}"
+      [pickerFormat]="displayFormat" [displayFormat]="displayFormat" [min]="minHour" [max]="maxHour"
+       (ionCancel)="focusOut=true" >
+    </ion-datetime>
+  </ion-item>
+  <p *ngIf="getError() && focusOut" class="error-box">{{getError()}}</p>
+  
+</div>

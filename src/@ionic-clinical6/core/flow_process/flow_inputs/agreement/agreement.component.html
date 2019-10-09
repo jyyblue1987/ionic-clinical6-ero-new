@@ -1,0 +1,12 @@
+<div [formGroup]="subForm" novalidate>
+  <ion-row class="choice-container">
+    <ion-checkbox [formControlName]="flowInput.inputId" [(ngModel)]="choiceSelected" (ionChange)="selectOption(i)"></ion-checkbox>
+    <ion-label class="labelwrap">{{title}}</ion-label>
+  </ion-row>
+  <ion-col no-padding class="question-container">
+    <div class="question">{{hint}}</div>
+  </ion-col>
+
+  <!-- Error feedback  -->
+  <p *ngIf="getError() && focusOut" class="error-box">{{getError()}}</p>
+</div>

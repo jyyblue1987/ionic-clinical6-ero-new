@@ -1,0 +1,11 @@
+<ion-item class="field_container_compact" *ngIf="(style===InputStyle.attribute)">
+  <ion-label class="label_container">
+    <div class="label">{{label}}</div>
+    <div class="value">{{value}}</div>
+  </ion-label>
+</ion-item>
+
+<ion-item class="text-field" *ngIf="(style===InputStyle.roles)">
+  <ion-label class="text-field-category" stacked>{{label}}</ion-label>
+  <ion-label class="text-field-value">{{roleValue}}</ion-label>
+</ion-item>

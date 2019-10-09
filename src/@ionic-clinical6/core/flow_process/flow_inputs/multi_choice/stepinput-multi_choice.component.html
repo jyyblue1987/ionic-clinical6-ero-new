@@ -1,0 +1,39 @@
+<div [formGroup]="subForm" novalidate>
+  <ion-col no-padding *ngIf="(style == InputStyle.radioButtons) && !filter['excludeQuestion']" class="question-container">
+      <div class="question">{{title}}</div>      
+      <div class="question" *ngIf="body">{{body}}</div>
+  </ion-col>
+
+  <dummy-input [formControlName]="flowInput.inputId" (onChangeFunction)="handleChangeFunction($event)" (onTouchedFunction)="handleTouchFunction($event)"
+    (writtenValue)="handleWrite($event)">
+  </dummy-input>
+
+  <!-- Radio Button (Checkbox) -->
+  <ion-row class="choice-container" *ngIf="(style == InputStyle.radioButtons)" [class.readonly]="readOnly">
+    <span>
+      <ion-item class="item" *ngFor="let choiceItem of choices">
+        <ion-label class="labelwrap">{{choiceItem.choiceBody}}</ion-label>
+        <ion-checkbox class="input-{{style}}" [(ngModel)]="choiceItem.choiceSelected" [ngModelOptions]="{standalone: true}" (ionChange)="selectOption()">
+        </ion-checkbox>
+      </ion-item>
+    </span>
+  </ion-row>
+
+  <!-- Dropdown -->
+  <ion-item *ngIf="(style == InputStyle.dropdown)" class="input-field" [class.readonly]="readOnly">
+    <ion-label floating>{{title}}</ion-label>
+    <ion-input class="input-{{style}}" type="text" readonly value="{{choiceText}}" #dropdownInput (ionFocus)="inputFocus()" (ionBlur)="inputBlur()"
+      (mousedown)="inputMousedown()"></ion-input>
+  </ion-item>
+  <ion-col *ngIf="(style == InputStyle.dropdown) && showDropdown" class="choice-box">
+    <ion-item class="item" *ngFor="let choiceItem of choices">
+      <ion-label class="labelwrap">{{choiceItem.choiceBody}}</ion-label>
+      <ion-checkbox class="input-{{style}}" [(ngModel)]="choiceItem.choiceSelected" [ngModelOptions]="{standalone: true}" (ionChange)="selectOption()"
+        (touchstart)="itemTouchStart()" (touchend)="itemTouchEnd()"></ion-checkbox>
+    </ion-item>
+  </ion-col>
+
+  <!-- Error feedback  -->
+  <p *ngIf="getError() && focusOut" class="error-box">{{getError()}}</p>
+
+</div>

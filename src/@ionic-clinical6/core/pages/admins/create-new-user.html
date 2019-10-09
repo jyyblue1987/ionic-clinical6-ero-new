@@ -1,0 +1,48 @@
+<ion-header>
+  <app-toolbar [backLabel]="'Back'"
+  layout="app"></app-toolbar>
+</ion-header>
+
+<ion-content no-padding>
+
+    <div class="title intro-flow" [innerHTML]="'Create a New User'" *ngIf="!working"></div>
+    <div class="form-container" *ngIf="!working">
+
+      <div style="text-align:center">Enter an email or user Account</div>
+      <ion-item class="input-field alone">
+        <ion-input class="text-input" type="email" value="" [(ngModel)]="email" required  (keyup)="handleKey($event)" 
+              [placeholder]="'Email Address'" autocorrect="off" autocapitalize="off" (focus)="focusOut=false" 
+              (blur)="focusOut=true"></ion-input>
+      </ion-item>
+      <div style="text-align:center">or</div>
+      <ion-item class="input-field alone">
+        <ion-input class="text-input" type="email" value="" [(ngModel)]="account_name" required  (keyup)="handleKey($event)" 
+              [placeholder]="'Account ID'" autocorrect="off" autocapitalize="off" (focus)="focusOut=false" 
+              (blur)="focusOut=true"></ion-input>
+      </ion-item>
+      <div style="text-align:center"><br/>Set a password (or leave it blank) </div>
+
+      <ion-item class="input-field alone">
+        <ion-input [placeholder]="'Enter PIN'"
+        class="text-input" type="tel"  
+        value="" [(ngModel)]="pin" required maxlength="6" autocorrect="off" autocapitalize="off" 
+        (keyup)="keyboardPin($event)" (ngModelChange)="keyboardPin($event)"></ion-input>
+      </ion-item>     
+
+
+    </div>
+    <ion-spinner *ngIf="working"></ion-spinner>
+    <!--<p *ngIf="focusOut && authForm.controls.pin.hasError('minlength') && !authForm.controls.pin.hasError('pattern')" class="error-box">PIN requires exactly 6 digits!</p>-->
+    <!--<p [hidden]="!authForm.controls.pin.hasError('pattern')" class="error-box">PIN requires only digits!</p>-->
+</ion-content>
+      
+<ion-footer no-border>
+  <ion-toolbar no-border >
+    <ion-row class="footer-buttons">
+      <ion-col no-padding>
+        <button ion-button full color="std-button" (click)="doneCallback()" [innerHTML]=" 'Create'" [style.opacity]="working?0:1"></button>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-footer>
+

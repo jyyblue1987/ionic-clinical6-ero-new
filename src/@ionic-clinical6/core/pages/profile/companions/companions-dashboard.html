@@ -1,0 +1,25 @@
+
+<ion-header>
+    <app-toolbar [backLabel]="'Back'" [title]="page.toolbar"></app-toolbar>
+</ion-header>
+
+<ion-content>
+<div class="title" *ngIf="page.title" [innerHTML]="page.title" text-center></div>
+<div *ngIf="page.image" class="content-img">
+    <img class="icon-image" src="{{page.image.original}}"/>
+</div>
+<div class="helper"  *ngIf="page.description" [innerHTML]="page.description" text-center></div>
+<div class="view-content">
+    <ion-card  *ngFor="let comp of companions; let i = index" [attr.data-index]="i">
+        <button ion-item class="item-ios" (click)="showCompanionProfile(comp)">
+            <ion-avatar item-start>
+                <img class='avatar' *ngIf="comp.attributes.avatar" src="{{comp.attributes.avatar.thumb}}"/>
+                <img class="avatar" *ngIf="!comp.attributes.avatar" src="assets/icon/user.svg"/> 
+            </ion-avatar>
+            <h1 *ngIf="getTitle(comp)" class="comp-title" [innerHTML]="getTitle(comp)"></h1>
+            <h3 *ngIf="getSubtitle(comp)" class="comp-subtitle" [innerHTML]="getSubtitle(comp)"></h3>
+            <p *ngIf="getInfo(comp)" class="comp-info" [innerHTML]="getInfo(comp)"></p>
+        </button>
+    </ion-card>
+</div>
+</ion-content>

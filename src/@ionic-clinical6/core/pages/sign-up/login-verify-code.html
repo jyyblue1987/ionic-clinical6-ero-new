@@ -1,0 +1,28 @@
+<ion-header>
+  <app-toolbar [backLabel]="params.get('invitation_token') ? '' : translator.getInnerHTML('BACK') || 'Back'"
+  layout="app"></app-toolbar>
+</ion-header>
+
+<ion-content no-padding style="background-image: url('assets/images/Hero@3x.png');">
+
+  <div class="title intro-flow" [innerHTML]="translator.get('VERIFY_CODE_TITLE') || 'Verification Code'"></div>
+  <hr class="separator" />
+  <div class="helper" [innerHTML]="translator.get('VERIFY_CODE_HELPER') || 'Enter Verification Code'"></div>
+  <form class="form-container" >
+    <ion-item class="input-field alone" [class.alert]="validateAlertPIN()">
+      <ion-input [placeholder]="translator.getInnerHTML('VERIFY_CODE_HINT') || 'Verification Code'" name="userCode" type="tel" 
+      [(ngModel)]="userCode" autocorrect="off" autocapitalize="off" (keyup)="handleKey($event)" maxlength="6" pattern="[0-9]+" 
+      (blur)="focusOut=true" style="-webkit-text-security:disc;" ></ion-input>
+    </ion-item>
+  </form>
+</ion-content>
+      
+<ion-footer no-border>
+  <ion-toolbar no-border >
+    <ion-row class="footer-buttons">
+      <ion-col no-padding>
+        <button ion-button full color="std-button" (click)="doneCallback()" [disabled]="!canContinue()" [innerHTML]="translator.getInnerHTML('BUTTON_CONTINUE') || 'Continue'"></button>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-footer>

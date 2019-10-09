@@ -1,0 +1,62 @@
+// @import "../../../../theme/global.scss";
+
+stepinput-pre-populated {
+
+    .field_container_compact {
+        margin: 0;
+        padding: 0;
+        background-color: map-get($colors, soft-background);
+        .item-inner {
+            border: none !important;
+        }
+        .value {
+            color: map-get($colors, text-regular);
+            font-size: 1.6rem;
+            margin: 0 0 1.6rem 0;
+            font-family: Gotham;
+            padding: 0;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+        .label {
+            color: map-get($colors, text-regular);
+            margin: 0rem 0 0;
+            font-family: Gotham;
+            text-align: left;
+            padding: 0;
+            font-size: 1.1rem;
+            letter-spacing: 0.08rem;
+        }
+        .label_container {
+            margin: 0;
+            padding: 0;
+        }
+        .form_container {
+            width: 82%;
+            margin: 1.5rem auto 0 auto;
+        }
+    }
+
+    .text-field {
+        background-color: map-get($colors, soft-background );/* transparent; */
+        padding: 0;
+        /* color: map-get($colors, text-regular); */
+        .text-field-value {
+            color: map-get($colors, text-regular);
+            margin: 8px 0;
+        }
+        .text-field-category {
+            color: map-get($colors, text-lighter);
+        }
+        .item-inner {
+            border-bottom: 1.5px solid map-get($colors, text-lighter) !important;
+        }
+    }
+  
+  .field_container_roles {
+    .item-inner {
+        border-bottom: 1.5px solid map-get($colors, text-lighter) !important;
+    }      
+  }
+
+}

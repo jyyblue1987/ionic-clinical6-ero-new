@@ -1,0 +1,45 @@
+<ion-header>
+    <app-toolbar [title]="'Edit Appointment'" [leftBtnLabel]="'Back'" (leftBtnClick)="goBack()"></app-toolbar>
+</ion-header>
+
+<ion-content>
+    <img class="page-image" src=""/>
+    <ion-label class="page-title">{{'Set Appointment Info'}}</ion-label>
+    <ion-label class="page-subtitle">{{'Set your appointment information below:'}}</ion-label>
+    <div class="page-inputs" *ngIf="editMode">
+        <ion-item>
+            <ion-label floating>{{'Name'}}</ion-label>
+            <ion-input type="text" [(ngModel)]="newReminder.title" autocapitalize="off" 
+            (keyup)="handleKeys($event)"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>{{'Date'}}</ion-label>
+            <ion-datetime id="date-selector" displayFormat="DD/MMM/YYYY" pickerFormat="DD-MMM-YYYY" 
+            [(ngModel)]="newReminder.start" monthShortNames={{monthShortNames}}></ion-datetime>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>{{'Time'}}</ion-label>
+            <ion-datetime id="time-selector" displayFormat="hh:mm a" 
+            [(ngModel)]="newReminder.time"></ion-datetime>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>{{'Location'}}</ion-label>
+            <ion-input type="text" [(ngModel)]="newReminder.site" autocapitalize="off" 
+            (keyup)="handleKeys($event)"></ion-input>
+        </ion-item>
+    </div>
+    <div class="reminder-content" *ngIf="!editMode">
+        <ion-label class="content-data">
+            {{moment(reminder.start).format('DD MMM YYYY').toUpperCase()}} @ 
+            {{moment(reminder.time).format('hh:mm a').toUpperCase()}}</ion-label>
+        <ion-label class="content-data">{{reminder.title}}</ion-label>
+        <ion-label class="content-data">{{reminder.site}}</ion-label>
+    </div>
+</ion-content>
+<ion-footer text-center no-border>
+      <ion-toolbar no-border >    
+        <button *ngIf="editMode" ion-button full color="std-button" class="blue-button" (click)="takeAction()" 
+        [disabled]="!(newReminder.site && newReminder.time && newReminder.start && newReminder.title)">{{'SET APPOINTMENT'}}</button>
+        <button *ngIf="!editMode" ion-button full color="std-button" class="blue-button" (click)="takeAction()">{{'EDIT APPOINTMENT'}}</button>
+      </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,1 @@
+{"version":3,"names":[],"mappings":"","sources":["src/@ionic-clinical6/core/pages/pdf-view/pdf-view.module.d.ts"],"sourcesContent":["export declare class PdfViewModule {\n}\n"],"file":"pdf-view.module.d.ts"}

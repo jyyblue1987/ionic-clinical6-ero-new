@@ -1,0 +1,72 @@
+<ion-header>
+  <app-toolbar [title]="navbarTitle" [backLabel]="backButtonText" [bgColor]="themeColor" layout="plain-action" [rightLabel]="getDoneEditLabel()"
+    (actionClick)="actionDoneEdit()" [actionDisabled]="isActionBtnDisabled()" (backClick)="popStack()"></app-toolbar>
+</ion-header>
+
+<ion-content no-padding (click)="return;">
+
+  <button ion-button no-lines no-margin block no-padding clear class="alert-ribbon red-alert" *ngIf="comment.present" (click)="handleComment()">
+    <span class="app-p6-icon-bell bell-icon"></span><div>{{comment.body}}</div>
+  </button>
+
+  <div class="heading-container">
+    <div class="progress-bar" *ngIf="step.progress_bar">
+      <div class="back"></div>
+      <div class="swipe" [style.width]="((step.index+1) / step.flow.total * 100) + '%'" [style.border-radius]="(step.index+1) == step.flow.total?'100px 100px 100px 100px':'100px 0px 0px 100px'"></div>
+    </div>
+    <div class="no-progress-bar-spacer" *ngIf="!step.progress_bar"></div>
+    <div class="title" [innerHTML]="step.title" *ngIf="step.title"></div>
+    <img class="icon-image" src="{{step.image.original}}" [style.display]="(showImage?'':'none')" (error)="imgError($event)"
+      (load)="imgLoaded()" />
+  </div>
+
+  <div class="helper" [innerHTML]="trustHTML(step.rich_description)" *ngIf="step.rich_description"></div>
+  <div class="helper" [innerHTML]="trustHTML(step.description)" *ngIf="!step.rich_description && step.description"></div>
+
+  <ion-col class="input-container" no-margin>
+    <input-container [inputList]="inputs" [fields]="fields" [filter]="filter" [readonly]="!editing" (formValueChanged)="updateControlValue($event)"
+      (formStatusChanged)="updateFormStatus($event)" (keyup)="handleGoButton($event)" (goToPage)="goToPage($event)"></input-container>
+  </ion-col>
+
+  <!-- Display of Additional Special Buttons -->
+  <ion-list no-margin class="additional-buttons">
+    <ng-template ngFor let-path [ngForOf]="step.paths">
+      <ion-row no-margin no-padding *ngIf="displayAsSpecialButton(path)">
+        <button ion-button (click)="gotoFlow(path.button_name)" [disabled]="!formValid">{{path.button_name}}</button>
+      </ion-row>
+    </ng-template>
+  </ion-list>
+  <div class="footer-spacer" *ngIf="(setupOrManage === 'manage')"></div>
+</ion-content>
+
+<!-- Footer With Prev and Next/Complete buttons -->
+<ion-footer class="survey-page" *ngIf="footerPrevNext && (setupOrManage == 'setup')">
+  <ion-toolbar no-padding>
+    <button ion-button class="button-left theme-primary-color" [style.background-color]="themeColor" *ngIf="showPrevButton()"
+      (click)="goBack()">Prev
+    </button>
+    <!-- change !formValid with !isAnswerValid to disable validations-->
+    <button [disabled]="!formValid || hasUploadButton()" ion-button class="button-right theme-primary-color" [style.background-color]="themeColor"
+      (click)="gotoFlow(nextStep.button_name)">{{nextStep.button_name}}
+    </button>
+  </ion-toolbar>
+</ion-footer>
+
+<!-- Other Buttons to be displayed in the footer (are there any?) -->
+<ion-footer *ngIf="((!footerPrevNext)  && (setupOrManage == 'setup'))" no-border>
+  <ion-toolbar class="footer">
+    <ion-row class="footer-buttons">
+      <ion-col *ngFor='let next of step.paths'>
+        <button class="theme-primary-color" [style.background-color]="themeColor" ion-button full (click)="gotoFlow(next.button_name)"
+          *ngIf="!displayAsSpecialButton(next)" [disabled]="!formValid">{{ next.button_name }}</button>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-footer>
+
+<!-- Delete Button in case of Editing Page-->
+<ion-footer no-padding no-border no-margin *ngIf="(setupOrManage === 'manage') && editing && !noDelete">
+  <ion-toolbar class="footer delete-button">
+    <button class="delete-button" ion-button full color="danger" outline (click)="deleteItem()">Delete</button>
+  </ion-toolbar>
+</ion-footer>

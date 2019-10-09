@@ -1,0 +1,1 @@
+{"version":3,"names":[],"mappings":"","sources":["src/@ionic-clinical6/plugins/bluetooth/bluetooth.module.d.ts"],"sourcesContent":["export declare class BluetoothModule {\n}\n"],"file":"bluetooth.module.d.ts"}

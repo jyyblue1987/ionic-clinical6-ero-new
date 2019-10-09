@@ -1,0 +1,123 @@
+sliding-menu {
+  .spinner-overlay {
+    position: fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    animation: fadein 300ms;
+    z-index: 1000;
+  }
+  @keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+
+  .img-header {
+    img {
+      width: 20rem;
+      margin: 1rem;
+    }
+  }
+
+  .text-header {
+      background-color: map-get($colors, secondary);     
+      color: white;
+      font-size: 2.7rem;
+      padding-left: 2rem;
+      padding-top: 6rem;
+      padding-bottom: .5rem;
+      // height: 12rem;
+      font-family: Lato-Regular, Arial, Helvetica, sans-serif;
+      font-weight: 600;
+  }
+
+  .menu-content-reveal {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  }
+  .menu-content {
+    background-color: map-get($colors, secondary) !important;
+    height: 100%;
+
+    ion-list.menu-list  {
+      margin-top: 2rem;
+      padding: 0.6rem 0 0 0;
+      background-color: map-get($colors, secondary);
+    
+        button {
+          color: map-get($colors, text-lightest) !important;
+          background-color: map-get($colors, secondary) !important; 
+          border: none !important;
+          height: 5.6rem;
+          padding: 0rem 0 0 1.2rem !important;
+
+          .icon {
+            height: 2.5rem;
+            width: 2.5rem;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            vertical-align: middle;
+            display: inline-block; 
+            margin-right: 1rem;
+          }
+
+          .item-inner {
+            padding-right:0;
+          }
+          .badge {
+            font-family: Gotham-Medium !important;
+            border-radius: 3rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            min-width: 1.9rem;
+            min-height: 1.9rem;
+            position: absolute;
+            right: 1.8rem;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 0.1rem;
+          }
+
+          .label {
+            display: inline-block;
+            padding-top: 0;
+            /* position: absolute; */
+            font-family: -apple-system, Roboto, "Segoe UI", sans-serif;
+            font-size: 1.7rem !important;
+            letter-spacing: 0;
+            font-weight: 500;
+          }
+          ion-label {
+            margin: 0;
+          }      
+        }
+    }
+    .custom-divider {
+      background-color:map-get($colors, text-lightest);
+      opacity: 0.3;
+      height: 2px;
+      background-color: #FFFFFF;
+      margin: 0 0 0 4.5rem;
+    }                
+  }
+
+  ion-footer button {
+    margin: 0;
+    height: 2.8em;
+    font-size: 1.6rem;
+    font-weight: 600;
+    letter-spacing: -0.05rem;
+  }
+
+  .version {
+    font-size: 0.5em;
+    text-align: center;
+    color: white;
+  }
+}

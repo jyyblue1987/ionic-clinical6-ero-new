@@ -1,0 +1,55 @@
+<ion-header class="{{step.id}} {{step.flow?.permanentLink}}">
+    <!-- show toolbar with title if the toolbar.title property is a string and toolbar.logo property is set to false or null -->
+    <app-toolbar *ngIf="step.toolbar?.title" [title]="step.toolbar.title || navbarTitle" [leftBtnLabel]="showBackButton?'Back':''" 
+            (leftBtnClick)="goBack()" [bgColor]="themeColor" [actionHidden]="true"></app-toolbar>
+
+    <!-- show toolbar with title if the toolbar.logo property is set to true and toolbar.title propert is set to false or null -->
+    <app-toolbar *ngIf="step.toolbar?.logo" [leftBtnLabel]="showBackButton?'Back':''" (leftBtnClick)="goBack()" layout="app"
+         [ngClass]="showBackButton?'toolbar-logo':''" [bgColor]="themeColor"></app-toolbar>  
+</ion-header>
+<ion-content padding class="bg-content {{step.id}} {{step.flow?.permanentLink}}" text-center>
+
+    <div *ngIf="step.title" class="content-title {{step.id}}">
+        <div class="title" [innerHTML]="step.title"></div>
+    </div>
+
+    <div *ngIf="step.image" class="content-img {{step.id}}">
+        <img class="icon-img" src="{{step.image.original}}" [style.display]="(showImage?'':'none')" (error)="imgError($event)"
+        (load)="imgLoaded()" />        
+    </div>
+
+    <div *ngIf="step.separator" [ngClass]="step.separator==='line'?'line-separator':'space-separator'"></div>
+
+    <div *ngIf="step.description" class="content-desc {{step.id}}">
+        <div class="desc" [innerHTML]="step.description"></div>
+    </div>
+
+    <div *ngIf="step.rich_description" class="content-desc {{step.id}}">
+        <div class="desc" [innerHTML]="step.rich_description"></div>
+    </div>
+
+    <input-container [inputList]="inputs" [fields]="fields" [filter]="filter"
+        (formStatusChanged)="updateFormStatus($event)" (formValueChanged)="updateControlValue($event)"
+        (keyup)="handleGoButton($event)" (goToPage)="goToPage($event)" labelStyle="stacked">
+    </input-container> 
+
+    <!-- Display of Additional Special Buttons -->
+    <ng-template ngFor let-path [ngForOf]="step.paths">
+        <ion-row no-margin no-padding *ngIf="displayAsSpecialButton(path) && !path.is_link_button" class="additional-button">
+        <button ion-button (click)="goNext(path)">{{path.button_name}}</button>
+        </ion-row>
+    </ng-template>
+
+</ion-content>
+  
+<ion-footer *ngIf="step.paths.length > 0" class="full-footer {{step.id}} {{step.flow?.permanentLink}}"  no-border>
+    <ion-toolbar no-border padding>
+      <ion-row class="footer-buttons">
+        <ng-template ngFor let-next [ngForOf]="step.paths">
+            <ion-col *ngIf="!displayAsSpecialButton(next)">
+                <button ion-button full class="footer-btn" (click)="goNext(next)" [disabled]="!formValid">{{ next.button_name }}</button>
+            </ion-col>
+        </ng-template>
+      </ion-row>
+    </ion-toolbar>
+</ion-footer>

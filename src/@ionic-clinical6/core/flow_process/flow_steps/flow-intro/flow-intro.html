@@ -1,0 +1,14 @@
+<ion-header>
+  <app-toolbar [title]="navbarTitle"
+              layout="plain"
+             ></app-toolbar>
+</ion-header>
+
+<ion-content no-padding (click)="return;">
+  <div class="video-button" [style.background-image]="previewImgUrl">
+    <iframe #iframeArea heigth="100%" width="100%" [src]="videoUrl" frameborder="0"></iframe>
+  </div>
+  <div class="rich_text_container" [innerHTML]="richText"></div>
+
+  <button ion-button class="begin_button" (click)="doBegin()">{{actionLabel}}</button>
+</ion-content>

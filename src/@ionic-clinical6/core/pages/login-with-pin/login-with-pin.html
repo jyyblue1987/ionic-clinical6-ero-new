@@ -1,0 +1,69 @@
+<ion-header>
+  <app-toolbar [backLabel]="'Back'"
+              layout="app"
+             ></app-toolbar>
+</ion-header>
+
+<ion-content padding class="scroll-content">
+    <div class="form-container" *ngIf="showPinPage">
+      <button class="icon-button" [hidden]="pin.length === 6" (click)="login()"><ion-icon name="arrow-forward" class="arrow-icon"></ion-icon></button>
+      <div class="title">{{title}}</div>          
+      <ion-item class="input-field" >
+        <ion-input  class="text-input" type="tel" value="" [(ngModel)]="pin" required maxlength="6" autocorrect="off" autocapitalize="off" 
+        (keyup)="keyboardPin($event)" (ngModelChange)="keyboardPin($event)"></ion-input>
+      </ion-item>     
+    </div>
+    <div class="form-container" *ngIf="showEmailPage" [formGroup]="authForm" novalidate>
+      <div class="info-title">We can send an activation code to your email to reset your PIN.<br><br>
+          Please enter your email address and tap the Send button below.</div>        
+      <ion-item class="input-field-label">
+        <ion-label floating>Email Address</ion-label>
+        <ion-input  class="text-input" type="email" value="" [(ngModel)]="email" formControlName="email" (focus)="focusOut = false" (blur) = "focusOut = true" autocorrect="off" autocapitalize="off">Email Address</ion-input>
+      </ion-item>
+      <p *ngIf="!authForm.controls.email.valid && focusOut" class="error-box">Invalid Email Address!</p>
+    </div>
+    <div class="form-container" *ngIf="showActivationCodePage">
+      <div class="title">Enter Activation Code</div>        
+      <ion-item class="input-field" >
+        <ion-input  class="text-input" type="password" value="" required maxlength="6" [(ngModel)]="code" autocorrect="off" autocapitalize="off" 
+        (keyup)="keyboardPin($event)" (ngModelChange)="keyboardPin($event)"></ion-input>
+      </ion-item>
+    </div>
+    <div class="form-container" *ngIf="showForgotPasswordPage">
+      <div class="info-title">Plese check your email. We sent you an email with an activation code.<br><br>
+       We sent your PIN to<br>
+        {{email}}</div>
+    </div>
+    <form *ngIf="showResetPinPage" class="form" [formGroup]="authForm" novalidate>
+    <div class="form-container">
+      <div class="info-title">Your activation code has been confirmed. Please create a new 6 digit PIN.</div>
+      <br>
+      <div class="helper">Please be sure to remember this information. You will be asked to enter your PIN next time you enter the app.</div>
+      <div class="input-wrapper"> 
+      <ion-item class="input-field-label">
+        <ion-label floating>New 6 Digit PIN</ion-label>
+        <ion-input class="text-input" type="tel" [(ngModel)]="newPin" formControlName="newPin" (focus)="focusOut = false" (blur) = "focusOut = true" required maxlength="6" autocorrect="off" autocapitalize="off"></ion-input>
+      </ion-item>  
+      <p *ngIf="focusOut && !authForm.controls.newPin.hasError('pattern') && authForm.controls.newPin.hasError('minlength')" class="error-box">PIN requires exactly 6 digits!</p>
+      <p *ngIf="authForm.controls.newPin.hasError('pattern')" class="error-box">PIN requires only digits!</p>
+      <ion-item class="input-field-label">
+        <ion-label floating>Confirm New 6 Digit PIN</ion-label>
+        <ion-input class="text-input" type="tel" [(ngModel)]="newPinConfirm" formControlName="newPinConfirm" required maxlength="6" autocorrect="off" autocapitalize="off"></ion-input>
+      </ion-item> 
+      </div>
+    </div>
+    </form>
+</ion-content>
+
+<ion-footer text-center no-border>
+    <div *ngIf="showPinPage || showActivationCodePage" class="link"><a class="link-pin" (click)="resetPin()">{{resetPINText}}</a></div>
+    <div  *ngIf="showEmailPage" class="row">
+      <button [disabled]="!authForm.controls.email.valid" ion-button no-padding full color="secondary" (click)="send()" block>Send</button>
+    </div> 
+    <div *ngIf="showForgotPasswordPage" class="row">
+      <button ion-button no-padding full color="secondary" (click)="continue()" block>Continue</button>
+    </div> 
+    <div *ngIf="showResetPinPage" class="row">
+      <button [disabled]="!authForm.valid" ion-button no-padding full color="secondary" (click)="submit()" block>Submit</button>
+    </div> 
+</ion-footer>

@@ -1,0 +1,21 @@
+<ion-header>
+  <app-toolbar [title]="navbarTitle" [backLabel]="backButtonText" [bgColor]="themeColor" layout="plain"></app-toolbar>
+</ion-header>
+
+<ion-content no-padding (click)="return;">
+  <ng-template ngFor let-item [ngForOf]="titleTextArray">
+    <div class="heading-container" *ngIf="item.title">
+      <div class="title" [innerHTML]="item.title" *ngIf="item.title"></div>
+    </div>
+    <div class="helper" [innerHTML]="getTrustedHTML(item.text)" *ngIf="item.text"></div>
+    <img class="icon-image" src="{{item.image}}" *ngIf="item.image"/>
+  </ng-template>
+
+  <div class="footer-spacer"></div>
+</ion-content>
+
+<ion-footer no-padding no-margin>
+    <ion-toolbar class="footer">
+
+    </ion-toolbar>
+</ion-footer>

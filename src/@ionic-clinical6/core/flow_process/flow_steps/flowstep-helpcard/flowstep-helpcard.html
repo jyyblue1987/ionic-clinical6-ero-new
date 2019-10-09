@@ -1,0 +1,46 @@
+<!--<ion-header>
+  <ion-toolbar no-padding no-margin color="primary" class="header-toolbar">
+    <ion-buttons left>
+      <button ion-button no-padding (click)="goBack()" class="bar-button">
+      <ion-icon name="arrow-back"></ion-icon>
+      <span class="button-text">Back</span>
+    </button>
+    </ion-buttons>
+    <ion-title><span class="app-p6-icon-PPD-logo app-logo"></span></ion-title>
+  </ion-toolbar>
+</ion-header>-->
+<ion-header>
+  <app-toolbar [backLabel]="'Back'"
+              layout="app"
+             ></app-toolbar>
+</ion-header>
+<ion-content padding (click)="return;">
+  <div class="progress-bar">
+    <div class="back"></div>
+    <div class="swipe" [style.width]="((step.index+1) / step.flow.total * 100) + '%'" 
+        [style.border-radius]="(step.index+1) == step.flow.total?'100px 100px 100px 100px':'100px 0px 0px 100px'"></div>
+  </div>
+  <ion-card class="full-size-card" [class.single-textarea-page]="hasSingleTextarea()">
+    <div [innerHTML]="step.title" class="title"></div>
+    <img class="icon-image" src="{{step.image.original}}" (error)="imgError($event)" [style.display]="(showImage?'':'none')" (load)="imgLoaded()"/>
+    <div padding [innerHTML]="step.rich_description" *ngIf="step.rich_description" class="description"></div>
+
+    <input-container [inputList]="inputs" (formStatusChanged)="updateForm($event)" (formValueChanged)="updateInputValues($event)" [fields]="fields"
+    (keyup)="handleGoButton($event)"
+    ></input-container>
+  </ion-card>
+
+</ion-content>
+
+<ion-footer no-border>
+  <ion-toolbar class="footer" >
+    <ion-row class="footer-buttons">
+      <ion-col *ngIf="showHelpButton">
+        <button ion-button full color="secondary" (click)="showHelp()">Help</button>
+      </ion-col>
+      <ion-col *ngFor='let next of step.paths'>
+        <button ion-button full (click)="gotoFlow(next.button_name)" [disabled]="!formValid">{{ next.button_name }}</button>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,1 @@
+{"version":3,"names":[],"mappings":"","sources":["src/@ionic-clinical6/core/toolbar/app-toolbar.module.d.ts"],"sourcesContent":["export declare class AppToolbarModule {\n}\n"],"file":"app-toolbar.module.d.ts"}

@@ -1,0 +1,7 @@
+@import "alert-modal.scss";
+
+/* See Alert-Modal.scss */
+
+help-modal {
+  @extend alert-modal;
+}

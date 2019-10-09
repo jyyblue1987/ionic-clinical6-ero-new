@@ -1,0 +1,32 @@
+input-container {
+    // Forms and Inputs 
+
+%question {
+    .question {
+        text-align: center;
+        font-family: Gotham;
+        font-size: 1.8rem;
+        margin: 1.2rem 0;
+        line-height: 2.8rem
+      }
+      .question-container{
+        // padding: 1.6rem 0 2rem;
+        padding: 0 0 2rem;
+      }
+}
+
+%input-field {
+    .input-field {
+        background-color: transparent; // map-get($colors, soft-background );
+        padding: 0;
+        color: map-get($colors, text-regular);
+        
+        ion-label {
+            color: map-get($colors, text-lighter ) !important;
+        }
+        .item-inner {
+            border-bottom: 1.5px solid map-get($colors, text-lighter) !important;
+        }
+    }
+}
+}

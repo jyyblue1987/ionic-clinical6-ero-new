@@ -1,0 +1,67 @@
+@import "../flowstep-help/flowstep-help.scss";
+
+flowstep-helpcard {
+  @extend flowstep-help;
+
+  ion-content {
+
+    .card {
+      border-color: map-get($colors, borders);
+      border-style: solid;
+      border-width: 1px;
+      box-shadow: none;
+      padding-bottom: 4rem;
+    }
+
+    .single-textarea-page {
+      border: none !important;
+      background: none;
+      overflow: visible;
+    }
+    
+    .full-size-card {
+      border-color: map-get($colors, borders);
+      border-style: solid;
+      border-width: 1px;
+      box-shadow: none;
+      padding: 0.6rem 0 2rem 0;
+      margin: 0;
+      width: 100%
+    }
+    .description {
+      @extend .small-text-helper-1;
+      font-size: 1.4rem;
+      line-height: 1.9rem;
+      margin-top: 0;
+      padding: 2rem 1.5rem;
+
+      p {
+        color: map-get($colors, text-regular);
+        @extend .small-text-helper-1;
+        font-size: 1.4rem;
+        line-height: 2rem;
+        padding: 0;
+        margin: 0;
+      }
+    }
+    .title {
+      margin-bottom: 1rem;
+      height: unset;
+    }
+    .progress-bar {
+        margin: 0 auto 1.5rem auto;
+        width: 100%;
+    }
+  }
+  ion-content {
+    padding: 1.9vh;
+
+    scroll-content {
+      padding: 1.9vh;
+    }
+      ion-toolbar.footer {
+      padding-top: 0;
+      margin: 1.5rem auto 0 auto;
+    }
+  }
+}

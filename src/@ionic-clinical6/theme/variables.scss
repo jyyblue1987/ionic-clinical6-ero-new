@@ -1,0 +1,135 @@
+// .This-is.variables.scss.file {
+//       color:blue;
+// }
+
+// Ionic Variables and Theming. For more info, please see:
+// http://ionicframework.com/docs/v2/theming/
+
+// @import "ionic.globals";
+
+// App Shared Variables
+// --------------------------------------------------
+// To customize the look and feel of this app, you can override
+// the Sass variables found in Ionic's source scss files. Setting
+// variables before Ionic's Sass will use these variables rather than
+// Ionic's default Sass variable values. App Shared Sass imports belong
+// in the app.core.scss file and not this file. Sass variables specific
+// to the mode belong in either the app.ios.scss or app.md.scss files.
+
+//1.7rem
+$font-size-ios-base: 1.7rem;
+// $font-size-md-base: 1.6rem;
+$font-family-base: Gotham, sans-serif !default;
+
+$font-family-md-base: Gotham, sans-serif !default;
+
+$cordova-ios-statusbar-padding: 20px;
+
+$toolbar-ios-height: 4.3rem;
+$toolbar-md-height: 4.3rem;
+
+$menu-width: 78.2vw; // 29.2rem;  //323px;
+$menu-small-width: calc(#{$menu-width});// - 40px) ; // recalculated here since ionic's menu.scss throws a 'incompatible units error
+
+// App Shared Color Variables
+// --------------------------------------------------
+// It's highly recommended to change the default colors
+// to match your app's branding. Ionic uses a Sass map of
+// colors so you can add, rename and remove colors as needed.
+// The "primary" color is the only required color in the map.
+// Both iOS and MD colors can be further customized if colors
+// are different per mode.
+
+
+// Added the following color variables here just to take advantage of the color picker :-)
+// NOTE: this are to be used only within this file!
+//       Please use the $colors MAP elsewhere! (thorugh map-get() function...)
+$violet:        #4F2683;
+$light-violet:  #623B95;
+$lightest-grey: #F4F4F4;
+$soft-grey:     #F8F8F8;
+$lighter-grey:  #DEDEDE;
+$lighter-grey2: #ebebeb;
+$light-grey:    #AEAEAE;
+$grey:          #979797;
+$dark-grey:     #6b6b6d;
+$darker-grey:   #58585A;
+$darkest-grey:  #252525;
+$almost-black:  #222;
+$light-blue:    #81A3B6;
+$light-blue2:   #81A1B6;
+$soft-blue:     #556180;
+$link-blue:     #5AA4e8;
+$danger-red:    #f53d3d;
+$darker-green:  #5AA801;
+$soft-green:    #69BB7B;
+$electric-green:#82CC34;
+$purple:        #64385A;
+$bronze:        #FFA463;
+$silver:        #A1A1A1;
+$gold:          #F5A623;
+$white:         #FFFFFF;
+$orange-alert:  #FACF59;
+$danger-darkred:#D9172A;
+$sun-yellow:    #fbd059;
+$sun-yellow2:   #FFC81E;
+// Please use the following color map for any color
+// feel free to add your custom colors...
+// but please double check whether your color is already being used elsewhere
+
+$colors: (
+  primary:    $violet,
+  secondary:  $light-blue,
+  danger:     $danger-red,
+  light:      $light-grey,
+  dark:       $almost-black,
+  favorite:   $soft-green,
+  
+  // custom colors
+  soft-background:  $soft-grey,
+  soft-dark-backgnd:$lightest-grey,
+  dark-background:  $grey,
+  lightest-bg:      $white,
+  text-lightest:    $white,
+  text-lighter:     $light-grey,
+  text-light:       $grey,
+  text-regular:     $dark-grey,
+  text-darker:      $darker-grey,
+  text-darkest:     $darkest-grey,
+  title-flows:      $light-violet,
+  borders:          $grey,
+  light-borders:    $light-grey,
+  lighter-borders:  $lighter-grey,
+  highlighted:      $electric-green,
+  greenlight-green: $darker-green,
+  dashboard_bkng:   $purple,
+  ppd_bronze:       $bronze,
+  ppd_silver:       $silver,
+  ppd_gold:         $gold,
+  ranking_badge_bg: $soft-blue,
+  inprogress-orange:$sun-yellow,
+  link-active:      $link-blue,
+  warning-banner-bg:$sun-yellow,
+  help:             $light-blue2,
+  cta-button:       $lighter-grey2,
+);
+
+$refresher-border-color: transparent;
+
+
+// App Theme
+// --------------------------------------------------
+// Ionic apps can have different themes applied, which can
+// then be future customized. This import comes last
+// so that the above variables are used and Ionic's
+// default are overridden.
+
+// @import "ionic.theme.default";
+
+// Ionicons
+// --------------------------------------------------
+// The premium icon font for Ionic. For more info, please see:
+// http://ionicframework.com/docs/v2/ionicons/
+
+// $ionicons-font-path: "../assets/fonts";
+// @import "ionic.ionicons";

@@ -1,0 +1,111 @@
+// @import "../../../theme/global.scss";
+
+glossary-page {
+    ion-searchbar.glossary-search {
+        background-color: map-get($colors, soft-background);
+        padding: 0;
+        // Base styles
+        input {
+            height: 6.1rem !important;
+            border-radius: 5px !important;
+            font-size: 2.65rem !important;
+            font-family: Gotham-Light !important;
+            letter-spacing: -0.08rem !important;
+            color: map-get($colors, text-regular) !important;
+            background-color: map-get($colors, soft-background) !important;
+        }
+        
+        .searchbar-input {
+            padding: 1.3rem 2rem;
+            padding-left: 2rem !important;
+        }
+
+        .searchbar-search-icon {
+            @extend [class^="app-p6-icon-"];
+            @extend .app-p6-icon-search;
+            position: absolute;
+            font-size: 3rem;
+            margin-top: 0.5rem;
+            background-image: none;
+            color: map-get($colors, highlighted);
+            margin-left: calc(90% - 2rem) !important;
+        }
+         .searchbar-clear-icon {
+            // margin-left: calc(90% - 3rem);
+            right: 1rem;
+            height: 100%;
+            display: block;
+            opacity: 0;
+             transition: all 300ms ease;
+            -webkit-transition: all 300ms ease; /* Safari */
+       }
+   }
+   
+   // Search Bar has focus ( value is either set or not)
+    .searchbar-active.searchbar-has-focus {
+        .searchbar-input {
+            padding-left: 3rem !important;
+            padding-right: 8rem !important;
+            color: map-get($colors, text-regular) !important;
+        }
+        .searchbar-search-icon {
+            display: none;
+        }
+        .searchbar-clear-icon {
+            // margin-left: calc(90% - 2rem) !important;
+            // margin-right: 0px;
+            right: 1rem;
+            height: 100%;
+            opacity: 1;
+        }
+    }
+
+    // Search Bar has value set (focus not necessarily)
+    .searchbar-active.searchbar-has-value {
+        .searchbar-input {
+            padding-left: 3rem;
+            padding-right: 8rem;
+            color: map-get($colors, text-light);
+        }
+        .searchbar-search-icon {
+            margin-left: auto;
+            right: 4rem;
+        }
+    }
+
+    ion-list {
+        background-color: map-get($colors, soft-background);
+
+        button .text {
+            font-size: 1.7rem;
+            font-family: Gotham-Medium;
+            color: map-get($colors, text-darker);
+        }
+        button.glossary-list-button {
+            border-style: solid;
+            border-top-width: 1px;
+            border-bottom-width: 1px;
+            margin: 1px 0px -2px 0px;
+            height: 6.07rem;
+            font-size: 2.2rem;
+            padding: 0 2rem;
+            background-color: map-get($colors, soft-background);
+            border-color: map-get($colors, borders);
+        }
+        .button-inner {
+            justify-content: flex-start;
+        }
+        .details {
+            @extend [small-text];
+            height: 0px;
+            border-width: 1px;
+            border-style: solid;
+            border-color: map-get($colors, borders);
+            background-color: map-get($colors, soft-dark-backgnd);
+            margin: 0 0 -2px 0;
+            overflow: hidden;
+            transition: all 200ms;
+            -webkit-transition: all 200ms; /* Safari */
+        }
+    }
+}

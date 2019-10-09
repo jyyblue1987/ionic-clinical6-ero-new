@@ -1,0 +1,29 @@
+<ion-header>
+  <app-toolbar [title]="title" [backLabel]="translator.getInnerHTML('BACK') || 'Back'"
+              layout="plain"
+             ></app-toolbar>
+</ion-header>
+
+<ion-content no-padding >
+    <div class="spinner-overlay" *ngIf="isLoading"><ion-spinner></ion-spinner></div>
+
+    <ion-list>
+        <div *ngFor="let item of faqs" >
+            <button ion-button clear full 
+                    (click)="toggleDetails(item)" 
+                    class="list-button" [class.expanded]="item.expanded">
+                <div class="text">{{item.title}}</div>
+                <div class="action-label">
+                    <div class="app-p6-icon-chevron-right action-arrow" 
+                        [class.turned]="item.expanded"></div>
+                    </div>
+            </button>
+            <div id="item_{{item.position}}" 
+                [style.height]="item.expanded?item.detailsHeight:'0px'"
+                class="details">
+                <div padding [innerHtml]="item.details">
+                </div>
+            </div>
+        </div>
+    </ion-list>
+</ion-content>

@@ -1,0 +1,185 @@
+[
+  {
+    "name": "StepInputTextComponent#getPasswordMask",
+    "filePath": "src/@ionic-clinical6/core/flow_process/flow_inputs/text/stepinput-text.component.ts",
+    "lines": [
+      {
+        "lineNumber": 122
+      },
+      {
+        "lineNumber": 123
+      },
+      {
+        "lineNumber": 124
+      },
+      {
+        "lineNumber": 125
+      },
+      {
+        "lineNumber": 126
+      },
+      {
+        "lineNumber": 127
+      }
+    ],
+    "codeParams": [],
+    "docParams": [
+      "rawValue"
+    ]
+  },
+  {
+    "name": "LoginFlowPage#goNext",
+    "filePath": "src/@ionic-clinical6/core/pages/login-flow/login-flow.ts",
+    "lines": [
+      {
+        "lineNumber": 63,
+        "line": "      this.utilsSvc.presentLoading();"
+      },
+      {
+        "lineNumber": 64,
+        "line": "      /** @type {any} last - check if the active Flow Step is the last  **/"
+      },
+      {
+        "lineNumber": 65,
+        "line": "      let last;"
+      },
+      {
+        "lineNumber": 66,
+        "line": "      if (button.callback)"
+      },
+      {
+        "lineNumber": 67,
+        "line": "         last = await this[`${button.callback}`]();"
+      },
+      {
+        "lineNumber": 68,
+        "line": "        const response = await super.gotoFlow(button.button_name, options); // ignoreRequiredFields"
+      }
+    ],
+    "codeParams": [
+      "button",
+      "options"
+    ],
+    "docParams": [
+      "input_id"
+    ]
+  },
+  {
+    "name": "UserProfilePage#saveUserProfile",
+    "filePath": "src/@ionic-clinical6/core/pages/profile/user-profile/user-profile.ts",
+    "lines": [
+      {
+        "lineNumber": 196,
+        "line": ""
+      },
+      {
+        "lineNumber": 197,
+        "line": "  /**"
+      },
+      {
+        "lineNumber": 198,
+        "line": "   * @callback actionDoneEdit - checks the form status"
+      },
+      {
+        "lineNumber": 199,
+        "line": "  **/"
+      },
+      {
+        "lineNumber": 200,
+        "line": "  actionDoneEdit() {"
+      },
+      {
+        "lineNumber": 201,
+        "line": "    if (this.editing) return this.saveUserProfile();"
+      }
+    ],
+    "codeParams": [],
+    "docParams": [
+      "event"
+    ]
+  },
+  {
+    "name": "UserProfilePage#savePhoto",
+    "filePath": "src/@ionic-clinical6/core/pages/profile/user-profile/user-profile.ts",
+    "lines": [
+      {
+        "lineNumber": 364
+      },
+      {
+        "lineNumber": 365
+      },
+      {
+        "lineNumber": 366
+      },
+      {
+        "lineNumber": 367
+      },
+      {
+        "lineNumber": 368
+      },
+      {
+        "lineNumber": 369
+      }
+    ],
+    "codeParams": [],
+    "docParams": [
+      "event"
+    ]
+  },
+  {
+    "name": "UserProfilePage#takePhoto",
+    "filePath": "src/@ionic-clinical6/core/pages/profile/user-profile/user-profile.ts",
+    "lines": [
+      {
+        "lineNumber": 390
+      },
+      {
+        "lineNumber": 391
+      },
+      {
+        "lineNumber": 392
+      },
+      {
+        "lineNumber": 393
+      },
+      {
+        "lineNumber": 394
+      },
+      {
+        "lineNumber": 395
+      }
+    ],
+    "codeParams": [],
+    "docParams": [
+      "event"
+    ]
+  },
+  {
+    "name": "UserProfilePage#openGallery",
+    "filePath": "src/@ionic-clinical6/core/pages/profile/user-profile/user-profile.ts",
+    "lines": [
+      {
+        "lineNumber": 419
+      },
+      {
+        "lineNumber": 420
+      },
+      {
+        "lineNumber": 421
+      },
+      {
+        "lineNumber": 422
+      },
+      {
+        "lineNumber": 423
+      },
+      {
+        "lineNumber": 424
+      }
+    ],
+    "codeParams": [],
+    "docParams": [
+      "event"
+    ]
+  }
+]

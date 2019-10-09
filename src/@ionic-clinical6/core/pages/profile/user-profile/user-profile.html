@@ -1,0 +1,44 @@
+<ion-header>
+    <app-toolbar [title]="step.toolbar" 
+    layout="plain-action" 
+    [backLabel]="'Back'">
+    </app-toolbar>
+  </ion-header>
+  <ion-content padding>
+
+      <div *ngIf="step.title" class="title" [innerHTML]="step.title"></div>
+
+      <div *ngIf="step.image" class="content-img">
+          <img class="icon-img" src="{{step.image.original}}"/>        
+      </div>
+    
+      <div *ngIf="step.description" class="helper" [innerHTML]="step.description"></div>
+
+      <div class="profile-image-container" *ngIf="showAvatar">
+          <button no-padding ion-button clear class="img-mask no-photo" *ngIf="!photo" (click)="changePhoto()" [disabled]="!editing">
+            <ion-icon name="camera"  class="image">
+            </ion-icon>
+          </button>
+    
+          <button no-padding ion-button clear class="img-mask photo" *ngIf="photo" (click)="changePhoto()">
+            <img [src]="photo" class="image" [style.display]="imgLoading?'none':'block'" (load)="imgLoaded()" (error)="imgError($event)"/>
+            <ion-spinner [style.display]="!imgLoading?'none':'inline-block'"></ion-spinner>
+          </button>
+      </div>
+  
+      <input-container *ngIf="!loading" [inputList]="step.inputs" [fields]="profileData" [filter]="filter" [readonly]="!editing"
+        (formStatusChanged)="updateFormStatus($event)" (formValueChanged)="updateControlValue($event)"
+        (keyup)="handleGoButton($event)" (goToPage)="goToPage($event)" labelStyle="stacked">
+      </input-container> 
+  
+  </ion-content>
+  
+  <ion-footer no-border *ngIf="step.content_type==='profile_edit_page'">
+    <ion-toolbar no-border >
+      <ion-row class="footer-buttons">
+        <ion-col no-padding>
+          <button ion-button full color="std-button" [disabled]="!formValid && editing" (click)="actionDoneEdit()">{{editing?'Save':'Edit'}}</button>
+        </ion-col>
+      </ion-row>
+    </ion-toolbar>
+  </ion-footer>

@@ -1,0 +1,29 @@
+// @import "../../../../theme/global.scss";
+
+stepinput-date {
+  
+  .placeholder-label {
+    color: map-get($colors, text-lighter);
+    font-size: 1.6rem;
+  }
+  ion-datetime {
+      color: map-get($colors, text-regular);
+      margin-left: 0;
+      margin-top: 8px;     
+      margin-bottom: 8px;
+  }
+  ion-item {
+    background-color: transparent !important;
+    /* border-bottom: 1.5px solid map-get($colors, text-lighter); */
+    padding-left: 0 !important;
+  }
+  .item-inner {
+    border-bottom: 1.5px solid map-get($colors, text-lighter) !important;
+  }
+
+  ion-list {
+    button {
+      z-index: 1;
+    }
+  }
+}

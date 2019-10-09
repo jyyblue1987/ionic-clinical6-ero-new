@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../../../../">
+  <title data-ice="title">src/@ionic-clinical6/core/flow_process/flow_steps/flowstep.ts | Clinical 6 - JavaScript SDK</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<link rel="stylesheet" href="./inject/css/0-style.css"><meta name="description" content="A JavaScript SDK to use the Clinical6 platform"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="Clinical 6 - JavaScript SDK"><meta property="twitter:description" content="A JavaScript SDK to use the Clinical6 platform"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./" style="display: flex; align-items: center;"><img src="./image/brand_logo.png" style="width:34px;"></a>
+  <a href="./manual/index.html" data-ice="manualHeaderLink">Manual</a>
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/parallel-6/ionic-clinical6"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core">@ionic-clinical6/core</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/clinical6.service.ts~Clinical6Service.html">Clinical6Service</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/ionic-clinical6.module.ts~IonicClinical6.html">IonicClinical6</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/login.service.ts~AppLoginService.html">AppLoginService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/soft-keyboard.service.ts~SoftKeyboardService.html">SoftKeyboardService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/utils.service.ts~UtilsService.html">UtilsService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-CustomComponent">CustomComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-AUTHSTATE">AUTHSTATE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-badges">@ionic-clinical6/core/badges</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/badges/badge-models.ts~AwardedBadge.html">AwardedBadge</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/badges/badge-models.ts~Badge.html">Badge</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/badges/badge-models.ts~likeInfo.html">likeInfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/badges/badges-plugin.module.ts~BadgesPluginModule.html">BadgesPluginModule</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/badges/badges-plugin.service.ts~BadgesPluginService.html">BadgesPluginService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-config">@ionic-clinical6/core/config</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/config/app.config.ts~AppConfig.html">AppConfig</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/config/environment.service.ts~EnvironmentService.html">EnvironmentService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-ediary">@ionic-clinical6/core/ediary</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/ediary/anti-pattern-examples.ts~EdiaryIonicServiceAP.html">EdiaryIonicServiceAP</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/ediary/ediary.service.ts~EdiaryIonicService.html">EdiaryIonicService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-flow-process">@ionic-clinical6/core/flow_process</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow-factory.ts~Flows.html">Flows</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow.service.ts~FlowService.html">FlowService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flows.module.ts~FlowsModule.html">FlowsModule</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-flow-process-flow-inputs">@ionic-clinical6/core/flow_process/flow_inputs</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_inputs/flow-input.model.ts~AppFlowInput.html">AppFlowInput</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_inputs/input-container.component.ts~InputContainerComponent.html">InputContainerComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_inputs/input.model.ts~InputStyle.html">InputStyle</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_inputs/input.model.ts~InputStyleUtil.html">InputStyleUtil</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_inputs/inputs.module.ts~InputsModule.html">InputsModule</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_inputs/stepinput.component.ts~StepInputComponent.html">StepInputComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_inputs/stepinput.directive.ts~StepInputDirective.html">StepInputDirective</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_inputs/stepinput.factory.ts~StepInputFactory.html">StepInputFactory</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_inputs/validation.factory.ts~InputValidationFactory.html">InputValidationFactory</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-ValidationService">ValidationService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-flow-process-flow-inputs-agreement">@ionic-clinical6/core/flow_process/flow_inputs/agreement</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_inputs/agreement/agreement.component.ts~AgreementCheckboxComponent.html">AgreementCheckboxComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-flow-process-flow-inputs-date">@ionic-clinical6/core/flow_process/flow_inputs/date</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_inputs/date/stepinput-date.component.ts~StepInputDateComponent.html">StepInputDateComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-flow-process-flow-inputs-dummy">@ionic-clinical6/core/flow_process/flow_inputs/dummy</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_inputs/dummy/stepinput-dummy.component.ts~StepInputDummyComponent.html">StepInputDummyComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-DUMMY_CONTROL_ACCESSOR">DUMMY_CONTROL_ACCESSOR</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-flow-process-flow-inputs-file-upload">@ionic-clinical6/core/flow_process/flow_inputs/file-upload</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_inputs/file-upload/stepinput-file-upload.component.ts~StepInputFileUploadComponent.html">StepInputFileUploadComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-flow-process-flow-inputs-multi-choice">@ionic-clinical6/core/flow_process/flow_inputs/multi_choice</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_inputs/multi_choice/stepinput-multi_choice.component.ts~StepInputMultiChoiceComponent.html">StepInputMultiChoiceComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-flow-process-flow-inputs-numeric">@ionic-clinical6/core/flow_process/flow_inputs/numeric</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_inputs/numeric/stepinput-numeric.component.ts~StepInputNumericComponent.html">StepInputNumericComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-flow-process-flow-inputs-pipes">@ionic-clinical6/core/flow_process/flow_inputs/pipes</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_inputs/pipes/address.pipe.ts~AddressPrintPipe.html">AddressPrintPipe</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_inputs/pipes/momentdate.pipe.ts~MomentDatePipe.html">MomentDatePipe</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_inputs/pipes/snake-to-title.pipe.ts~SnakeToTitleCasePipe.html">SnakeToTitleCasePipe</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-flow-process-flow-inputs-pre-populated">@ionic-clinical6/core/flow_process/flow_inputs/pre-populated</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_inputs/pre-populated/stepinput-pre-populated.component.ts~StepInputPrePopulatedComponent.html">StepInputPrePopulatedComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-flow-process-flow-inputs-single-choice">@ionic-clinical6/core/flow_process/flow_inputs/single_choice</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_inputs/single_choice/stepinput-single_choice.component.ts~StepInputSingleChoiceComponent.html">StepInputSingleChoiceComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-COUNTRIES">COUNTRIES</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-STATE">STATE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-flow-process-flow-inputs-text">@ionic-clinical6/core/flow_process/flow_inputs/text</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_inputs/text/stepinput-text.component.ts~StepInputTextComponent.html">StepInputTextComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-flow-process-flow-inputs-time">@ionic-clinical6/core/flow_process/flow_inputs/time</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_inputs/time/stepinput-time.component.ts~StepInputTimeComponent.html">StepInputTimeComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-flow-process-flow-steps">@ionic-clinical6/core/flow_process/flow_steps</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_steps/flowstep.ts~FlowStepPage.html">FlowStepPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-flow-process-flow-steps-flow-choice">@ionic-clinical6/core/flow_process/flow_steps/flow-choice</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_steps/flow-choice/flow-choice.ts~FlowChoicePage.html">FlowChoicePage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-flow-process-flow-steps-flow-intro">@ionic-clinical6/core/flow_process/flow_steps/flow-intro</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_steps/flow-intro/flow-intro.ts~FlowIntroPage.html">FlowIntroPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-flow-process-flow-steps-flowstep-help">@ionic-clinical6/core/flow_process/flow_steps/flowstep-help</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_steps/flowstep-help/flowstep-help.ts~FlowStepHelpPage.html">FlowStepHelpPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-DEMOUSERINFO">DEMOUSERINFO</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-flow-process-flow-steps-flowstep-helpcard">@ionic-clinical6/core/flow_process/flow_steps/flowstep-helpcard</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_steps/flowstep-helpcard/flowstep-helpcard.ts~FlowStepHelpCardPage.html">FlowStepHelpCardPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-flow-process-flow-steps-flowstep-signature">@ionic-clinical6/core/flow_process/flow_steps/flowstep-signature</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_steps/flowstep-signature/flowstep-signature.ts~FlowStepSignPage.html">FlowStepSignPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-STATUS_SIGNED">STATUS_SIGNED</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-flow-process-flow-steps-verify-card">@ionic-clinical6/core/flow_process/flow_steps/verify-card</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_steps/verify-card/flowstep-verifycard.ts~FlowStepVerifyCardPage.html">FlowStepVerifyCardPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_steps/verify-card/flowstep-verifycard.ts~VerifyIRBAddress.html">VerifyIRBAddress</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_steps/verify-card/flowstep-verifycard.ts~VerifyIRBContact.html">VerifyIRBContact</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_steps/verify-card/flowstep-verifycard.ts~VerifyLab.html">VerifyLab</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_steps/verify-card/flowstep-verifycard.ts~VerifyLabDirector.html">VerifyLabDirector</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-flow-process-items-verify-card">@ionic-clinical6/core/flow_process/items/verify-card</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/items/verify-card/verify-card.component.ts~VerifyCardComponent.html">VerifyCardComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-menu">@ionic-clinical6/core/menu</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/menu/menu.module.ts~MenuModule.html">MenuModule</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/menu/sliding-menu.ts~SlidingMenu.html">SlidingMenu</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/menu/submenu.ts~SlidingMenuSubCategoryPage.html">SlidingMenuSubCategoryPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-DEBUGMENUITEMS">DEBUGMENUITEMS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-DEMOMENUITEMS">DEMOMENUITEMS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-MenuService">MenuService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-modal">@ionic-clinical6/core/modal</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/modal/help-modal.ts~HelpModalPage.html">HelpModalPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/modal/modal.module.ts~ModalModule.html">ModalModule</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-AlertModalPage">AlertModalPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-pages-about">@ionic-clinical6/core/pages/about</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/about/about.ts~AboutPage.html">AboutPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-pages-admins">@ionic-clinical6/core/pages/admins</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/admins/admins.module.ts~AdminsModule.html">AdminsModule</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/admins/create-new-user.ts~CreateNewUserPage.html">CreateNewUserPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-pages-alerts">@ionic-clinical6/core/pages/alerts</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/alerts/alert.factory.ts~AlertsFactory.html">AlertsFactory</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/alerts/alerts.service.ts~AlertsService.html">AlertsService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/alerts/alerts.ts~AlertGroup.html">AlertGroup</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/alerts/alerts.ts~ViewInfo.html">ViewInfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/alerts/push.service.ts~PushNotification.html">PushNotification</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/alerts/push.service.ts~PushService.html">PushService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-AlertsPage">AlertsPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-DEMO_VIEW_INFO">DEMO_VIEW_INFO</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-pages-appointments">@ionic-clinical6/core/pages/appointments</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/appointments/appointments.module.ts~AppointmentsModule.html">AppointmentsModule</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/appointments/appointments.service.ts~AppointmentsService.html">AppointmentsService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/appointments/appointments.ts~AppointmentsPage.html">AppointmentsPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-DATA">DATA</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-EVENTS">EVENTS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-RECORDS">RECORDS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-pages-appointments-edit">@ionic-clinical6/core/pages/appointments/edit</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/appointments/edit/edit-appointment.ts~EditAppointmentPage.html">EditAppointmentPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-pages-base">@ionic-clinical6/core/pages/base</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/base/base-page.ts~BasePage.html">BasePage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-pages-contact">@ionic-clinical6/core/pages/contact</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/contact/contact.ts~ContactPage.html">ContactPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-pages-faq">@ionic-clinical6/core/pages/faq</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/faq/faq.ts~FAQsPage.html">FAQsPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-pages-glossary">@ionic-clinical6/core/pages/glossary</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/glossary/glossary.ts~GlossaryPage.html">GlossaryPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-pages-login">@ionic-clinical6/core/pages/login</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/login/login.ts~LoginPage.html">LoginPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-pages-login-flow">@ionic-clinical6/core/pages/login-flow</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/login-flow/login-flow.ts~LoginFlowPage.html">LoginFlowPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/login-flow/mock.ts~LoginFlow.html">LoginFlow</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-loginFlow">loginFlow</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-pages-login-flow-custom-login-input">@ionic-clinical6/core/pages/login-flow/custom-login-input</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/login-flow/custom-login-input/stepinput-login.ts~CustomStepInputLoginComponent.html">CustomStepInputLoginComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-pages-login-with-pin">@ionic-clinical6/core/pages/login-with-pin</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/login-with-pin/login-with-pin.ts~LoginWithPinPage.html">LoginWithPinPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-pages-pdf-view">@ionic-clinical6/core/pages/pdf-view</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/pdf-view/pdf-view.module.ts~PdfViewModule.html">PdfViewModule</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/pdf-view/pdf-view.ts~PdfViewPage.html">PdfViewPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-pages-pin">@ionic-clinical6/core/pages/pin</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/pin/pin.ts~PinPage.html">PinPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-pages-plain">@ionic-clinical6/core/pages/plain</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/plain/plain-page.ts~PlainPage.html">PlainPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-pages-profile">@ionic-clinical6/core/pages/profile</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/profile/profile.module.ts~ProfileModule.html">ProfileModule</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/profile/profile.service.ts~CompanionModel.html">CompanionModel</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/profile/profile.service.ts~ProfileService.html">ProfileService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-COMPANION_PROFILE_FORM">COMPANION_PROFILE_FORM</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-PATIENT_PROFILE_FORM">PATIENT_PROFILE_FORM</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-pages-profile-companions">@ionic-clinical6/core/pages/profile/companions</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/profile/companions/companions-dashboard.ts~CompanionsDashboardPage.html">CompanionsDashboardPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-pages-profile-user-profile">@ionic-clinical6/core/pages/profile/user-profile</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/profile/user-profile/user-profile.ts~UserProfilePage.html">UserProfilePage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-pages-resources">@ionic-clinical6/core/pages/resources</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/resources/resources.module.ts~ResourcesModule.html">ResourcesModule</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/resources/resources.ts~ResourcesPage.html">ResourcesPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-pages-sign-up">@ionic-clinical6/core/pages/sign-up</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/sign-up/login-email.ts~EnterEmailPage.html">EnterEmailPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/sign-up/login-verify-code.ts~VerifyCodePage.html">VerifyCodePage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-pages-simple-title-text">@ionic-clinical6/core/pages/simple-title-text</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/simple-title-text/simple-title-text-page.ts~SimpleTitleTextPage.html">SimpleTitleTextPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-toolbar">@ionic-clinical6/core/toolbar</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/toolbar/app-toolbar.module.ts~AppToolbarModule.html">AppToolbarModule</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-AppToolbar">AppToolbar</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__param">__param</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-translator">@ionic-clinical6/core/translator</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/translator/translator.module.ts~TranslatorModule.html">TranslatorModule</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/translator/translator.service.ts~TranslatorService.html">TranslatorService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-tutorial">@ionic-clinical6/core/tutorial</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/tutorial/tutorial-modal.ts~TutorialModalPage.html">TutorialModalPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/tutorial/tutorial.module.ts~TutorialModule.html">TutorialModule</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/tutorial/tutorial.service.ts~TutorialService.html">TutorialService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-plugins-bluetooth">@ionic-clinical6/plugins/bluetooth</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/plugins/bluetooth/ble.service.ts~BLEService.html">BLEService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/plugins/bluetooth/bluetooth-characteristic.model.ts~BluetoothCharacteristic.html">BluetoothCharacteristic</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/plugins/bluetooth/bluetooth.factory.ts~BluetoothFactory.html">BluetoothFactory</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/plugins/bluetooth/bluetooth.module.ts~BluetoothModule.html">BluetoothModule</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/plugins/bluetooth/bluetooth.service.ts~BluetoothService.html">BluetoothService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-createMask">createMask</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getCanonicalUUID">getCanonicalUUID</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getCharacteristicUUID">getCharacteristicUUID</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getDescriptorUUID">getDescriptorUUID</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getKeyFromValue">getKeyFromValue</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getServiceUUID">getServiceUUID</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-bluetoothCharacteristics">bluetoothCharacteristics</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-bluetoothDescriptors">bluetoothDescriptors</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-bluetoothServices">bluetoothServices</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-plugins-bluetooth-devices">@ionic-clinical6/plugins/bluetooth/devices</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/plugins/bluetooth/devices/bluetooth-device.model.ts~BluetoothDevice.html">BluetoothDevice</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/plugins/bluetooth/devices/fora-glucometer.model.ts~ForaGlucometer.html">ForaGlucometer</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-plugins-calendar">@ionic-clinical6/plugins/calendar</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/plugins/calendar/calendar.component.ts~CalendarComponent.html">CalendarComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/@ionic-clinical6/core/flow_process/flow_steps/flowstep.ts</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import { Component, ViewChild, ElementRef } from &apos;@angular/core&apos;;
+import { FormControl } from &apos;@angular/forms&apos;;
+import { DomSanitizer, SafeHtml } from &apos;@angular/platform-browser&apos;;
+import moment from &apos;moment&apos;;
+
+import { NavController, NavParams, Loading, ModalController, Platform, AlertController } from &apos;ionic-angular&apos;;
+import { analyticsService, discussService, Thread, Client } from &apos;clinical6&apos;;
+
+import { AppConfig } from &apos;../../config/app.config&apos;;
+import { AppFlowInput } from &apos;../flow_inputs/flow-input.model&apos;;
+import { InputContainerComponent } from &apos;../flow_inputs/input-container.component&apos;;
+import { FlowService } from &apos;../flow.service&apos;;
+import { Flows } from &apos;../flow-factory&apos;;
+import { AlertModalPage } from &apos;../../modal/alert-modal&apos;;
+import { PdfViewPage } from &apos;../../pages/pdf-view/pdf-view&apos;;
+
+import { BasePage } from &apos;../../pages/base/base-page&apos;;
+import { UtilsService } from &apos;../../utils.service&apos;;
+
+@Component({
+  selector: &apos;flowstep&apos;,
+  templateUrl: &apos;flowstep.html&apos;
+})
+export class FlowStepPage extends BasePage {
+
+  nextButtonNames: Array&lt;string&gt;;
+  prevButtonNames: Array&lt;string&gt;;
+  prevButtonName: string;
+  nextButtonName: string;
+
+  navbarTitle: string;
+  backButtonText: string;
+  themeColor: string;
+  isAnswerValid: boolean = false;
+  footerPrevNext: boolean = false;
+  showImage: boolean = false;
+  isNavigating: boolean = false;
+
+  flow: any;
+  step: any;
+  nextStep: any;
+  inputs: AppFlowInput[];
+  fields: any = {};
+  inputvalues: any = {};
+  existingId: any = null;
+  setupOrManage: string;
+  editing: boolean = true;
+  noDelete: boolean;
+  comment = { present: false, body: null, custom: false };
+
+  loadingCtrl: Loading;
+  formValid: boolean;
+  previousResponse: any;
+  filter: any;
+
+  constructor(
+    public utilsSvc: UtilsService,
+    public navParams: NavParams,
+    public nav: NavController,
+    public flowCtlr: FlowService,
+    public modalCtrl: ModalController,
+    public sanitizer?: DomSanitizer,
+    public platform?: Platform,
+    public elementRef?: ElementRef,
+    public alertCtrl?: AlertController
+  ) {
+    super(platform, elementRef);
+
+    this.step = this.navParams.get(&apos;step&apos;);
+
+    this.setupOrManage = this.isThisAManageStep() ? &apos;manage&apos; : (this.navParams.get(&apos;setupOrManage&apos;) || &apos;setup&apos;);
+    this.editing = (this.navParams.get(&apos;editing&apos;) !== undefined) ? this.navParams.get(&apos;editing&apos;) : ((this.setupOrManage === &apos;manage&apos;) ? false : true);
+    this.navbarTitle = this.navParams.get(&apos;navbarTitle&apos;) || &apos;&apos;;
+    this.themeColor = this.navParams.get(&apos;themeColor&apos;) || &apos;&apos;;
+    this.backButtonText = this.navParams.get(&apos;backButtonText&apos;) || &apos;&apos;;
+    this.noDelete = this.navParams.get(&apos;noDelete&apos;) || undefined;
+    this.previousResponse = this.navParams.get(&apos;previousResponse&apos;) || {};
+    this.showImage = false;
+
+
+    this.inputs = this.step.inputs;
+    this.isAnswerValid = true;
+
+    // Fill up the form with stored values
+    for (let inputdata of this.step.inputs) {
+      this.fields[inputdata.id] = this.step.get(inputdata.id) || &apos;&apos;;
+      this.inputvalues[inputdata.id] = this.step.get(inputdata.id);
+      if (inputdata.question_type === &apos;pre_populated&apos;) {
+        this.inputvalues[inputdata.id] = inputdata.style;
+      }
+      this.isAnswerValid = false;
+    }
+
+    for (let inputState of this.inputs) {
+      inputState.inputId = inputState.id;
+      inputState.inputTitle = inputState.title;
+      inputState.inputStyle = inputState.style;
+      inputState.inputChoices = inputState.choice_list;
+      inputState.inputType = inputState.question_type;
+      inputState.inputEnabled = !inputState.locked;
+      inputState.inputRequired = inputState.required;
+      for (let choiceState of inputState.inputChoices) {
+        choiceState.choiceId = choiceState.id;
+        choiceState.choiceBody = choiceState.body;
+        choiceState.choiceSelected = false;
+      }
+    }
+
+    if (this.step.progress_bar) {
+        this.step.index = this.step.flow.steps.findIndex((step) =&gt; {
+          return step.id === this.step.id;
+        });
+    }
+
+    this.setButtonNames();
+
+    this.footerPrevNext = this.isThisAPrevNextFooterPage();
+    this.nextStep = this.selectNextStep();
+
+    this.filter = { exclusionsList: this.navParams.get(&apos;exclusionsList&apos;) } || null;
+  }
+
+
+  /**
+   * This method can be overridden to add additional/different button names
+   * that help identifying the Prev-Next layout
+   */
+  setButtonNames() {
+    this.nextButtonNames = [&apos;next&apos;, &apos;continue&apos;];
+    this.prevButtonNames = [&apos;prev&apos;];
+  }
+
+  ngOnInit() {
+  }
+
+  /**
+   * Returns the step to go to when clicking on &quot;Next&quot; button
+   * Tipically a flow page can have many buttons and possible
+   * corresponding next steps. In case of a Prev / Next footer page there
+   * is no strict way to determine which one is the &apos;Prev&apos; step and which the &apos;Next&apos;.
+   * This method can be overridden and it&apos;s used to determine the &apos;Next&apos; step.
+   * (The Prev step would presumably be a &apos;Back&apos; button)
+   */
+  selectNextStep() {
+    // if there is only one path, go for it
+    if (this.step.paths.length === 1) {
+      return this.step.paths[0];
+    }
+
+    // find one path whose button_name is in the this.nextButtonNames Array
+    let nextStepIndex = this.step.paths.findIndex(path =&gt; { return this.nextButtonNames.map(value =&gt; { return path.button_name.toLowerCase() === value.toLowerCase(); }).reduce((prev, curr) =&gt; { return prev || curr; }); });
+    if (nextStepIndex &gt;= 0) return this.step.paths[nextStepIndex];
+
+    return null;
+  }
+
+  isThisAPrevNextFooterPage() {
+    let result = false;
+
+    if (this.step.paths.length &gt; 0) {
+      // let nextStepIndex = this.step.paths.findIndex(path =&gt; ((path.button_name.toLowerCase() === &apos;next&apos;) || (path.button_name.toLowerCase() === &apos;continue&apos; )));
+
+      let nextStepIndex = this.step.paths.findIndex(path =&gt; { return this.nextButtonNames.map(value =&gt; { return path.button_name.toLowerCase() === value.toLowerCase(); }).reduce((prev, curr) =&gt; { return prev || curr; }); });
+
+      let prevStepIndex = this.step.paths.findIndex(path =&gt; { return this.prevButtonNames.map(value =&gt; { return path.button_name.toLowerCase() === value.toLowerCase(); }).reduce((prev, curr) =&gt; { return prev || curr; }); });
+
+
+      // Sets Button names
+      this.prevButtonName = prevStepIndex &gt;= 0 ? this.step.paths[prevStepIndex].button_name : &apos;&apos;;
+      this.nextButtonName = nextStepIndex &gt;= 0 ? this.step.paths[nextStepIndex].button_name : &apos;&apos;;
+
+
+      // 1. Is there a button with a label in this.nextButtonNames ?
+      if (nextStepIndex &gt;= 0) result = true;
+
+      // 2. Is there a button with a label in this.prevButtonNames ?
+      else if (prevStepIndex &gt;= 0) result = true;
+
+      // 3. Is this a manage step ? (Legacy)
+      if (this.setupOrManage === &apos;manage&apos;) result = true; // this is to keep proper handling of additional buttons
+    }
+
+    return result;
+  }
+
+  ionViewDidLoad() {
+    this.checkComments();
+  }
+
+  async checkComments() {
+    // check if there are comments for this step
+    // this only applies for flow starting from the Manage Site Profile
+    if (this.setupOrManage === &apos;manage&apos; &amp;&amp; !this.comment.custom) {
+      // TODO, here we are checking every time, maybe we can condition the check if there is a pending alert
+      const self = this;
+
+      let commentable = this.step.commentable || this.step.flow.commentable;
+      if (commentable) {
+        let thread = new Thread();
+        thread.owner = Client.instance.user;
+        thread.commentable = { id: commentable.commentable_id, type: commentable.commentable_type };
+        const comments = await discussService.getComments(thread);
+            if (comments.length &gt; 0) {
+              self.comment.present = true;
+              self.comment.body = comments[comments.length - 1].body;
+            }
+      }
+    }
+  }
+
+  handleComment() {
+    this.comment.present = false;
+  }
+  async ionViewWillEnter() {
+    this.isNavigating = false;
+    // Clinical6.postInsights(&apos;Step: this.step.title (id: ${this.step.id})&apos;, &apos;Entered: &apos; + this.step.title, true);
+    if (this.step.id === this.step.flow.first.id) {
+      await analyticsService.postInsights(&apos;Flow: Started&apos;,
+        &apos;Flow: &apos; + this.step.flow.name + &apos; (id: &apos; + this.step.flow.id + &apos;)&apos;,
+        true,
+        this.step.flow.id,
+        this.step.flow.name,
+        (new Date()).toISOString());
+
+      this.step.flow.transition(&apos;start&apos;);
+      this.flowCtlr.resetStack(this.step);
+    }
+    await analyticsService.postInsights(&apos;Flow Step: Entered&apos;,
+      &apos;Flow: &apos; + this.step.flow.name + &apos; (id: &apos; + this.step.flow.id + &apos;)&apos;,
+      true,
+      this.step.id,
+      this.step.title,
+      (new Date()).toISOString());
+  }
+
+  goToPage(event: any) {
+    switch (event.id) {
+      case &apos;viewFile&apos;:
+        // this is a dead ended flow
+        this.nav.push(PdfViewPage, { title: &apos;&apos;, filePath: event.value, themeColor: this.themeColor }, AppConfig.animationOpt);
+        this.isNavigating = false;
+        break;
+      case &apos;removeFile&apos;:
+        if (event.value) {
+          let input = this.step.inputs.find(el =&gt; { return (el.storage_attribute === &apos;remove_&apos; + event.value); });
+          if (input) {
+            this.step.set(input.id, &apos;true&apos;);
+          }
+          else console.error(&apos;FlowStep delete file: input &apos; + &apos;remove_&apos; + event.value + &apos; not found in flow: &apos; + this.step.flow.id);
+
+        }
+        break;
+      case &apos;uploadFile&apos;:
+        var pathName = event.value;
+        if (this.step.getPath(pathName) &amp;&amp; this.step.getPath(pathName).steps &amp;&amp;
+          this.step.getNextStep(this.step.getPath(pathName).steps)) {
+
+          let followingStep = this.step.getNextStep(this.step.getPath(pathName).steps);
+          this.gotoFlow(pathName, { navbarTitle: followingStep.title, themeColor: this.themeColor, setupOrManage: &apos;setup&apos; });
+        }
+        this.isNavigating = false;
+        break;
+    }
+  }
+
+  updateControlValue(event: any) {
+    this.inputvalues[event.id] = event.value;
+    this.step.set(event.id, event.value);
+  }
+
+  updateFormStatus(valid: any) {
+    this.formValid = valid;
+  }
+
+  doneCallback() {
+  }
+  hasUploadButton() {
+    return (this.step.paths.findIndex((el) =&gt; { return el.button_name === &apos;Attach Document via Email&apos;; }) &gt;= 0);
+  }
+  isThisAManageStep() {
+
+    // When the Attach Document via Email sub_flows are used,
+    // the info on setup/manage mode is lost since the flow has to be a &apos;setup&apos; flow (showing next/prev buttons)
+    // so here we infer whether this is going to be a &apos;manage&apos; step looking at the button names.
+    //
+    // TODO: this is very baroque coding... need to figure out a way to set the step layout style in the flow
+    // configuration on the backend
+    if (!this.step) return false;
+
+    return this.step.paths.reduce((prev, curr) =&gt; {
+      return (prev ||
+        [&apos;medical_board&apos;,
+          &apos;certificate&apos;,
+          &apos;license&apos;,
+          &apos;normal_values&apos;,
+          &apos;cv&apos;,
+          &apos;New Document&apos;,
+          &apos;Done&apos;,
+          &apos;document&apos;]
+          .indexOf(curr.button_name) &gt;= 0) ||
+        (curr.button_name &amp;&amp; (curr.button_name.indexOf(&apos;tag_&apos;) &gt; -1));
+    }, false);
+  }
+  displayAsSpecialButton(path: any) {
+    // Filter out some redundant or unneeded buttons/paths
+    // that will break the page layout
+    // in particular all buttons that are not to be displayed as
+    // special buttons (ie. light blue wide buttons above the footer)
+    // those include:
+    //  - buttons to be placed in the footer (eg. )Next/Prev, etc..)
+    //  - Buttons to be placed in the toolbar (eg. Plus, Done, ...)
+    //  - buttons managed by some other component (eg. buttons related to file upload fields: medical_board, certificate, ...)
+    //  - leftover/errored buttons (eg. with empty/null button_names )
+
+    return !(([null,
+      &apos;&apos;,
+      &apos;medical_board&apos;,
+      &apos;certificate&apos;,
+      &apos;license&apos;,
+      &apos;normal_values&apos;,
+      &apos;cv&apos;,
+      &apos;document&apos;,
+      &apos;new document&apos;,
+      &apos;cancel&apos;,
+      &apos;plus&apos;,
+      &apos;prev&apos;,
+      &apos;next&apos;,
+      &apos;continue&apos;,
+      &apos;complete&apos;,
+      &apos;done&apos;]
+      .indexOf(path.button_name.toLowerCase()) &gt;= 0) ||
+      (path.button_name &amp;&amp; (path.button_name.indexOf(&apos;tag_&apos;) &gt; -1)));
+  }
+  enterEditMode() {
+    this.editing = true;
+  }
+  doneEditing() {
+    if (this.setupOrManage === &apos;manage&apos;) {
+      if ((this.step.flow.id)) {
+        // here there is a proper Flow handling data input/update
+        for (let inputdata of this.step.inputs) {
+          if (!AppConfig.demoMode) { // SKIP in case of Demo Mode
+            if (this.inputvalues[inputdata.id] !== null) this.step.set(inputdata.id, this.inputvalues[inputdata.id]);
+          }
+        }
+        this.step.save();
+        this.doneEditingCallback();
+      }
+      else {
+        this.step.save();
+        this.nav.pop(AppConfig.animationOptBack);
+      }
+    }
+    else {
+      this.nav.pop(AppConfig.animationOptBack);
+    }
+    this.editing = false;
+
+  }
+  doneEditingCallback() {
+    // let nextPathName = this.step.getPath(&apos;Next&apos;).steps ? &apos;Next&apos; : &apos;Complete&apos;;
+    let nextPathName = this.selectNextStep() ? this.selectNextStep().button_name : null;
+    let currentDepth = this.navParams.get(&apos;editingDepth&apos;) || 0; currentDepth++;
+
+    if (!this.isThisASingleStep() &amp;&amp; nextPathName) {
+      // ... then keep following the flow
+      this.gotoFlow(nextPathName, { setupOrManage: &apos;manage&apos;, noDelete: true, editing: true, editingDepth: currentDepth });
+    }
+    else {
+      // ...otherwise just go back
+      this.nav.remove(this.nav.length() - currentDepth, currentDepth);
+    }
+  }
+  isThisASingleStep() {
+    // A step is considered to be a single step
+    // if the next step in the flow has a different title
+    // let nextPathName = this.step.getPath(&apos;Next&apos;).steps ? &apos;Next&apos; : &apos;Complete&apos;;
+
+    let nextPath = this.selectNextStep();
+    // if (this.step.getPath(nextPathName) &amp;&amp;
+    //     this.step.getPath(nextPathName).steps &amp;&amp;
+    //     this.step.getNextStep(this.step.getPath(nextPathName).steps) &amp;&amp;
+    //     (this.step.getNextStep(this.step.getPath(nextPathName).steps).title === this.step.title )) {
+    if (nextPath &amp;&amp;
+      nextPath.steps &amp;&amp;
+      this.step.getNextStep(nextPath.steps) &amp;&amp;
+      (this.step.getNextStep(nextPath.steps).title === this.step.title)) {
+      return false; // this step is to be considered as part of a pool
+    }
+    else {
+      return true; // this step is to be considered as single
+    }
+  }
+
+  getDoneEditLabel() {
+    if ((this.setupOrManage === &apos;manage&apos;) &amp;&amp; this.editing) return (this.isThisASingleStep() ? &apos;Done&apos; : &apos;Next&apos;);
+    if ((this.setupOrManage === &apos;manage&apos;) &amp;&amp; !this.editing) return &apos;Edit&apos;;
+  }
+  actionDoneEdit() {
+    if ((this.setupOrManage === &apos;manage&apos;) &amp;&amp; this.editing) return this.doneEditing();
+    if ((this.setupOrManage === &apos;manage&apos;) &amp;&amp; !this.editing) return this.enterEditMode();
+  }
+  isActionBtnDisabled() {
+    if ((this.setupOrManage === &apos;manage&apos;) &amp;&amp; this.editing) return (!this.formValid);
+    return false;
+  }
+  getRelatedConditionalSteps(nextPathName: string) {
+
+    if (!(this.step.getPath(nextPathName) &amp;&amp;
+      this.step.getPath(nextPathName).steps &amp;&amp;
+      this.step.getNextStep(this.step.getPath(nextPathName).steps))) return null;
+
+    let condSteps = this.step.getPath(nextPathName).steps;
+    let nextStep = this.step.getNextStep(this.step.getPath(nextPathName).steps);
+    return condSteps.map(el =&gt; { return el.step; })
+      .filter((el) =&gt; el.id !== nextStep.id);
+  }
+
+  gotoFlowLegacy(name: string, options: any = {}) {
+
+    let dataValues: Array&lt;{ input_id: number, att_name: string, value: string }&gt;;
+    let previousResponse: any = this.previousResponse;
+
+    this.step.onSave = (currentResponse) =&gt; {
+      previousResponse = currentResponse;
+    };
+
+    // This is used to prevent double tapping / double saving / data corruption.
+    // Do not remove this when something fails, instead figure out where &quot;isNavigating&quot;
+    // should be true/false appropriately.
+    if (!this.isNavigating) {
+      this.isNavigating = true;
+      let followingStep;
+
+      // handling inputs
+      for (let inputdata of this.step.inputs) {
+        if (!AppConfig.demoMode) { // SKIP in case of Demo Mode
+          this.step.existingId = this.existingId;
+          this.step.set(inputdata.id, this.inputvalues[inputdata.id]);
+        }
+      }
+
+      // SKIP in case of Demo Mode or Force ignoring required fields
+      if (!AppConfig.demoMode &amp;&amp; !options.ignoreRequiredFields) {
+        const self = this;
+        let auxStep = this.step;
+        this.step.go(name).then((followingStep) =&gt; {
+          if (followingStep) { // double check NEED REVIEW
+            for (let index = 0; index &lt; followingStep.inputs.length; index++) {
+              let singleInput = followingStep.inputs[index];
+              // if we need values for the next step, we save them
+              if (dataValues) {
+                if (dataValues[index]) {
+                  followingStep.set(singleInput.id, dataValues[index].value);
+                }
+                else {
+                  // if there are no values, we clear previous values
+                  followingStep.set(singleInput.id, undefined);
+                }
+              }
+            }
+            this.flowCtlr.goToStep(followingStep, Object.assign({
+              step: followingStep,
+              navbarTitle: self.navbarTitle,
+              themeColor: self.themeColor,
+              backButtonText: self.backButtonText,
+              previousResponse,
+              setupOrManage: this.setupOrManage
+            }, options));
+            this.isNavigating = false;
+          }
+        },
+          (failure) =&gt; {
+            this.isNavigating = false;
+            AlertModalPage.show(
+              self, {
+                type: &apos;type_error&apos;,
+                body: failure.messageHTML || failure.message,
+                subTitle: &apos;Unable to save&apos;,
+                cancelCallback: (ref) =&gt; {
+                  console.log(&apos;Could not load the dashaboard&apos;, failure);
+                }
+              });
+
+          });
+      }
+      else { // move to next step anyway in case of Demo Mode
+        if (this.step.getPath(name).steps.length &gt; 0) {
+          followingStep = this.step.getPath(name).steps[0].step;
+          if (followingStep) {
+            this.flowCtlr.goToStep(followingStep, {
+              step: followingStep,
+              navbarTitle: this.navbarTitle,
+              themeColor: this.themeColor,
+              backButtonText: this.backButtonText,
+              setupOrManage: this.setupOrManage
+            });
+            this.isNavigating = false;
+          }
+        }
+        else {
+          this.step.flow.end(this.step);
+        }
+      }
+    }
+  }
+
+  async gotoFlow(name: string, options: any = {}) {
+
+    // This is used to prevent double tapping / double saving / data corruption.
+    // Do not remove this when something fails, instead figure out where &quot;isNavigating&quot;
+    // should be true/false appropriately.
+    if (!this.isNavigating) {
+      this.isNavigating = true;
+
+      let dataValues: Array&lt;{ input_id: number, att_name: string, value: string }&gt;;
+      let previousResponse: any = this.previousResponse;
+
+      this.step.onSave = (currentResponse) =&gt; {
+        previousResponse = currentResponse;
+      };
+
+      // handling inputs
+      for (let inputdata of this.step.inputs) {
+        if (!AppConfig.demoMode) { // SKIP in case of Demo Mode
+          this.step.existingId = this.existingId;
+          this.step.set(inputdata.id, this.inputvalues[inputdata.id]);
+          console.log(&apos;Flow proces Values&apos;);
+          console.log(`InputId: ${inputdata.id}, Value: ${this.inputvalues[inputdata.id]}`);
+        }
+      }
+
+      // console.log(&apos;FlowStep Page getting the followingStep for &apos;, this.step);
+      let followingStep;
+      // Handle the special cases:
+      // - Demo Mode, or
+      // - Force ignoring required fields
+      if (AppConfig.demoMode || options.ignoreRequiredFields) {
+        followingStep = this.step.getPath(name).steps[0].step;
+
+        // last step
+        if (!followingStep) {
+          this.step.flow.end(this.step);
+          // this.isNavigating = false;
+          return true;
+        }
+      }
+      else { // normal case
+        try {
+          followingStep = await this.step.go(name);
+        }
+        catch (failure) {
+          console.warn(&apos;FlowStep Page this.step.go(name), failure&apos;, failure);
+          AlertModalPage.show(this, {
+            type: &apos;type_error&apos;,
+            body: failure.messageHTML || failure.message,
+            subTitle: &apos;Unable to save&apos;,
+            cancelCallback: (ref) =&gt; {
+              console.log(&apos;Could not load the dashaboard&apos;, failure);
+            }
+          });
+          this.isNavigating = false;
+          return false;
+        }
+      }
+
+      if (!followingStep) {
+        // this.isNavigating = false;
+        return true;
+      }
+      // console.log(&apos;FlowStep Page followingStep is &apos;, followingStep);
+
+      // double check NEED REVIEW
+      for (let index = 0; index &lt; followingStep.inputs.length; index++) {
+        let singleInput = followingStep.inputs[index];
+        // if we need values for the next step, we save them
+        if (dataValues) {
+          if (dataValues[index]) {
+            followingStep.set(singleInput.id, dataValues[index].value);
+          }
+          else {
+            // if there are no values, we clear previous values
+            followingStep.set(singleInput.id, undefined);
+          }
+        }
+      }
+
+      this.isNavigating = false;
+      return this.flowCtlr.goToStep(followingStep, Object.assign({
+        step: followingStep,
+        navbarTitle: this.navbarTitle,
+        themeColor: this.themeColor,
+        backButtonText: this.backButtonText,
+        previousResponse,
+        setupOrManage: this.setupOrManage
+      }, options));
+    }
+  }
+
+  showPrevButton() {
+    return (this.step.index !== 0);
+  }
+  imgLoaded() {
+    this.showImage = true;
+  }
+  imgError(event: any) {
+    console.log(&apos;image error called &apos;, event);
+    this.showImage = false;
+  }
+  trustHTML(text: string) {
+    return this.sanitizer.bypassSecurityTrustHtml(text);
+  }
+  onError(message: any) {
+
+  }
+  showError(subtitle: string, body: any) {
+    AlertModalPage.show(this, {
+      type: &apos;type_error&apos;,
+      body: body,
+      subTitle: subtitle
+    });
+  }
+  deleteItem(id?: string) {
+    const self = this;
+    let prompt = this.alertCtrl.create({
+      title: &apos;Delete Item&apos;,
+      message: &apos;Are you sure you would like to delete this item?&apos;,
+      inputs: [],
+      buttons: [
+        {
+          text: &apos;Cancel&apos;,
+          role: &apos;cancel&apos;,
+          handler: data =&gt; {
+            console.log(&apos;Deleting, Cancel clicked, returns to the same page&apos;);
+          }
+        },
+        {
+          text: &apos;Delete&apos;,
+          handler: data =&gt; {
+            console.log(&apos;This needs to be handled by application&apos;);
+          }
+        }
+      ]
+    });
+    prompt.present();
+  }
+
+  /**
+   * This is to Handle the &apos;Go&apos; button on the device Keyboard for iOS
+   * @param event
+   */
+  handleGoButton(event: KeyboardEvent) {
+    if (this.platform &amp;&amp; this.platform.is(&apos;ios&apos;)) {
+      if (event.keyCode === 13) {
+        for (let i = 0; i &lt; this.inputItems.length; i++) {
+          if (this.inputItems[i] === document.activeElement) {
+            console.log(&apos;found item, index: &apos;, i);
+            if (i &gt;= this.inputItems.length - 2) {
+              let nextPathName = &apos;Complete&apos;;
+              if (this.step.getPath(&apos;Next&apos;).steps) nextPathName = &apos;Next&apos;;
+              if (this.step.getPath(&apos;NEXT&apos;).steps) nextPathName = &apos;NEXT&apos;;
+              if (this.step.getPath(&apos;next&apos;).steps) nextPathName = &apos;next&apos;;
+
+              this.gotoFlow(nextPathName);
+            } else {
+              let auxItem = this.inputItems[(i + 2) % this.inputItems.length];
+              auxItem.focus();
+            }
+            break;
+          }
+        }
+      }
+    }
+  }
+
+  goBack() {
+    this.popStack();
+    this.flowCtlr._navCtrl.pop(AppConfig.animationOptBack);
+  }
+  
+  popStack() {
+    this.flowCtlr._stepsStack.pop();
+    if ( this.flowCtlr._stepsStack.length - 1 &gt; 0 ) {
+      // update the current progress bar index in the FlowService
+      if (this.step[&apos;progress_bar&apos;] &amp;&amp; this.flowCtlr._progress_current_step &gt; 0)
+        this.flowCtlr._progress_current_step--;
+
+      this.flowCtlr._currentStepID = this.flowCtlr._stepsStack[this.flowCtlr._stepsStack.length - 1].stepId;
+    } else {
+      // update the current progress bar index in the FlowService
+      if (this.step[&apos;progress_bar&apos;] &amp;&amp; this.flowCtlr._progress_current_step &gt; 0)
+        this.flowCtlr._progress_current_step--;
+      this.flowCtlr._currentStepID = undefined;
+    }
+  }
+
+  getIndexByBFS() { // use the BFS to calculate the Progress Bar percentage to avoid the platform issue about the flowStep id
+    if (this.step.progress_bar) {
+      const sourceBFS = this.step.flow.getBFS(this.step.flow.first);
+      this.step.flow.total = Math.max.apply(Math, Object.keys(sourceBFS).map(key =&gt; sourceBFS[key]));      
+      this.step.index = this.step.id === this.step.flow.first.id ? 0 : sourceBFS[this.step.id] -1;      
+    }
+  }
+}</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

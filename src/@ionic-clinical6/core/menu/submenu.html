@@ -1,0 +1,14 @@
+<ion-header>
+  <app-toolbar [title]="menuItem.title" [backLabel]="'Home'"
+              layout="plain"
+             ></app-toolbar>
+</ion-header>
+
+<ion-content no-padding (click)="return;">
+  <ion-list>
+    <button ion-button clear full *ngFor="let page of pages" (click)="openPage(page)" class="list-button">
+      <div class="text">{{page.title}}</div>
+      <div class="action-label"><div class="app-p6-icon-chevron-right action-arrow"></div></div>
+    </button>
+  </ion-list>
+</ion-content>

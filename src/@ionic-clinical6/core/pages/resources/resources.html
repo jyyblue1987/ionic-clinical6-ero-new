@@ -1,0 +1,26 @@
+<!--<ion-header>
+  <ion-toolbar no-padding no-margin color="primary" class="header-toolbar">
+    <ion-buttons left>
+      <button ion-button no-padding (click)="goBack()" class="bar-button">
+        <ion-icon name="arrow-back"></ion-icon>
+        <span class="button-text">Home</span>
+      </button>
+    </ion-buttons>
+
+    <ion-title>Resources</ion-title>
+  </ion-toolbar>
+</ion-header>-->
+<ion-header>
+  <app-toolbar [title]="'Resources'" [backLabel]="'Home'"
+              layout="plain"
+             ></app-toolbar>
+</ion-header>
+
+<ion-content no-padding (click)="return;">
+  <ion-list>
+    <button ion-button clear full *ngFor="let page of pages" (click)="goToPage(page)" class="list-button">
+      <div class="text">{{page.title}}</div>
+      <div class="action-label"><div class="app-p6-icon-chevron-right action-arrow"></div></div>
+    </button>
+  </ion-list>
+</ion-content>

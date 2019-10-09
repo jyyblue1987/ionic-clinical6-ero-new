@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../../../">
+  <title data-ice="title">src/@ionic-clinical6/plugins/bluetooth/bluetooth.utility.ts | Clinical 6 - JavaScript SDK</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<link rel="stylesheet" href="./inject/css/0-style.css"><meta name="description" content="A JavaScript SDK to use the Clinical6 platform"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="Clinical 6 - JavaScript SDK"><meta property="twitter:description" content="A JavaScript SDK to use the Clinical6 platform"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./" style="display: flex; align-items: center;"><img src="./image/brand_logo.png" style="width:34px;"></a>
+  <a href="./manual/index.html" data-ice="manualHeaderLink">Manual</a>
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/parallel-6/ionic-clinical6"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core">@ionic-clinical6/core</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/clinical6.service.ts~Clinical6Service.html">Clinical6Service</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/ionic-clinical6.module.ts~IonicClinical6.html">IonicClinical6</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/login.service.ts~AppLoginService.html">AppLoginService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/soft-keyboard.service.ts~SoftKeyboardService.html">SoftKeyboardService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/utils.service.ts~UtilsService.html">UtilsService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-CustomComponent">CustomComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-AUTHSTATE">AUTHSTATE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-badges">@ionic-clinical6/core/badges</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/badges/badge-models.ts~AwardedBadge.html">AwardedBadge</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/badges/badge-models.ts~Badge.html">Badge</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/badges/badge-models.ts~likeInfo.html">likeInfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/badges/badges-plugin.module.ts~BadgesPluginModule.html">BadgesPluginModule</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/badges/badges-plugin.service.ts~BadgesPluginService.html">BadgesPluginService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-config">@ionic-clinical6/core/config</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/config/app.config.ts~AppConfig.html">AppConfig</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/config/environment.service.ts~EnvironmentService.html">EnvironmentService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-ediary">@ionic-clinical6/core/ediary</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/ediary/anti-pattern-examples.ts~EdiaryIonicServiceAP.html">EdiaryIonicServiceAP</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/ediary/ediary.service.ts~EdiaryIonicService.html">EdiaryIonicService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-flow-process">@ionic-clinical6/core/flow_process</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow-factory.ts~Flows.html">Flows</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow.service.ts~FlowService.html">FlowService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flows.module.ts~FlowsModule.html">FlowsModule</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-flow-process-flow-inputs">@ionic-clinical6/core/flow_process/flow_inputs</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_inputs/flow-input.model.ts~AppFlowInput.html">AppFlowInput</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_inputs/input-container.component.ts~InputContainerComponent.html">InputContainerComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_inputs/input.model.ts~InputStyle.html">InputStyle</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_inputs/input.model.ts~InputStyleUtil.html">InputStyleUtil</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_inputs/inputs.module.ts~InputsModule.html">InputsModule</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_inputs/stepinput.component.ts~StepInputComponent.html">StepInputComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_inputs/stepinput.directive.ts~StepInputDirective.html">StepInputDirective</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_inputs/stepinput.factory.ts~StepInputFactory.html">StepInputFactory</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_inputs/validation.factory.ts~InputValidationFactory.html">InputValidationFactory</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-ValidationService">ValidationService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-flow-process-flow-inputs-agreement">@ionic-clinical6/core/flow_process/flow_inputs/agreement</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_inputs/agreement/agreement.component.ts~AgreementCheckboxComponent.html">AgreementCheckboxComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-flow-process-flow-inputs-date">@ionic-clinical6/core/flow_process/flow_inputs/date</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_inputs/date/stepinput-date.component.ts~StepInputDateComponent.html">StepInputDateComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-flow-process-flow-inputs-dummy">@ionic-clinical6/core/flow_process/flow_inputs/dummy</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_inputs/dummy/stepinput-dummy.component.ts~StepInputDummyComponent.html">StepInputDummyComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-DUMMY_CONTROL_ACCESSOR">DUMMY_CONTROL_ACCESSOR</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-flow-process-flow-inputs-file-upload">@ionic-clinical6/core/flow_process/flow_inputs/file-upload</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_inputs/file-upload/stepinput-file-upload.component.ts~StepInputFileUploadComponent.html">StepInputFileUploadComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-flow-process-flow-inputs-multi-choice">@ionic-clinical6/core/flow_process/flow_inputs/multi_choice</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_inputs/multi_choice/stepinput-multi_choice.component.ts~StepInputMultiChoiceComponent.html">StepInputMultiChoiceComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-flow-process-flow-inputs-numeric">@ionic-clinical6/core/flow_process/flow_inputs/numeric</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_inputs/numeric/stepinput-numeric.component.ts~StepInputNumericComponent.html">StepInputNumericComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-flow-process-flow-inputs-pipes">@ionic-clinical6/core/flow_process/flow_inputs/pipes</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_inputs/pipes/address.pipe.ts~AddressPrintPipe.html">AddressPrintPipe</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_inputs/pipes/momentdate.pipe.ts~MomentDatePipe.html">MomentDatePipe</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_inputs/pipes/snake-to-title.pipe.ts~SnakeToTitleCasePipe.html">SnakeToTitleCasePipe</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-flow-process-flow-inputs-pre-populated">@ionic-clinical6/core/flow_process/flow_inputs/pre-populated</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_inputs/pre-populated/stepinput-pre-populated.component.ts~StepInputPrePopulatedComponent.html">StepInputPrePopulatedComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-flow-process-flow-inputs-single-choice">@ionic-clinical6/core/flow_process/flow_inputs/single_choice</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_inputs/single_choice/stepinput-single_choice.component.ts~StepInputSingleChoiceComponent.html">StepInputSingleChoiceComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-COUNTRIES">COUNTRIES</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-STATE">STATE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-flow-process-flow-inputs-text">@ionic-clinical6/core/flow_process/flow_inputs/text</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_inputs/text/stepinput-text.component.ts~StepInputTextComponent.html">StepInputTextComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-flow-process-flow-inputs-time">@ionic-clinical6/core/flow_process/flow_inputs/time</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_inputs/time/stepinput-time.component.ts~StepInputTimeComponent.html">StepInputTimeComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-flow-process-flow-steps">@ionic-clinical6/core/flow_process/flow_steps</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_steps/flowstep.ts~FlowStepPage.html">FlowStepPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-flow-process-flow-steps-flow-choice">@ionic-clinical6/core/flow_process/flow_steps/flow-choice</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_steps/flow-choice/flow-choice.ts~FlowChoicePage.html">FlowChoicePage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-flow-process-flow-steps-flow-intro">@ionic-clinical6/core/flow_process/flow_steps/flow-intro</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_steps/flow-intro/flow-intro.ts~FlowIntroPage.html">FlowIntroPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-flow-process-flow-steps-flowstep-help">@ionic-clinical6/core/flow_process/flow_steps/flowstep-help</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_steps/flowstep-help/flowstep-help.ts~FlowStepHelpPage.html">FlowStepHelpPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-DEMOUSERINFO">DEMOUSERINFO</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-flow-process-flow-steps-flowstep-helpcard">@ionic-clinical6/core/flow_process/flow_steps/flowstep-helpcard</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_steps/flowstep-helpcard/flowstep-helpcard.ts~FlowStepHelpCardPage.html">FlowStepHelpCardPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-flow-process-flow-steps-flowstep-signature">@ionic-clinical6/core/flow_process/flow_steps/flowstep-signature</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_steps/flowstep-signature/flowstep-signature.ts~FlowStepSignPage.html">FlowStepSignPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-STATUS_SIGNED">STATUS_SIGNED</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-flow-process-flow-steps-verify-card">@ionic-clinical6/core/flow_process/flow_steps/verify-card</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_steps/verify-card/flowstep-verifycard.ts~FlowStepVerifyCardPage.html">FlowStepVerifyCardPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_steps/verify-card/flowstep-verifycard.ts~VerifyIRBAddress.html">VerifyIRBAddress</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_steps/verify-card/flowstep-verifycard.ts~VerifyIRBContact.html">VerifyIRBContact</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_steps/verify-card/flowstep-verifycard.ts~VerifyLab.html">VerifyLab</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/flow_steps/verify-card/flowstep-verifycard.ts~VerifyLabDirector.html">VerifyLabDirector</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-flow-process-items-verify-card">@ionic-clinical6/core/flow_process/items/verify-card</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/flow_process/items/verify-card/verify-card.component.ts~VerifyCardComponent.html">VerifyCardComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-menu">@ionic-clinical6/core/menu</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/menu/menu.module.ts~MenuModule.html">MenuModule</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/menu/sliding-menu.ts~SlidingMenu.html">SlidingMenu</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/menu/submenu.ts~SlidingMenuSubCategoryPage.html">SlidingMenuSubCategoryPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-DEBUGMENUITEMS">DEBUGMENUITEMS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-DEMOMENUITEMS">DEMOMENUITEMS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-MenuService">MenuService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-modal">@ionic-clinical6/core/modal</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/modal/help-modal.ts~HelpModalPage.html">HelpModalPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/modal/modal.module.ts~ModalModule.html">ModalModule</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-AlertModalPage">AlertModalPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-pages-about">@ionic-clinical6/core/pages/about</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/about/about.ts~AboutPage.html">AboutPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-pages-admins">@ionic-clinical6/core/pages/admins</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/admins/admins.module.ts~AdminsModule.html">AdminsModule</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/admins/create-new-user.ts~CreateNewUserPage.html">CreateNewUserPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-pages-alerts">@ionic-clinical6/core/pages/alerts</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/alerts/alert.factory.ts~AlertsFactory.html">AlertsFactory</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/alerts/alerts.service.ts~AlertsService.html">AlertsService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/alerts/alerts.ts~AlertGroup.html">AlertGroup</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/alerts/alerts.ts~ViewInfo.html">ViewInfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/alerts/push.service.ts~PushNotification.html">PushNotification</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/alerts/push.service.ts~PushService.html">PushService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-AlertsPage">AlertsPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-DEMO_VIEW_INFO">DEMO_VIEW_INFO</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-pages-appointments">@ionic-clinical6/core/pages/appointments</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/appointments/appointments.module.ts~AppointmentsModule.html">AppointmentsModule</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/appointments/appointments.service.ts~AppointmentsService.html">AppointmentsService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/appointments/appointments.ts~AppointmentsPage.html">AppointmentsPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-DATA">DATA</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-EVENTS">EVENTS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-RECORDS">RECORDS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-pages-appointments-edit">@ionic-clinical6/core/pages/appointments/edit</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/appointments/edit/edit-appointment.ts~EditAppointmentPage.html">EditAppointmentPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-pages-base">@ionic-clinical6/core/pages/base</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/base/base-page.ts~BasePage.html">BasePage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-pages-contact">@ionic-clinical6/core/pages/contact</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/contact/contact.ts~ContactPage.html">ContactPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-pages-faq">@ionic-clinical6/core/pages/faq</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/faq/faq.ts~FAQsPage.html">FAQsPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-pages-glossary">@ionic-clinical6/core/pages/glossary</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/glossary/glossary.ts~GlossaryPage.html">GlossaryPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-pages-login">@ionic-clinical6/core/pages/login</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/login/login.ts~LoginPage.html">LoginPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-pages-login-flow">@ionic-clinical6/core/pages/login-flow</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/login-flow/login-flow.ts~LoginFlowPage.html">LoginFlowPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/login-flow/mock.ts~LoginFlow.html">LoginFlow</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-loginFlow">loginFlow</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-pages-login-flow-custom-login-input">@ionic-clinical6/core/pages/login-flow/custom-login-input</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/login-flow/custom-login-input/stepinput-login.ts~CustomStepInputLoginComponent.html">CustomStepInputLoginComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-pages-login-with-pin">@ionic-clinical6/core/pages/login-with-pin</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/login-with-pin/login-with-pin.ts~LoginWithPinPage.html">LoginWithPinPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-pages-pdf-view">@ionic-clinical6/core/pages/pdf-view</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/pdf-view/pdf-view.module.ts~PdfViewModule.html">PdfViewModule</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/pdf-view/pdf-view.ts~PdfViewPage.html">PdfViewPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-pages-pin">@ionic-clinical6/core/pages/pin</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/pin/pin.ts~PinPage.html">PinPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-pages-plain">@ionic-clinical6/core/pages/plain</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/plain/plain-page.ts~PlainPage.html">PlainPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-pages-profile">@ionic-clinical6/core/pages/profile</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/profile/profile.module.ts~ProfileModule.html">ProfileModule</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/profile/profile.service.ts~CompanionModel.html">CompanionModel</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/profile/profile.service.ts~ProfileService.html">ProfileService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-COMPANION_PROFILE_FORM">COMPANION_PROFILE_FORM</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-PATIENT_PROFILE_FORM">PATIENT_PROFILE_FORM</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-pages-profile-companions">@ionic-clinical6/core/pages/profile/companions</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/profile/companions/companions-dashboard.ts~CompanionsDashboardPage.html">CompanionsDashboardPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-pages-profile-user-profile">@ionic-clinical6/core/pages/profile/user-profile</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/profile/user-profile/user-profile.ts~UserProfilePage.html">UserProfilePage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-pages-resources">@ionic-clinical6/core/pages/resources</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/resources/resources.module.ts~ResourcesModule.html">ResourcesModule</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/resources/resources.ts~ResourcesPage.html">ResourcesPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-pages-sign-up">@ionic-clinical6/core/pages/sign-up</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/sign-up/login-email.ts~EnterEmailPage.html">EnterEmailPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/sign-up/login-verify-code.ts~VerifyCodePage.html">VerifyCodePage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-pages-simple-title-text">@ionic-clinical6/core/pages/simple-title-text</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/pages/simple-title-text/simple-title-text-page.ts~SimpleTitleTextPage.html">SimpleTitleTextPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-toolbar">@ionic-clinical6/core/toolbar</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/toolbar/app-toolbar.module.ts~AppToolbarModule.html">AppToolbarModule</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-AppToolbar">AppToolbar</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__param">__param</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-translator">@ionic-clinical6/core/translator</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/translator/translator.module.ts~TranslatorModule.html">TranslatorModule</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/translator/translator.service.ts~TranslatorService.html">TranslatorService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-core-tutorial">@ionic-clinical6/core/tutorial</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/tutorial/tutorial-modal.ts~TutorialModalPage.html">TutorialModalPage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/tutorial/tutorial.module.ts~TutorialModule.html">TutorialModule</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/core/tutorial/tutorial.service.ts~TutorialService.html">TutorialService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-plugins-bluetooth">@ionic-clinical6/plugins/bluetooth</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/plugins/bluetooth/ble.service.ts~BLEService.html">BLEService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/plugins/bluetooth/bluetooth-characteristic.model.ts~BluetoothCharacteristic.html">BluetoothCharacteristic</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/plugins/bluetooth/bluetooth.factory.ts~BluetoothFactory.html">BluetoothFactory</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/plugins/bluetooth/bluetooth.module.ts~BluetoothModule.html">BluetoothModule</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/plugins/bluetooth/bluetooth.service.ts~BluetoothService.html">BluetoothService</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-createMask">createMask</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getCanonicalUUID">getCanonicalUUID</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getCharacteristicUUID">getCharacteristicUUID</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getDescriptorUUID">getDescriptorUUID</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getKeyFromValue">getKeyFromValue</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getServiceUUID">getServiceUUID</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-bluetoothCharacteristics">bluetoothCharacteristics</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-bluetoothDescriptors">bluetoothDescriptors</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-bluetoothServices">bluetoothServices</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-plugins-bluetooth-devices">@ionic-clinical6/plugins/bluetooth/devices</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/plugins/bluetooth/devices/bluetooth-device.model.ts~BluetoothDevice.html">BluetoothDevice</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/plugins/bluetooth/devices/fora-glucometer.model.ts~ForaGlucometer.html">ForaGlucometer</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#-ionic-clinical6-plugins-calendar">@ionic-clinical6/plugins/calendar</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/@ionic-clinical6/plugins/calendar/calendar.component.ts~CalendarComponent.html">CalendarComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-__decorate">__decorate</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/@ionic-clinical6/plugins/bluetooth/bluetooth.utility.ts</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">// bluetooth.helpers.js
+var bluetoothServices = {
+    &apos;alert_notification&apos;: 0x1811,
+    &apos;automation_io&apos;: 0x1815,
+    &apos;battery_service&apos;: 0x180F,
+    &apos;blood_pressure&apos;: 0x1810,
+    &apos;body_composition&apos;: 0x181B,
+    &apos;bond_management&apos;: 0x181E,
+    &apos;continuous_glucose_monitoring&apos;: 0x181F,
+    &apos;current_time&apos;: 0x1805,
+    &apos;cycling_power&apos;: 0x1818,
+    &apos;cycling_speed_and_cadence&apos;: 0x1816,
+    &apos;device_information&apos;: 0x180A,
+    &apos;environmental_sensing&apos;: 0x181A,
+    &apos;generic_access&apos;: 0x1800,
+    &apos;generic_attribute&apos;: 0x1801,
+    &apos;glucose&apos;: 0x1808,
+    &apos;health_thermometer&apos;: 0x1809,
+    &apos;heart_rate&apos;: 0x180D,
+    &apos;human_interface_device&apos;: 0x1812,
+    &apos;immediate_alert&apos;: 0x1802,
+    &apos;indoor_positioning&apos;: 0x1821,
+    &apos;internet_protocol_support&apos;: 0x1820,
+    &apos;link_loss&apos;: 0x1803,
+    &apos;location_and_navigation&apos;: 0x1819,
+    &apos;next_dst_change&apos;: 0x1807,
+    &apos;phone_alert_status&apos;: 0x180E,
+    &apos;pulse_oximeter&apos;: 0x1822,
+    &apos;reference_time_update&apos;: 0x1806,
+    &apos;running_speed_and_cadence&apos;: 0x1814,
+    &apos;scan_parameters&apos;: 0x1813,
+    &apos;tx_power&apos;: 0x1804,
+    &apos;user_data&apos;: 0x181C,
+    &apos;weight_scale&apos;: 0x181D
+};
+
+var bluetoothCharacteristics = {
+    &apos;aerobic_heart_rate_lower_limit&apos;: 0x2A7E,
+    &apos;aerobic_heart_rate_upper_limit&apos;: 0x2A84,
+    &apos;aerobic_threshold&apos;: 0x2A7F,
+    &apos;age&apos;: 0x2A80,
+    &apos;aggregate&apos;: 0x2A5A,
+    &apos;alert_category_id&apos;: 0x2A43,
+    &apos;alert_category_id_bit_mask&apos;: 0x2A42,
+    &apos;alert_level&apos;: 0x2A06,
+    &apos;alert_notification_control_point&apos;: 0x2A44,
+    &apos;alert_status&apos;: 0x2A3F,
+    &apos;altitude&apos;: 0x2AB3,
+    &apos;anaerobic_heart_rate_lower_limit&apos;: 0x2A81,
+    &apos;anaerobic_heart_rate_upper_limit&apos;: 0x2A82,
+    &apos;anaerobic_threshold&apos;: 0x2A83,
+    &apos;analog&apos;: 0x2A58,
+    &apos;apparent_wind_direction&apos;: 0x2A73,
+    &apos;apparent_wind_speed&apos;: 0x2A72,
+    &apos;gap.appearance&apos;: 0x2A01,
+    &apos;barometric_pressure_trend&apos;: 0x2AA3,
+    &apos;battery_level&apos;: 0x2A19,
+    &apos;blood_pressure_feature&apos;: 0x2A49,
+    &apos;blood_pressure_measurement&apos;: 0x2A35,
+    &apos;body_composition_feature&apos;: 0x2A9B,
+    &apos;body_composition_measurement&apos;: 0x2A9C,
+    &apos;body_sensor_location&apos;: 0x2A38,
+    &apos;bond_management_control_point&apos;: 0x2AA4,
+    &apos;bond_management_feature&apos;: 0x2AA5,
+    &apos;boot_keyboard_input_report&apos;: 0x2A22,
+    &apos;boot_keyboard_output_report&apos;: 0x2A32,
+    &apos;boot_mouse_input_report&apos;: 0x2A33,
+    &apos;gap.central_address_resolution_support&apos;: 0x2AA6,
+    &apos;cgm_feature&apos;: 0x2AA8,
+    &apos;cgm_measurement&apos;: 0x2AA7,
+    &apos;cgm_session_run_time&apos;: 0x2AAB,
+    &apos;cgm_session_start_time&apos;: 0x2AAA,
+    &apos;cgm_specific_ops_control_point&apos;: 0x2AAC,
+    &apos;cgm_status&apos;: 0x2AA9,
+    &apos;csc_feature&apos;: 0x2A5C,
+    &apos;csc_measurement&apos;: 0x2A5B,
+    &apos;current_time&apos;: 0x2A2B,
+    &apos;cycling_power_control_point&apos;: 0x2A66,
+    &apos;cycling_power_feature&apos;: 0x2A65,
+    &apos;cycling_power_measurement&apos;: 0x2A63,
+    &apos;cycling_power_vector&apos;: 0x2A64,
+    &apos;database_change_increment&apos;: 0x2A99,
+    &apos;date_of_birth&apos;: 0x2A85,
+    &apos;date_of_threshold_assessment&apos;: 0x2A86,
+    &apos;date_time&apos;: 0x2A08,
+    &apos;day_date_time&apos;: 0x2A0A,
+    &apos;day_of_week&apos;: 0x2A09,
+    &apos;descriptor_value_changed&apos;: 0x2A7D,
+    &apos;gap.device_name&apos;: 0x2A00,
+    &apos;dew_point&apos;: 0x2A7B,
+    &apos;digital&apos;: 0x2A56,
+    &apos;dst_offset&apos;: 0x2A0D,
+    &apos;elevation&apos;: 0x2A6C,
+    &apos;email_address&apos;: 0x2A87,
+    &apos;exact_time_256&apos;: 0x2A0C,
+    &apos;fat_burn_heart_rate_lower_limit&apos;: 0x2A88,
+    &apos;fat_burn_heart_rate_upper_limit&apos;: 0x2A89,
+    &apos;firmware_revision_string&apos;: 0x2A26,
+    &apos;first_name&apos;: 0x2A8A,
+    &apos;five_zone_heart_rate_limits&apos;: 0x2A8B,
+    &apos;floor_number&apos;: 0x2AB2,
+    &apos;gender&apos;: 0x2A8C,
+    &apos;glucose_feature&apos;: 0x2A51,
+    &apos;glucose_measurement&apos;: 0x2A18,
+    &apos;glucose_measurement_context&apos;: 0x2A34,
+    &apos;gust_factor&apos;: 0x2A74,
+    &apos;hardware_revision_string&apos;: 0x2A27,
+    &apos;heart_rate_control_point&apos;: 0x2A39,
+    &apos;heart_rate_max&apos;: 0x2A8D,
+    &apos;heart_rate_measurement&apos;: 0x2A37,
+    &apos;heat_index&apos;: 0x2A7A,
+    &apos;height&apos;: 0x2A8E,
+    &apos;hid_control_point&apos;: 0x2A4C,
+    &apos;hid_information&apos;: 0x2A4A,
+    &apos;hip_circumference&apos;: 0x2A8F,
+    &apos;humidity&apos;: 0x2A6F,
+    &apos;ieee_11073-20601_regulatory_certification_data_list&apos;: 0x2A2A,
+    &apos;indoor_positioning_configuration&apos;: 0x2AAD,
+    &apos;intermediate_blood_pressure&apos;: 0x2A36,
+    &apos;intermediate_temperature&apos;: 0x2A1E,
+    &apos;irradiance&apos;: 0x2A77,
+    &apos;language&apos;: 0x2AA2,
+    &apos;last_name&apos;: 0x2A90,
+    &apos;latitude&apos;: 0x2AAE,
+    &apos;ln_control_point&apos;: 0x2A6B,
+    &apos;ln_feature&apos;: 0x2A6A,
+    &apos;local_east_coordinate.xml&apos;: 0x2AB1,
+    &apos;local_north_coordinate&apos;: 0x2AB0,
+    &apos;local_time_information&apos;: 0x2A0F,
+    &apos;location_and_speed&apos;: 0x2A67,
+    &apos;location_name&apos;: 0x2AB5,
+    &apos;longitude&apos;: 0x2AAF,
+    &apos;magnetic_declination&apos;: 0x2A2C,
+    &apos;magnetic_flux_density_2D&apos;: 0x2AA0,
+    &apos;magnetic_flux_density_3D&apos;: 0x2AA1,
+    &apos;manufacturer_name_string&apos;: 0x2A29,
+    &apos;maximum_recommended_heart_rate&apos;: 0x2A91,
+    &apos;measurement_interval&apos;: 0x2A21,
+    &apos;model_number_string&apos;: 0x2A24,
+    &apos;navigation&apos;: 0x2A68,
+    &apos;new_alert&apos;: 0x2A46,
+    &apos;gap.peripheral_preferred_connection_parameters&apos;: 0x2A04,
+    &apos;gap.peripheral_privacy_flag&apos;: 0x2A02,
+    &apos;plx_continuous_measurement&apos;: 0x2A5F,
+    &apos;plx_features&apos;: 0x2A60,
+    &apos;plx_spot_check_measurement&apos;: 0x2A5E,
+    &apos;pnp_id&apos;: 0x2A50,
+    &apos;pollen_concentration&apos;: 0x2A75,
+    &apos;position_quality&apos;: 0x2A69,
+    &apos;pressure&apos;: 0x2A6D,
+    &apos;protocol_mode&apos;: 0x2A4E,
+    &apos;rainfall&apos;: 0x2A78,
+    &apos;gap.reconnection_address&apos;: 0x2A03,
+    &apos;record_access_control_point&apos;: 0x2A52,
+    &apos;reference_time_information&apos;: 0x2A14,
+    &apos;report&apos;: 0x2A4D,
+    &apos;report_map&apos;: 0x2A4B,
+    &apos;resting_heart_rate&apos;: 0x2A92,
+    &apos;ringer_control_point&apos;: 0x2A40,
+    &apos;ringer_setting&apos;: 0x2A41,
+    &apos;rsc_feature&apos;: 0x2A54,
+    &apos;rsc_measurement&apos;: 0x2A53,
+    &apos;sc_control_point&apos;: 0x2A55,
+    &apos;scan_interval_window&apos;: 0x2A4F,
+    &apos;scan_refresh&apos;: 0x2A31,
+    &apos;sensor_location&apos;: 0x2A5D,
+    &apos;serial_number_string&apos;: 0x2A25,
+    &apos;gatt.service_changed&apos;: 0x2A05,
+    &apos;software_revision_string&apos;: 0x2A28,
+    &apos;sport_type_for_aerobic_and_anaerobic_thresholds&apos;: 0x2A93,
+    &apos;supported_new_alert_category&apos;: 0x2A47,
+    &apos;supported_unread_alert_category&apos;: 0x2A48,
+    &apos;system_id&apos;: 0x2A23,
+    &apos;temperature&apos;: 0x2A6E,
+    &apos;temperature_measurement&apos;: 0x2A1C,
+    &apos;temperature_type&apos;: 0x2A1D,
+    &apos;three_zone_heart_rate_limits&apos;: 0x2A94,
+    &apos;time_accuracy&apos;: 0x2A12,
+    &apos;time_source&apos;: 0x2A13,
+    &apos;time_update_control_point&apos;: 0x2A16,
+    &apos;time_update_state&apos;: 0x2A17,
+    &apos;time_with_dst&apos;: 0x2A11,
+    &apos;time_zone&apos;: 0x2A0E,
+    &apos;true_wind_direction&apos;: 0x2A71,
+    &apos;true_wind_speed&apos;: 0x2A70,
+    &apos;two_zone_heart_rate_limit&apos;: 0x2A95,
+    &apos;tx_power_level&apos;: 0x2A07,
+    &apos;uncertainty&apos;: 0x2AB4,
+    &apos;unread_alert_status&apos;: 0x2A45,
+    &apos;user_control_point&apos;: 0x2A9F,
+    &apos;user_index&apos;: 0x2A9A,
+    &apos;uv_index&apos;: 0x2A76,
+    &apos;vo2_max&apos;: 0x2A96,
+    &apos;waist_circumference&apos;: 0x2A97,
+    &apos;weight&apos;: 0x2A98,
+    &apos;weight_measurement&apos;: 0x2A9D,
+    &apos;weight_scale_feature&apos;: 0x2A9E,
+    &apos;wind_chill&apos;: 0x2A79
+};
+
+var bluetoothDescriptors = {
+    &apos;gatt.characteristic_extended_properties&apos;: 0x2900,
+    &apos;gatt.characteristic_user_description&apos;: 0x2901,
+    &apos;gatt.client_characteristic_configuration&apos;: 0x2902,
+    &apos;gatt.server_characteristic_configuration&apos;: 0x2903,
+    &apos;gatt.characteristic_presentation_format&apos;: 0x2904,
+    &apos;gatt.characteristic_aggregate_format&apos;: 0x2905,
+    &apos;valid_range&apos;: 0x2906,
+    &apos;external_report_reference&apos;: 0x2907,
+    &apos;report_reference&apos;: 0x2908,
+    &apos;number_of_digitals&apos;: 0x2909,
+    &apos;value_trigger_setting&apos;: 0x290A,
+    &apos;es_configuration&apos;: 0x290B,
+    &apos;es_measurement&apos;: 0x290C,
+    &apos;es_trigger_setting&apos;: 0x290D,
+    &apos;time_trigger_setting&apos;: 0x290E
+};
+
+function getCanonicalUUID(uuid: any) {
+    if (typeof uuid === &apos;number&apos;) uuid = uuid.toString(16);
+    uuid = uuid.toLowerCase();
+    if (uuid.length &lt;= 8) uuid = (&apos;00000000&apos; + uuid).slice(-8) + &apos;-0000-1000-8000-00805f9b34fb&apos;;
+    if (uuid.length === 32) uuid = uuid.match(/^([0-9a-f]{8})([0-9a-f]{4})([0-9a-f]{4})([0-9a-f]{4})([0-9a-f]{12})$/).splice(1).join(&apos;-&apos;);
+    return uuid;
+}
+
+function getCharacteristicUUID(uuid: any) {
+    if (bluetoothCharacteristics[uuid]) uuid = bluetoothCharacteristics[uuid];
+    return getCanonicalUUID(uuid);
+}
+
+function getDescriptorUUID(uuid: any) {
+    if (bluetoothDescriptors[uuid]) uuid = bluetoothDescriptors[uuid];
+    return getCanonicalUUID(uuid);
+}
+
+function getKeyFromValue(value: any, dictionary: any) {
+  const s = dictionary;
+  for ( var prop in s ) {
+      if ( s.hasOwnProperty( prop ) ) {
+            if ( s[ prop ] === value )
+                return prop;
+      }
+  }
+  return null;
+}
+
+function getServiceUUID(uuid: any) {
+    if (bluetoothServices[uuid]) uuid = bluetoothServices[uuid];
+    return getCanonicalUUID(uuid);
+}
+
+function createMask(a, b) {
+    let r = 0;
+    for (let i = a; i &lt;= b; i++) {
+      r |= 1 &lt;&lt; i;
+    }
+    return r;
+}
+
+export {
+  bluetoothServices,
+  bluetoothCharacteristics,
+  bluetoothDescriptors,
+  createMask,
+  getCanonicalUUID,
+  getCharacteristicUUID,
+  getDescriptorUUID,
+  getKeyFromValue,
+  getServiceUUID,
+};
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

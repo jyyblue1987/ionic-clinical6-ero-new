@@ -1,0 +1,5 @@
+<form novalidate [class.readonly]="readonly">
+  <ng-template step-input *ngFor="let input of inputList; let index = index" [input]="input" [value]="(fields && fields[input.inputId]) || ''"
+    [group]="mainForm" [filter]="filter" (goToPage)="forwardGoToPage($event)">
+  </ng-template>
+</form>

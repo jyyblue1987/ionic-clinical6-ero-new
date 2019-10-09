@@ -1,0 +1,44 @@
+<ion-header>
+    <app-toolbar    [title]="pageTitle" [backLabel]="backText" (backClick)="goBack()"></app-toolbar>
+  </ion-header>
+  <ion-content no-padding (click)="return;">
+    <ion-refresher (ionRefresh)="doRefresh($event)">
+      <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+    <ion-list class="alerts-list">
+      <ng-template ngFor let-group [ngForOf]="alertGroups">        
+        <button ion-button no-margin clear full class="alert-item" *ngFor="let item of group.alerts" (click)="goTakeAction(item)">
+          <ion-grid>
+            <ion-row>
+              <ion-col class="image-col">
+                <div class="item-icon-container" >
+                  <img class="alert-image" src ="{{getIconId(item.action)}}"/>
+                </div>
+              </ion-col>
+          <ion-col class="details-col">
+          <div class="details">
+            <div class="title-content"> 
+              <ion-row>
+                <ion-col class="alert-title-col">
+                    <div *ngIf="showDate" class="time">{{moment(item.created_at).format('DD MMM Y hh:mma')}}</div>  
+                    <div class="title">{{item.title}}</div>                                
+                </ion-col>
+              </ion-row>            
+            </div>
+            <div class="description">{{item.message}}</div>
+          </div>
+        </ion-col>
+          <a (click)="dismiss(item,$event)"><div class="dismiss-button app-p6-icon-exit-large"></div></a>
+        </ion-row>
+      </ion-grid>
+        </button>
+      </ng-template>
+    </ion-list>
+    <div class="no-alerts"  *ngIf="(!hasAlerts())">
+      <ion-card>
+        <ion-card-content>
+          <div class="message">{{translate('ALERTS_PAGE_NO_ALERTS')}}</div>
+        </ion-card-content>
+      </ion-card>    
+    </div>
+  </ion-content>

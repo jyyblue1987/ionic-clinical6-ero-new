@@ -1,0 +1,1 @@
+{"version":3,"names":[],"mappings":"","sources":["src/@ionic-clinical6/plugins/bluetooth/bluetooth.factory.d.ts"],"sourcesContent":["import { BLEService } from './ble.service';\nexport declare class BluetoothFactory {\n    static getClass(name: any): any;\n    static create(response: any, ble: BLEService): any;\n}\n"],"file":"bluetooth.factory.d.ts"}

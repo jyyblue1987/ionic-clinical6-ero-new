@@ -1,0 +1,88 @@
+// @import "../../../theme/global.scss";
+
+login-page {
+  
+  ion-content {
+      height: 100%;
+      position: relative !important;
+      background-color: map-get($colors, soft-background) !important;
+
+    .title {
+      @extend .title-centered-2;
+      height: 5.2rem;
+      align-items: baseline;
+      margin-top: 2.2rem;
+      line-height: 2.8rem;
+    }
+    .helper {
+      @extend .small-text-helper-1;
+      font-size: 1.4rem;
+      line-height: 1.9rem;
+      margin-top: 0.3rem;
+      padding: 0.5rem 8%;
+    }
+    .icon-image {
+      @extend .icon-big;
+      font-size: 8.1rem;
+      padding: 0rem;
+      height: 11.5rem
+    }
+    img.icon-image { // used e.g. by pin.html
+      height: 11.5rem;
+      width: 11.5rem;
+      margin: auto;
+      padding: 0.7rem;
+    }
+    .form-container {
+      width: 82%;
+      margin-right: auto;
+      margin-left: auto;
+
+    }
+    .input-field {
+      background-color: map-get($colors, soft-background );
+      padding: 0;
+
+      ion-label {
+        color: map-get($colors, text-lighter ) !important;
+      }
+    }
+    .item-inner {
+      border-bottom: 1.5px solid map-get($colors, text-lighter) !important;
+    }
+
+    .button-hidden {
+      padding: 0px;
+    }
+  } // ion-content
+
+  ion-row.footer-buttons {
+    width: 83%;
+    margin-left: auto;
+    margin-right: auto;
+
+    ion-col {
+      margin: 0 1.2%;
+    }
+    button {
+      letter-spacing: -0.08rem;
+      font-size: 1.6rem;
+      height: 5.4rem;
+      margin-bottom: 0;
+      font-family: Gotham-Book;
+      font-weight: 600;
+    }
+  }
+  .help-footer {
+    color: map-get($colors, text-regular);
+    text-align: center;
+    font-size: 0.9rem;
+    letter-spacing: -0.0rem;
+    padding: 0 0 0.6rem 0;
+  }
+  .help-footer a, .help-footer a:visited {
+    color: map-get($colors, text-regular);
+    font-weight: 600;
+    text-decoration: underline;
+  }
+}

@@ -1,0 +1,1 @@
+{"version":3,"names":[],"mappings":"","sources":["src/@ionic-clinical6/core/config/index.d.ts"],"sourcesContent":["import { AppState } from './app-state.enum';\nimport { AppConfig } from './app.config';\nimport { EnvironmentService } from './environment.service';\nexport { AppConfig, AppState, EnvironmentService };\n"],"file":"index.d.ts"}

@@ -1,0 +1,107 @@
+export declare const PATIENT_PROFILE_FORM: {
+    'id': string;
+    'title': string;
+    'toolbar': string;
+    'content_type': string;
+    'image': any;
+    'inputs': ({
+        'id': string;
+        'storage_attribute': string;
+        'title': string;
+        'body': string;
+        'question_type': string;
+        'style': string;
+        'required': boolean;
+        'validation_expression': any;
+        'validation_details': any;
+        'instructions': string;
+        'choice_list': any[];
+        'locked': boolean;
+        'max': any;
+        'min': any;
+        'max_label': string;
+        'min_label': string;
+        'interval': any;
+        'labels': any[];
+    } | {
+        'id': string;
+        'storage_attribute': string;
+        'title': string;
+        'body': any;
+        'question_type': string;
+        'list': string;
+        'style': string;
+        'required': boolean;
+        'validation_expression': any;
+        'validation_details': any;
+        'instructions': any;
+        'choice_list': {
+            id: string;
+            body: string;
+        }[];
+        'locked': any;
+        'max': any;
+        'min': any;
+        'max_label': any;
+        'min_label': any;
+        'interval': any;
+        'labels': any[];
+    } | {
+        'id': string;
+        'storage_attribute': string;
+        'title': string;
+        'body': any;
+        'question_type': string;
+        'style': string;
+        'required': boolean;
+        'validation_expression': any;
+        'validation_details': any;
+        'instructions': any;
+        'choice_list': {
+            id: string;
+            body: string;
+        }[];
+        'locked': any;
+        'max': any;
+        'min': any;
+        'max_label': any;
+        'min_label': any;
+        'interval': any;
+        'labels': any[];
+    })[];
+    'paths': {
+        'button_name': string;
+        'capture': boolean;
+        'last': boolean;
+        'steps': any[];
+    }[];
+};
+export declare const COMPANION_PROFILE_FORM: {
+    'id': string;
+    'title': string;
+    'toolbar': string;
+    'description': string;
+    'content_type': string;
+    'image': any;
+    'inputs': {
+        'id': string;
+        'storage_attribute': string;
+        'title': string;
+        'body': string;
+        'question_type': string;
+        'style': string;
+        'required': boolean;
+        'validation_expression': any;
+        'validation_details': any;
+        'instructions': string;
+        'choice_list': any[];
+        'locked': boolean;
+        'max': any;
+        'min': any;
+        'max_label': string;
+        'min_label': string;
+        'interval': any;
+        'labels': any[];
+    }[];
+    'paths': any[];
+};

@@ -1,0 +1,13 @@
+<ion-header>
+  <app-toolbar [title]="title" [backLabel]="translator.getInnerHTML('BACK') || 'Back'" layout="plain"></app-toolbar>
+
+</ion-header>
+<ion-content  no-padding >
+    <div class="spinner-overlay" *ngIf="isLoading || !imgLoaded"><ion-spinner></ion-spinner></div>
+    <div small-padding class="image-container" [style.background-image]="backgrImage">
+        <img class="icon-image" [src]="imageUrl" (error)="imageLoaded()" (load)="imageLoaded();" style="opacity:0;position:absolute;height:0;"/>
+    </div>
+    <div small-padding *ngIf="!isLoading && imgLoaded">
+        <div [innerHTML]="body" padding small-text></div>
+    </div>
+</ion-content>

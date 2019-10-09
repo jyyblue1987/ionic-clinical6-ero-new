@@ -1,0 +1,62 @@
+<ion-toolbar *ngIf="currentPlatform === 'iOS'" no-padding no-margin class="c6-toolbar ios" 
+[style.background-color]="bgColor">
+  <ion-buttons id="left-button" left>
+    <button *ngIf="displayLeftButton()" ion-button no-padding (click)="leftButtonClick($event)" class="bar-button">
+      <ion-icon name="ios-arrow-back"></ion-icon>
+      <span class="button-text">{{leftBtnLabel}}</span>
+    </button>
+    <button *ngIf="displayBackButton()" ion-button no-padding (click)="backButtonClick($event)" class="bar-button">
+      <ion-icon name="ios-arrow-back"></ion-icon>
+      <span class="button-text">{{backLabel}}</span>
+    </button>
+    <button *ngIf="layout === 'app-menu'" ion-button no-padding menuToggle left class="menu-button">
+      <div name="menu" class="menu-icon app-p6-icon-hamburger-straigth"></div>
+    </button>
+  </ion-buttons>
+
+  <ion-title *ngIf="displayTextTitle()"><span [innerHTML]="title"></span></ion-title>
+  <ion-title *ngIf="displayLogoTitle()"><span class="app-p6-icon-logo app-logo"></span></ion-title>
+
+  <ion-buttons id="right-button" right *ngIf="displayAction()">
+    <button ion-button  no-padding (click)="onRightActionClick()" [disabled]="actionDisabled">
+      <span *ngIf="layout === 'plain-info'" [class]="infoIconClass + ' info-icon'"></span>
+      <span *ngIf="layout === 'plain-action'" class="button-text">{{rightLabel}}</span>
+      <span *ngIf="layout === 'plain-plus'" class="app-p6-icon-add plus-icon"></span>
+      <div *ngIf="displayAlerts()" id="alerts-text">{{alert}}</div>
+      <div *ngIf="displayAlerts()" id="alerts-icon" [class]="alertsIconClass"></div>
+    </button>
+  </ion-buttons>
+  <ng-content select="ion-buttons[end]"></ng-content>
+</ion-toolbar>
+
+<ion-toolbar *ngIf="currentPlatform === 'Android'" no-padding no-margin class="c6-toolbar android" 
+[style.background-color]="bgColor">
+  <ion-buttons id="left-button" left>
+    <button *ngIf="displayLeftButton()" ion-button no-padding (click)="leftButtonClick($event)" class="bar-button">
+      <ion-icon name="ios-arrow-back"></ion-icon>
+      <span class="button-text">{{leftBtnLabel}}</span>
+    </button>
+    <button *ngIf="displayBackButton()" ion-button no-padding (click)="backButtonClick($event)" class="bar-button">
+      <ion-icon name="ios-arrow-back"></ion-icon>
+      <span class="button-text">{{backLabel}}</span>
+    </button>
+    <button *ngIf="layout === 'app-menu'" ion-button no-padding menuToggle left class="menu-button">
+      <div name="menu" class="menu-icon app-p6-icon-hamburger-straigth"></div>
+    </button>
+  </ion-buttons>
+  
+    <ion-title *ngIf="displayTextTitle()"><span [innerHTML]="title"></span></ion-title>
+    <ion-title *ngIf="displayLogoTitle()"><span class="app-p6-icon-logo app-logo"></span></ion-title>
+
+  <ion-buttons id="right-button" right *ngIf="displayAction()">
+    <button ion-button  no-padding (click)="onRightActionClick()" [disabled]="actionDisabled">
+      <span *ngIf="layout === 'plain-info'" [class]="infoIconClass + ' info-icon'"></span>
+      <span *ngIf="layout === 'plain-action'" class="button-text">{{rightLabel}}</span>
+      <span *ngIf="layout === 'plain-plus'" class="app-p6-icon-add plus-icon"></span>
+
+      <div *ngIf="displayAlerts()" id="alerts-text">{{alert}}</div>
+      <div *ngIf="displayAlerts()" id="alerts-icon" [class]="alertsIconClass"></div>
+    </button>
+  </ion-buttons>
+  <ng-content select="ion-buttons[end]"></ng-content>
+</ion-toolbar>

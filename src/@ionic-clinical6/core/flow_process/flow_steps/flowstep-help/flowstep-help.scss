@@ -1,0 +1,77 @@
+// @import "../../../../theme/global.scss";
+
+flowstep-help {
+
+  ion-content {
+      height: 100%;
+      position: relative !important;
+      background-color: map-get($colors, soft-background) !important;
+
+    .title {
+      @extend .title-centered-2;
+      /* height: 5.2rem; // unset */
+      margin-bottom: 1rem;
+      align-items: baseline;
+      margin-top: 2.2rem;
+      line-height: 2.8rem;
+    }
+    .helper {
+      @extend .small-text-helper-1;
+      font-size: 1.4rem;
+      line-height: 1.9rem;
+      margin-top: 0rem;
+      padding: 0 8%;
+    }
+
+    .icon-image {
+      @extend .icon-big;
+      font-size: 8.1rem;
+    }
+    img.icon-image {
+      height: 11.5rem;
+      width: 11.5rem;
+      margin: auto;
+      padding: 0.7rem;
+    }
+
+    .form_container {
+      width: 85%;
+      margin: 1.5rem auto 0 auto;
+
+      stepinput-pre-populated .field_container {
+        padding: 0 0 0 5%;
+      }
+    }
+  } // ion-content
+
+  // Additional Buttons
+  .additional-button {
+    @extend button.light-blue;
+    margin: 1.5rem auto;
+    font-family: Gotham-Medium;
+  }
+
+  // Footer
+  ion-toolbar.footer {
+    padding-top: 0;
+    margin: 0 auto 0 auto;
+  }
+  ion-row.footer-buttons {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2.8rem;
+
+    ion-col {
+      margin: 0 1.2%;
+    }
+    button {
+      letter-spacing: -0.08rem;
+      font-size: 1.6rem;
+      height: 5.4rem;
+      margin-bottom: 0;
+      font-family: Gotham-Book;
+      font-weight: 600;
+    }
+  }
+}

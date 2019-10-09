@@ -1,0 +1,60 @@
+// @import "../../theme/variables.scss";
+
+.ppd-pin-alert{
+
+    .alert-head {
+        background: map-get($colors, primary)!important;
+        color: map-get($colors, text-lightest) !important;
+        padding: 0.7rem 0 0.7rem 0 !important;
+    }
+
+    .alert-wrapper {
+        max-width: 80%!important;
+        border-radius: 0.5rem!important; 
+        width: 100% !important;
+    }
+
+    .alert-title {
+        margin-top: 0.7rem!important;
+        margin-bottom: 0.7rem!important;
+        font-size: 1.7rem;
+        font-weight: 600; 
+        text-align: center;
+    }
+
+    .alert-message {
+        margin-top: 3rem!important;
+        padding-left: 2rem!important;
+        padding-right: 2rem!important;
+        font-size: 15px!important;
+        color: map-get($colors, text-regular)!important;
+        border-bottom: 1.5px solid map-get($colors, light-borders)!important;
+        text-align: center;
+    }
+
+    .alert-button {
+        color: map-get($colors, text-regular)!important;
+        border-bottom: 1.5px solid map-get($colors, light-borders)!important;
+        font-size: 15px!important;
+        margin: 0;
+    }
+
+    .alert-button:last-child {
+        font-weight: normal!important;
+        color: map-get($colors, text-regular)!important;
+        border-bottom: none!important;
+
+    }
+
+    .alert-button-group {
+        flex-direction: column!important;
+        -webkit-flex-direction: column!important;
+        -ms-flex-direction: column!important;
+        padding: 0;
+    }
+
+    .button-inner {
+        justify-content: center!important;
+    }
+}
+

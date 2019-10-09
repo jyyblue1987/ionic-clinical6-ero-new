@@ -1,0 +1,143 @@
+appointments-page {
+
+    ion-content {
+        text-align: center;
+        .scroll-content {
+            top: 12rem !important;
+        }
+
+        .custom-spinner {
+            margin: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            height: 85px;
+            text-align: center;
+        }
+    }
+
+    .date-selector {
+        background-color: #488fd3;
+        height: 12.5rem;
+        width: 100%;
+        text-align: center;
+
+        ion-segment {
+            margin-top: 2rem !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
+
+            .segment-button {
+                border-color: white !important;
+                color: white !important;
+                height: 4rem;
+                font-size: 1.5rem;
+                line-height: 3.7rem;
+            }
+            .segment-activated {
+                border-color: white !important;
+                background-color: white !important;
+                color: #488fd3 !important;
+            }
+
+            .segment-button:first-of-type {
+                border-radius: 8px 0 0 8px;
+            }
+
+            .segment-button:last-of-type {
+                border-radius: 0 8px 8px 0;
+            }
+        }
+
+        .current-date {
+            color: white;
+            font-family: Lato, sans-serif;
+            font-weight: bold;
+            font-size: 2.7rem;
+            margin: 1.5rem 0;
+        }
+    }
+
+    .appointment-list {
+        .details-container {
+            height: unset;
+            padding: 2.5rem 2rem 2rem;
+            text-align: left;
+            // border-bottom-style: solid;
+            // border-bottom-width: 1px;
+            // border-bottom-color: lightgrey;
+            color: #7a7a7a;
+        }
+        .details-container:after {
+            content: "";
+            background-color: #7a7a7a;
+            position: absolute;
+            height: 1px;
+            margin-left: 1.5rem;
+            width: 100%;
+            left: 0;
+            bottom: 0;
+        }
+        // .detail-title {
+        // }
+        // .detail-dates {
+        // }
+        .detail-content {
+            white-space: normal;
+            line-height: 2.1rem;
+        }
+        .detail-icon {
+            min-width: 3.5rem;
+            max-width: 3.5rem;
+        }
+        .arrow {
+            font-size: 2.8rem;
+        }
+        .arrow-col {
+            text-align: right;
+        }
+    }
+
+    .no-appointments {
+        .no-icon {
+            margin-top: 6rem;
+            margin-bottom: 2rem;
+            width: 8rem;
+        }
+        .no-title {
+            font-family: Lato, sans-serif;
+            font-weight: bold;
+            font-size: 2rem;
+        }
+        .no-subtitle{
+            font-family: Lato, sans-serif;
+            padding-left: 6rem;
+            padding-right: 6rem;
+            white-space: unset;
+        }
+    }
+
+    .blue-button {
+        width: 100%;
+        height: 5rem !important;
+    }
+
+    ion-footer {
+        button {
+            margin: 0 !important;
+        }
+        ion-toolbar {
+            padding: 0.5rem 2.5rem 2rem !important;
+        }
+    }
+
+    .green-colored {
+        color: #04a34c !important;
+    }
+ 
+    .red-colored {
+        color: #d31614 !important;
+    }
+}

@@ -1,0 +1,44 @@
+<div class="login-form {{flowInput.inputId}}">
+    <div *ngIf="(body || hint) && !filter['excludeQuestion']" class="form-header {{flowInput.inputId}}">
+        <div *ngIf="(body) && !filter['excludeQuestion']" class="body">{{body}}</div>
+        <div *ngIf="flowInput['attribute']" [ngClass]="flowInput['attribute']['separator']==='line'?'line-separator':'space-separator'"></div>
+        <div *ngIf="(hint) && !filter['excludeQuestion']" class="hint">{{hint}}</div>
+    </div> 
+        <!--These are the inputs in case of Floating Labels Style -->
+    <div class="form-container {{flowInput.inputId}}" [formGroup]="subForm" novalidate *ngIf="!labelStyle || labelStyle !== 'placeholder'">
+        
+        <ion-item class="input-field" *ngIf="style===InputStyle.text" [class.readonly]="readOnly">
+            <!-- <ion-label floating *ngIf="!labelStyle || labelStyle === 'floating'">{{title? title: ""}}</ion-label>
+            <ion-label stacked *ngIf="labelStyle === 'stacked'">{{title? title: ""}}</ion-label> -->
+            <ion-input type="text" [placeholder]="title" class="input-{{flowInput.inputId}}" [formControlName]="flowInput.inputId" [readonly]="readOnly" (ionFocus)="focusOut=false"
+            (ionBlur)="focusOut=true" autocorrect="off"  autocapitalize="off"></ion-input>
+        </ion-item>
+
+        <ion-item class="input-field" *ngIf="style===InputStyle.email" [class.readonly]="readOnly">
+            <!-- <ion-label floating *ngIf="!labelStyle || labelStyle === 'floating'">{{title? title: ""}}</ion-label>
+            <ion-label stacked *ngIf="labelStyle === 'stacked'">{{title? title: ""}}</ion-label> -->
+            <ion-input type="email" [placeholder]="title"  [formControlName]="flowInput.inputId" [readonly]="readOnly" class="input-{{flowInput.inputId}}" autocapitalize="off"
+                (ionFocus)="focusOut=false" (ionBlur)="focusOut=true" autocorrect="off"  autocapitalize="off">
+            </ion-input>
+        </ion-item>
+
+        <ion-item class="input-field" *ngIf="style===InputStyle.password" [class.readonly]="readOnly">
+            <!-- <ion-label floating *ngIf="!labelStyle || labelStyle === 'floating'">{{title? title: ""}}</ion-label>
+            <ion-label stacked *ngIf="labelStyle === 'stacked'">{{title? title: ""}}</ion-label> -->
+            <ion-input type="tel" style="-webkit-text-security:disc;" [formControlName]="flowInput.inputId" [readonly]="readOnly" class="input-{{flowInput.inputId}}"
+            [minlength]="validationMin" [maxlength]="validationMax" [textMask]="{mask: getPasswordMask(), guide: false}" (ionFocus)="focusOut=false" [placeholder]="title" 
+            (ionBlur)="focusOut=true">
+            </ion-input>
+        </ion-item>
+        <!-- <p *ngIf="throwError()" class="error-box">{{throwError()}}</p> -->
+        <p *ngIf="getError() && focusOut" class="error-box">{{getError()}}</p>
+    </div>
+    <!-- <div class="form-footer {{flowInput.inputId}}"> -->
+        <!-- Error feedback  -->
+        <!-- Error feedback  -->
+        <div *ngIf="link_button" class="link-button">
+            <a (click)="btnClicked($event)">{{link_button.button_name}}</a>
+        </div>
+    <!-- </div> -->
+</div> 
+

@@ -1,0 +1,6 @@
+<div class = "file-container" *ngIf="fileUrl">
+  <a class = "url" (click)="openFile()">{{filename}}</a>
+  <a class = "remove-icon app-p6-icon-exit-large" *ngIf="!readonly"  (click)="removeFile()"></a>
+</div>
+<button ion-button class="upload_button" *ngIf="!fileUrl" (click)="buttonClick()">{{actionLabel}}</button>
+

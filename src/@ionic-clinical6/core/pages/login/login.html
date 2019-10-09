@@ -1,0 +1,51 @@
+
+<ion-header>
+  <app-toolbar [backLabel]="'Back'"
+              layout="app"
+             ></app-toolbar>
+</ion-header>
+<ion-content padding >
+
+  <div class="title">{{title}}</div>
+  <div class="app-p6-icon-survey icon-image"></div>
+  <!--<div class="helper">Text...</div>-->
+  <div class="helper">{{body}}</div>
+
+  <form class="form-container" >
+    <!--
+    <div *ngFor="let x of test">
+        <span>
+            <input title="{{x.label}}" type="x.type"  />
+            {{x.label}}
+        </span>
+    </div> 
+  -->
+
+    <div *ngFor="let input of inputs">
+    <ion-item class="input-field">
+      <ion-label floating>{{input.label}}</ion-label>
+      <ion-input name="input.id" type="input.type" [(ngModel)]="input.id" autocorrect="off" autocapitalize="off" (keyup)="handleKey($event)"></ion-input>
+    </ion-item>
+
+    </div> 
+
+  </form>
+</ion-content>
+
+<ion-footer no-border>
+  <ion-toolbar no-border>
+    <ion-row class="footer-buttons">
+      <ion-col>
+        <button ion-button full color="secondary" (click)="showHelp()">{{helpText}}</button>
+      </ion-col>
+      <ion-col>
+        <button ion-button full (click)="doLogin()">{{nextText}}</button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="help-footer">By tapping {{nextText}} you agree to the <a (click)="goToTerms()"><b>Terms of Use</b></a> and <a (click)="goToPrivacyPolicy()"><b>Privacy Policy</b></a></div>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-footer>

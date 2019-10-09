@@ -1,0 +1,18 @@
+<ion-header>
+  <app-toolbar [title]="navbarTitle" [bgColor]="themeColor" layout="plain"></app-toolbar>
+</ion-header>
+
+<ion-content no-padding (click)="return;">
+  <div class="title-section">
+    <div class="title" [innerHTML]="step.title"></div>
+    <div class="letter-text" [innerHTML]="step.rich_description" *ngIf="step.rich_description"></div>
+  </div>
+
+  <ion-list no-margin>
+    <ng-template ngFor let-next [ngForOf]="step.paths">
+    <ion-row no-margin no-padding>
+      <button class="next-button" ion-button (click)="gotoFlow(next.button_name)">{{next.button_name}}</button>
+    </ion-row>
+    </ng-template>
+  </ion-list>
+</ion-content>

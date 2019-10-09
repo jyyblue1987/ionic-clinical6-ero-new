@@ -1,0 +1,22 @@
+<ion-toolbar class="alert-top">  
+    <a><div class="app-p6-icon-cross exit-icon" 
+            (click)="dismiss()"></div></a>
+</ion-toolbar> 
+
+<ion-content padding>
+    <div class="title-container">
+        <span class="{{iconClass[type]}} title-icon"></span>
+        <div class="title-big title">{{title}}</div>
+    </div>
+
+    <div class="subtitle" *ngIf="subTitle" [innerHTML]="subTitle"></div>
+    <div class="body-text" [innerHTML]="body"></div>
+</ion-content>
+
+<ion-footer>
+  <ion-row>
+    <ion-col *ngFor='let button of buttons'>
+      <button ion-button full (click)="button.action(self)">{{button.title}}</button>
+    </ion-col>
+  </ion-row>
+</ion-footer>

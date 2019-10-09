@@ -1,0 +1,1 @@
+{"version":3,"names":[],"mappings":"","sources":["src/@ionic-clinical6/core/flow_process/flow_inputs/single_choice/location-list.d.ts"],"sourcesContent":["export declare const COUNTRIES: {\n    id: string;\n    body: string;\n}[];\nexport declare const STATE: {\n    id: string;\n    body: string;\n}[];\n"],"file":"location-list.d.ts"}

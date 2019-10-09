@@ -1,0 +1,58 @@
+edit-appointment-page {
+    ion-content {
+        text-align: center;
+    }
+    .page-image {
+        width: 8rem;
+        margin-top: 5rem;
+        margin-bottom: 2rem;
+    }
+    .page-title {
+        font-family: Lato, sans-serif;
+        font-size: 2rem;
+        font-weight: bolder;
+        color: #7f878d;
+    }
+    .page-subtitle {
+        font-family: Lato, sans-serif;
+        margin-bottom: 0;
+        color: #7f878d;
+    }
+    
+    .content-data {
+        @extend .page-subtitle;
+        margin-bottom: 3rem;
+        white-space: initial;
+    }
+    ion-item {
+        color: #7f878d !important;
+        background-color: transparent !important;
+        margin-bottom: 0.5rem !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        width: 80% !important;
+        padding-left: 0 !important;
+
+        ion-datetime {
+            padding-bottom: 8px !important;
+            padding-top: 8px !important;        }
+    }
+    .item-inner {
+        border-bottom: 0.55px solid #6c7474 !important;
+    }
+
+    .blue-button {
+        width: 100%;
+        height: 5rem !important;
+    }
+
+    ion-footer {
+        button {
+            margin: 0 !important;
+        }
+        ion-toolbar {
+            padding: 0.5rem 2.5rem 2rem !important;
+        }
+    }
+
+}

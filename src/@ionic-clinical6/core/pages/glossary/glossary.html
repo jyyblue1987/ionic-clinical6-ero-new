@@ -1,0 +1,20 @@
+<ion-header>
+  <app-toolbar [title]="title" [backLabel]="translator.getInnerHTML('BACK') || 'Back'"
+              layout="plain"
+             ></app-toolbar>
+</ion-header>
+
+<ion-content no-padding (click)="return;">
+  <ion-searchbar mode='ios' (ionInput)="getItems($event)" class="glossary-search"></ion-searchbar>
+  <ion-list>
+    <div *ngFor="let item of filteredGlossary">
+      <button ion-button clear full (click)="toggleDetails(item)" class="glossary-list-button">
+        <div class="text">{{item.title}}</div>
+      </button>
+      <div id="item_{{item.position}}" [style.height]="item.expanded?item.detailsHeight:'0px'" class="details">
+        <div padding [innerHTML]="_sanitizer.bypassSecurityTrustHtml(item.details)">
+        </div>
+      </div>
+    </div>
+  </ion-list>
+</ion-content>

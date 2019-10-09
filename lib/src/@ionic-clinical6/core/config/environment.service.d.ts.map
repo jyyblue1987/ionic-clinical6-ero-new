@@ -1,0 +1,1 @@
+{"version":3,"names":[],"mappings":"","sources":["src/@ionic-clinical6/core/config/environment.service.d.ts"],"sourcesContent":["export declare class EnvironmentService {\n    APIEndpoint: string;\n}\n"],"file":"environment.service.d.ts"}

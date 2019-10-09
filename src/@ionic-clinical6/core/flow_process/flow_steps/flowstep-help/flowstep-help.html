@@ -1,0 +1,55 @@
+<!--<ion-header>
+  <ion-toolbar no-padding no-margin color="primary" class="header-toolbar">
+    <ion-buttons left>
+      <button ion-button no-padding (click)="goBack()" class="bar-button">
+      <ion-icon name="arrow-back"></ion-icon>
+      <span class="button-text">Back</span>
+    </button>
+    </ion-buttons>
+    <ion-title><span class="app-p6-icon-PPD-logo app-logo"></span></ion-title>
+  </ion-toolbar>
+</ion-header>-->
+<ion-header>
+  <app-toolbar [backLabel]="'Back'"
+              layout="app"
+             ></app-toolbar>
+</ion-header>
+<ion-content padding (click)="return;">
+
+  <div class="title">{{step.title}}</div>
+  <img class="icon-image" src="{{step.image.original}}" />
+  <div class="helper" [innerHTML]="step.rich_description" *ngIf="step.rich_description"></div>
+
+  <ion-row no-padding no-margin *ngIf="showInputs">
+    <ion-col>
+      <div class="form_container">
+        <input-container [inputList]="inputs" (formStatusChanged)="updateForm($event)" (formValueChanged)="updateInputValues($event)" [fields]="fields"></input-container>
+      </div>
+    </ion-col>
+  </ion-row>
+
+    <ng-template ngFor let-index [ngForOf]="additionalButtons">
+      <ion-row no-margin no-padding>
+        <button ion-button full color="secondary" class="additional-button" (click)="gotoFlow(step.paths[index].button_name)">{{step.paths[index].button_name}}</button>
+      </ion-row>
+    </ng-template>
+
+
+</ion-content>
+
+<ion-footer nopadding no-border>
+  <ion-toolbar class="footer">
+    <ion-row class="footer-buttons">
+      <ion-col *ngIf="showHelpButton">
+        <button ion-button full color="secondary" (click)="showHelp()">Help</button>
+      </ion-col>
+      <!--
+      <ion-col *ngFor='let next of step.paths'>
+        <button ion-button full (click)="gotoFlow(next.button_name)">{{ next.button_name }}</button>
+      </ion-col>-->
+      <ion-col *ngFor='let index of prevNextButtons'>
+        <button ion-button full (click)="gotoFlow(step.paths[index].button_name)">{{ step.paths[index].button_name }}</button>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-footer>

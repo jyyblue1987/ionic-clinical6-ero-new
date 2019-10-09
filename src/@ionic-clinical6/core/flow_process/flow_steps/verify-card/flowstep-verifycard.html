@@ -1,0 +1,34 @@
+<ion-header>
+  <app-toolbar [title]="navbarTitle" [backLabel]="'Back'" [bgColor]="themeColor" layout="plain"></app-toolbar>
+</ion-header>
+
+<ion-content padding (click)="return;">
+
+  <div class="title">{{step.title}}</div>
+  <div class="helper" [innerHTML]="step.rich_description" *ngIf="step.rich_description"></div>
+
+  <ion-row no-padding no-margin>
+    <ion-col>
+      <div class="form_container">
+        <span *ngFor="let verify  of verifyInfoList">
+          <verify-card [verify]="verify"></verify-card>
+        </span>
+      </div>
+    </ion-col>
+  </ion-row>
+
+  <ion-row no-padding no-margin>
+    <ion-col class="input-container" no-margin>
+    <input-container [inputList]="inputs" (formStatusChanged)="updateForm($event)" (formValueChanged)="updateInputValues($event)" [fields]="fields"></input-container>
+    </ion-col>
+  </ion-row>
+</ion-content>
+
+<ion-footer class="survey-page" *ngIf="footerPrevNext">
+  <ion-toolbar no-padding>
+    <button ion-button class="button-left theme-primary-color" [style.background-color]="themeColor" *ngIf="showPrevButton()" (click)="goBack()">Prev
+    </button>
+    <button ion-button class="button-right theme-primary-color" [style.background-color]="themeColor" [disabled]="!isAnswerValid" (click)="gotoFlow(nextStep.button_name)">{{nextStep.button_name}}
+    </button>
+  </ion-toolbar>
+</ion-footer>

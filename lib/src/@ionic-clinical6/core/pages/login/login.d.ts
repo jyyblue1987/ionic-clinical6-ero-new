@@ -1,0 +1,61 @@
+import { ElementRef } from '@angular/core';
+import { NavController, NavParams, LoadingController, AlertController, Platform } from 'ionic-angular';
+import { Clinical6Service } from '../../clinical6.service';
+import { ModalController } from 'ionic-angular';
+import { Flow } from 'clinical6';
+import { Keyboard } from '@ionic-native/keyboard';
+import { BasePage } from '../base/base-page';
+import { TranslatorService } from '../../translator/translator.service';
+export declare class LoginPage extends BasePage {
+    platform: Platform;
+    elementRef: ElementRef;
+    c6LibService: Clinical6Service;
+    loader: LoadingController;
+    alertCtrl: AlertController;
+    modalCtrl: ModalController;
+    navParams: NavParams;
+    nav: NavController;
+    keyboard: Keyboard;
+    translator: TranslatorService;
+    flow: Flow;
+    apiBaseUrl: string;
+    userId: string;
+    siteId: string;
+    _title: string;
+    _body: string;
+    _nextText: string;
+    _helpText: string;
+    privacy_page_link: string;
+    terms_page_link: string;
+    loadingCtrl: any;
+    isNavigating: boolean;
+    showBackButton: boolean;
+    inputs: any;
+    demoUserStatus: string;
+    owner: number;
+    constructor(platform: Platform, elementRef: ElementRef, c6LibService: Clinical6Service, loader: LoadingController, alertCtrl: AlertController, modalCtrl: ModalController, navParams: NavParams, nav: NavController, keyboard: Keyboard, translator: TranslatorService);
+    getInputs(): any;
+    title: string;
+    body: string;
+    helpText: string;
+    nextText: string;
+    addInput(type: string, label: string): void;
+    removeInput(label: string): void;
+    ngOnInit(): void;
+    ionViewDidLoad(): void;
+    ionViewWillEnter(): void;
+    loadInitFlow(): void;
+    doneCallback(): void;
+    /**
+     * This is a placeholder doLogin function to be overridden by the extending app
+     */
+    doLogin(): void;
+    goToInitialFlow(status: string): void;
+    showError(title: string, errorSubTitle: string, errorText: string): void;
+    showHelp(): void;
+    showAlert(title: string, message: string): void;
+    goToTerms(): void;
+    goToPrivacyPolicy(): void;
+    goToPlainPage(target: string): void;
+    handleKey(event: KeyboardEvent): void;
+}

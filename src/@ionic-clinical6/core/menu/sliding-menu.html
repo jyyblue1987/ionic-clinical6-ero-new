@@ -1,0 +1,26 @@
+<ion-content class="menu-content">
+  <!-- Show Company Logo-->
+  <div class="img-header" *ngIf="logoUrl">
+      <img class="logo" src="{{logoUrl}}"/> 
+  </div>
+  <!-- Show User Profile Info-->
+  <div *ngIf="showProfile" class="text-header">{{showProfileInfo}}</div>
+  <ion-list no-lines no-padding no-margin class="menu-list">
+      <ng-template ngFor let-menuItem [ngForOf]="menuService.menus" >    
+        <button ion-item detail-none no-padding no-margin (click)="openPage(menuItem)" class="{{menuItem.action}}">
+          <div class="icon" [style.background-image]="getImage(menuItem)"></div>
+          <div class="label">{{menuItem.title}}</div>
+
+          <!-- Badges -->
+          <div class="badge" *ngIf="menuItem.badge"
+              [style.background-color]="'#DA452D' ">
+            <div class="number">{{menuItem.badge}}</div>
+          </div>            
+        </button>
+        <div class="custom-divider"></div>
+      </ng-template>
+    </ion-list>
+</ion-content>
+<ion-footer>
+  <!--Footer Content (such as switch sites) here      -->
+</ion-footer>

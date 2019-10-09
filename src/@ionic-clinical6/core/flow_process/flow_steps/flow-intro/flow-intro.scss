@@ -1,0 +1,36 @@
+// @import "../../../../theme/global.scss";
+
+ion-content.flow-intro {
+    background-color: map-get($colors, soft-dark-backgnd);
+}
+
+flow-intro {
+    .video_container {
+        height: 67vw;
+        width: 100vw;
+        img {
+            width: 100%;
+        }
+        iframe {
+            position: absolute;
+            height: 67vw;
+            width: 100vw;
+        }
+    }
+    .rich_text_container {
+        padding: 1rem 2.2rem;
+    }
+
+    h1 {
+        font-size: 2.4rem;
+        margin: 1rem 0 2.2rem 0;
+    }
+    p {
+        font-size: 1.5rem;
+        color: map-get($colors, text-regular);
+    }
+    button.begin_button {
+        @extend button.large;
+        background-color: map-get($colors, secondary);
+    }
+}

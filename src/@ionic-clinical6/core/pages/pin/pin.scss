@@ -1,0 +1,18 @@
+@import "../login/login.scss";
+
+pin-page {
+  @extend login-page;
+
+  .text-input{
+      -webkit-text-security: disc;
+      -moz-webkit-text-security: disc;
+      -moz-text-security: disc;
+      letter-spacing: 1.5rem;
+  }
+
+  .footer-buttons button {
+    font-size: 1.5rem !important;
+    margin-bottom: 3rem !important;
+  }
+
+}
