@@ -64,7 +64,7 @@
     "esdoc-inject-style-plugin": "^1.0.0",
     "esdoc-standard-plugin": "^1.0.0",
     "esdoc-typescript-plugin": "^1.0.0",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-clean-css": "^3.4.0",
     "gulp-concat": "^2.6.1",
     "gulp-header": "^1.8.8",
